@@ -5,10 +5,10 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
+title:               Data Workshops 
 tagline:             'Library Data Workshops'
 description:         'A list of library workshops related to data.'
-url:                 http://ucsdlib.github.io/workshops/
+url:                 http://ucsdlib.github.io/workshops
 baseurl:             'http://ucsdlib.github.io/workshops/'
 paginate:            5
 
