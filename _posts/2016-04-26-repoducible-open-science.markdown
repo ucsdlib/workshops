@@ -19,7 +19,7 @@ TBD
 
 ## Description
 
-There are many actions researchers can take to increase the openness and reproducibility of their work. Please join us for a workshop, hosted by the Center for Open Science, to learn easy, practical steps researchers can take to increase the reproducibility of their work. The workshop will be hands-on. Using example studies, attendees will actively participate in creating a reproducible project from start to finish.
+There are many actions researchers can take to increase the openness and reproducibility of their work. Please join us for a workshop, hosted by the (Center for Open Science)[https://cos.io/], to learn easy, practical steps researchers can take to increase the reproducibility of their work. The workshop will be hands-on. Using example studies, attendees will actively participate in creating a reproducible project from start to finish.
 
 ### Topics covered:
 
