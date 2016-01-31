@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Left
+title: Software Carpentry Worshop
 category: posts
 ---
 
