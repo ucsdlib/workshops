@@ -1,0 +1,12 @@
+markdown: rdiscount
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
+
+gems:
+  - jekyll-sitemap
+
+name: Data Workshops
+url: http://zachholman.com
+description: A list of our workshops.
+twitter: jt14den
