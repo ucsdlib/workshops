@@ -1,5 +1,5 @@
 markdown: rdiscount
-permalink: /workshops/posts/:title
+permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 
@@ -7,6 +7,6 @@ gems:
   - jekyll-sitemap
 
 name: Data Workshops
-url: http://ucsdlib.github.io/
+url: http://ucsdlib.github.io/workshops
 description: A list of our workshops.
 twitter: jt14den
