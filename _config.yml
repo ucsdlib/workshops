@@ -5,6 +5,7 @@ rdiscount:
 
 gems:
   - jekyll-sitemap
+  - jekyll-mentions
 
 name: Data Workshops
 url: http://ucsdlib.github.io/workshops

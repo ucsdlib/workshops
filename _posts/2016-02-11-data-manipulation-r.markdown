@@ -15,7 +15,7 @@ Graduate students or researchers. Register here.
 
 ## Website: 
 
-TBD 
+TBA
 
 ## Description
 
