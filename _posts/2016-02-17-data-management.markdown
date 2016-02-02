@@ -6,7 +6,7 @@ category: posts
 
 ## Time/Date 
 
-* Feb 17, 18 W/M, 12:30pm - 1:50 
+* Feb 17, 18 W/F, 12:30pm - 1:50 
 
 ## Audience 
 
