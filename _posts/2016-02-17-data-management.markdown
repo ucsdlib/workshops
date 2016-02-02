@@ -18,5 +18,5 @@ Set up and course topics can be found on the [website](http://ucsdlib.github.io/
 
 ## Description
 
-his course will introduce you the data management best practices and how to use Unix Shell to work with data files. In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short assignments, and pass the in-class quizzes during the course.
+This course will introduce you the data management best practices and how to use Unix Shell to work with data files. In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short assignments, and pass the in-class quizzes during the course.
 
