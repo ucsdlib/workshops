@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Software Carpentry Worshop
+title: Software Carpentry Workshop
 category: posts
 ---
 
