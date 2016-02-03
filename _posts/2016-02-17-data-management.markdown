@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Mangement
-category: posts
+
 ---
 
 ## Time/Date 
