@@ -10,3 +10,6 @@ name: Data Workshops
 url: http://ucsdlib.github.io/workshops
 description: A list of our workshops.
 twitter: ucsdlibrary
+
+# Enables future posts (posts with dates in the future) and drafts
+future: true

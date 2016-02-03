@@ -1,12 +1,11 @@
 ---
 layout: post
-title: Data Mangement
-category: posts
+title: Data Mangement 101
 ---
 
 ## Time/Date 
 
-* Feb 17, 18 W/F, 12:30pm - 1:50 
+* Feb 17, 18 W/F, 12:30pm - 1:50pm 
 
 ## Audience 
 
