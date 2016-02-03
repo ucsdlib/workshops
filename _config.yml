@@ -1,8 +1,7 @@
 markdown: rdiscount
-permalink: /posts/:title/
 rdiscount:
   extensions: [smart]
-
+permalink: /posts/:title/
 gems:
   - jekyll-sitemap
   - jekyll-mentions
