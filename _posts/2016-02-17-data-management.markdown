@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Mangement 101
+title: Data Mangement
 category: posts
 ---
 
