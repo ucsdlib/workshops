@@ -11,5 +11,5 @@ url: http://ucsdlib.github.io/workshops
 description: A list of our workshops.
 twitter: ucsdlibrary
 
-# Enables future posts (posts with dates in the future) and drafts
-future: true
+# Enables/Disable future posts (posts with dates in the future) and drafts.  set using: True | False
+future: false
