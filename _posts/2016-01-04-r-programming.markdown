@@ -14,7 +14,7 @@ Graduate students in the School of Global Policy and Strategy. Registration is c
 
 ## Website: 
 
-Set up and course topics can be found on the (website)[http://ucsdlib.github.io/win2016-gps-intro-R/].  Any notebooks and links to the collaborative notetaking can be found there as well.  We are using (Software Carpentry materials)[http://software-carpentry.org/lessons/] for this class. 
+Set up and course topics can be found on the [website](http://ucsdlib.github.io/win2016-gps-intro-R/).  Any notebooks and links to the collaborative notetaking can be found there as well.  We are using [Software Carpentry materials](http://software-carpentry.org/lessons/) for this class. 
 
 ## Description
 

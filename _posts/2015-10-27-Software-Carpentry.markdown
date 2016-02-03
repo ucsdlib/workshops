@@ -14,7 +14,7 @@ Researchers who are new to coding.
 
 ## Website: 
 
-Set up and course topics can be found on the (website)[http://scicomp.sdsc.edu/2015-10-27-ucsd/].  Any notebooks and links to the collaborative notetaking can be found there as well. 
+Set up and course topics can be found on the [website](http://scicomp.sdsc.edu/2015-10-27-ucsd/).  Any notebooks and links to the collaborative notetaking can be found there as well. 
 
 ## Description
 
