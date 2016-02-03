@@ -24,7 +24,7 @@ For more information about training opportunities:
 
 Contact us at: [Research-Data-Curation@ucsd.edu](mailto:research-data-curation@ucsd.edu) 
 
-Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or [Data Services](http://ucsd.libguides.com/data-services) 
+Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or [Data Services](http://ucsd.libguides.com/data-services) web sites.
 
 
 
