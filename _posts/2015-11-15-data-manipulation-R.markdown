@@ -11,7 +11,8 @@ category: posts
 
 ## Instructors
 
-@jt14den and @U2NG
+@jt14den - Tim Dennis 
+@U2NG - Reid Otsuji
 
 ## Audience 
 
