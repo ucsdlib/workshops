@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intro to R for Genomics
+title: Data manipulation in R for Genomics
 category: posts r
 ---
 

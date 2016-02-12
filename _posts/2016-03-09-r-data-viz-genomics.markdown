@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intro to R for Genomics
+title: Data Visualization in R for Genomics
 category: posts r
 ---
 
