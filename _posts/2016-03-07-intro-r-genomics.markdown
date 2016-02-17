@@ -32,7 +32,7 @@ This workshop is taught in a hands-on style, so participants are encouraged to u
 
 ### R
 
-R is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use RStudio.
+[R](http://www.r-project.org/) is a programming language that is especially powerful for data exploration, visualization, and statistical analysis. To interact with R, we use [RStudio](http://www.rstudio.com/).
 
 #### Windows
 
