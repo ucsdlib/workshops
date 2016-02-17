@@ -14,8 +14,10 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 
 ## Topics: 
 
-* Data manipulation using Dplyr (subsetting, filtering, aggregating) 
-* Dataframe manipulation with tidyr (reshaping data)
+* Basic plots
+* Advanced plots (introducing ggplot)
+* Writing images (and other things) to file
+* The basics of the grammar of graphics
 
 ## Code Samples: 
  
