@@ -7,8 +7,7 @@ tags: workshop r
 
 ## Time/Date 
 
-* Nov. 15, 2015, 10-12p
-* Biomedical Library Classroom 4
+* canceled
 
 ## Instructors
 
