@@ -10,7 +10,7 @@ category: posts
 
 ## Audience 
 
-Graduate students or researchers. Register here. 
+Graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371650) 
 
 ## Topics: 
 
