@@ -10,13 +10,14 @@ category: posts
 
 ## Audience 
 
-Graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371650) 
+NOVICE graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371650) 
 
 ## Topics: 
 
-* Intro to R 
-* Working with data 
-* Data Frames
+* [Getting Started](http://www.datacarpentry.org/R-genomics/00-before-we-start.html)
+* [Intro to R](http://www.datacarpentry.org/R-genomics/01-intro-to-R.html)
+* [Working with data](http://www.datacarpentry.org/R-genomics/02-starting-with-data.html)
+* [Data Frames](http://www.datacarpentry.org/R-genomics/03-data-frames.html)
 
 ## Code Samples: 
  
