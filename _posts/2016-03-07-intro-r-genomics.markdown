@@ -25,7 +25,7 @@ NOVICE graduate students or researchers: [please register](http://ucsd.libcal.co
 
 ## Description
 
-This course aims to teach participants basic concepts, skills, and tools for working more effectively with data. This workshop was designed for those interested in working with Genomics data in R. You don't need to have previous knowledge of R or programming to take this course. Participants are encouraged to bring theßir own laptops and install R and RStudio prior to the workshop.  
+This course aims to teach participants basic concepts, skills, and tools for working more effectively with data. This workshop was designed for those interested in working with Genomics data in R. You don't need to have previous knowledge of R or programming to take this course. Participants are encouraged to bring theßir own laptops and install R and RStudio prior to the workshop. The lessons used in this workshop come from the [Data Carpentry Lessons](http://www.datacarpentry.org/lessons/). 
 
 ## Setup <a name="setup"></a>
 
