@@ -14,8 +14,9 @@ NOVICE graduate students or researchers: [please register](http://ucsd.libcal.co
 
 ## Instructors: 
 
-@u2ng
-@jt14den
+@u2ng  - Reid Otsuji (Research Data Curation Specialist)  
+@jt14den - Tim Dennis (Data Librarian)  
+Mary Linn Bergstrom (Research Data Curation Liaison Librarian)  
 
 ## Topics: 
 
