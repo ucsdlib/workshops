@@ -12,6 +12,11 @@ category: posts
 
 NOVICE graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371650) 
 
+## Instructors: 
+
+@u2ng
+@jt14den
+
 ## Topics: 
 
 * [Getting Started](http://www.datacarpentry.org/R-genomics/00-before-we-start.html)
