@@ -33,9 +33,16 @@ Mary Linn Bergstrom (Research Data Curation Liaison Librarian)
 
 This course aims to teach participants basic concepts, skills, and tools for working more effectively with data. This workshop was designed for those interested in working with Genomics data in R. You don't need to have previous knowledge of R or programming to take this course. Participants are encouraged to bring theßir own laptops and install R and RStudio prior to the workshop. The lessons used in this workshop come from the [Data Carpentry Lessons](http://www.datacarpentry.org/lessons/). 
 
+## Resources
+
+For this course we will be using Etherpad for collaborative note taking:
+[Etherpad](https://goo.gl/DQMPrp)
+
+
+
 ## Setup <a name="setup"></a>
 
-This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  This class is 
+This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  
 
 ### R
 
