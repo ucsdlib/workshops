@@ -21,4 +21,79 @@ opts_chunk$set(cache = TRUE,
                warning = FALSE)
 opts_knit$set(width = 75)
 ```
+## Working with Data
+
+*  “The Influence of Recombination on Human Genetic Diversity” by Spencer et al. http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020148
+* Dataset_S1.txt on GitHub for the following reasons:
+* The article is open access and thus freely accessible the public.
+* The raw data is also freely available and is tidy, allowing us to start exploring it immediately.
+* All scripts used in the authors’ analyses are freely available (making this a great example of reproducible research).
+* In addition, this type of genomic dataset is also characteristic of the data generated from lower-level bioinformatics workflows that are then analyzed in R.
+* Dataset_S1.txt contains estimates of population genetics statistics such as nucleotide diversity (Pi and Theta), recombination, sequence divergence (divergence).
+* other columns sequencing depth (depth) & GC content
+* see description of Dataset_S1.txt in the paper's supplemental info
+
+## Loading Data into R 
+
+First step, is to find out our working directory and set it to the appropriate folder. 
+
+```{r}
+getwd() # tells us our current working directory
+```
+
+Now set it to where you want to do your work, which will also have a folder for your data. 
+
+```{r}
+setwd('~/Desktop/workshops/intro-r/') #sets working directory
+#list.files() #helpful command to list the files in a directory
+list.dirs() # will list directories 
+```
+
+Let's now download the data and place it in our `data` folder. Note: we could directly read a file in from the web, but we first want to inspect the file before we try and read it. 
+
+```{r}
+download.file('https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/Dataset_S1.txt', 'data/Dataset_S1.txt')
+```
+We can confirm it downloaded into our folder by listing files in that folder. 
+
+```{r}
+list.files('data/')
+```
+
+Before we attempt to load the `Dataset_S1.txt` data set, we want to inspect a part of it. We can either drop into a terminal client and use `head -n 10 Dataset_S1.txt` to inspect the file:
+
+```{r engine='bash'}
+head -n 10 data/Dataset_S1.txt
+```
+
+This prints out the first 10 lines of the file. Alternately, we can attempt to open the file in a text editor (not word or other markup rich word processors, but somethign like notepad, sublime, textmate). From above output we can see the file is comma separated value file with header values. We might want to use tail to see if the end of the file is as tidy as the head. 
+
+```{r engine='bash'}
+tail -n 10 data/Dataset_S1.txt
+```
+
+Looks good and tidy. We can now read the data into R. 
+NOte: about untidy data - ref to hadley wickham's article 
+NOte about files too big, chunking (working with a chromosome at a time)
+* working with random subset 
+* few tricks in R to make read.csv or read.delim functions load large data files faster
+* look at colClasses argument and set 
+* for R to skip columns by setting their vals in colClasses to "NULL" in quotes
+* setting nrow in read.delim() to the length of your dataset can help
+  * use wc -l 
+* if these don't work try readr or data.table packages, both improving read spead.
+* if data still too big, you'll want to keep bulk of data out of memory 
+  * use a database like SQLite (RSQLite package)
+```{r}
+d <- read.csv("data/Dataset_S1.txt")
+```
+
+In R, we can do this using the `head()` built in function. If you are famililar with any `UNIX`, the `head()` function immulates the functionality that `head` provide on the command line.  There is also a `tail` in R for inspecting the end lines of files. Let's use `head()` and `tail()` to look in the file
+
+```{r}
+head(d)
+```
+
+
+
 
