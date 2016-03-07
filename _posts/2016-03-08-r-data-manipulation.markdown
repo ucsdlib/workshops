@@ -8,6 +8,10 @@ category: posts r
 
 * March 8, 10am - noon 
 
+## Location 
+
+Biomedical Library Building - Classroom 4 
+
 ## Audience 
 
 Graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371651) 
