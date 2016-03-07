@@ -21,6 +21,12 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
  
  * TBD 
 
+## Resources
+
+For this course we will be using Etherpad for collaborative note taking:
+[Etherpad](https://public.etherpad-mozilla.org/p/dmanip)
+
+
 ## Description
 
 This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 3/7. 
