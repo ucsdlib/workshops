@@ -5,6 +5,7 @@ output:
     fig_width: 6
     fig_height: 6
     highlight: pygments
+bibliography: bibliography.bib
 ---
 
 
@@ -23,19 +24,11 @@ opts_knit$set(width = 75)
 ```
 ## Working with Data
 
-*  “The Influence of Recombination on Human Genetic Diversity” by Spencer et al. http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020148
-* Dataset_S1.txt on GitHub for the following reasons:
-* The article is open access and thus freely accessible the public.
-* The raw data is also freely available and is tidy, allowing us to start exploring it immediately.
-* All scripts used in the authors’ analyses are freely available (making this a great example of reproducible research).
-* In addition, this type of genomic dataset is also characteristic of the data generated from lower-level bioinformatics workflows that are then analyzed in R.
-* Dataset_S1.txt contains estimates of population genetics statistics such as nucleotide diversity (Pi and Theta), recombination, sequence divergence (divergence).
-* other columns sequencing depth (depth) & GC content
-* see description of Dataset_S1.txt in the paper's supplemental info
+The data we'll use comes from the article entitled “The Influence of Recombination on Human Genetic Diversity” [see below: @10.1371/journal.pgen.0020148]. The data is contained in `Dataset_S1.txt` and found on [GitHub](https://github.com/vsbuffalo/bds-files) as part of example code for the O'Reilly book **[Bioinformatics Data Skills](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480)**. The following tutorial is adapted from that book and [Data Carpentry Lessons](http://www.datacarpentry.org/lessons/).  
 
 ## Loading Data into R 
 
-First step, is to find out our working directory and set it to the appropriate folder. 
+Before we download the data we need to find out our working directory and set it to the appropriate folder. 
 
 ```{r}
 getwd() # tells us our current working directory
@@ -51,7 +44,7 @@ list.dirs() # will list directories
 
 Let's now download the data and place it in our `data` folder. Note: we could directly read a file in from the web, but we first want to inspect the file before we try and read it. 
 
-```{r}
+```{r eval=FALSE}
 download.file('https://raw.githubusercontent.com/vsbuffalo/bds-files/master/chapter-08-r/Dataset_S1.txt', 'data/Dataset_S1.txt')
 ```
 We can confirm it downloaded into our folder by listing files in that folder. 
@@ -73,27 +66,280 @@ tail -n 10 data/Dataset_S1.txt
 ```
 
 Looks good and tidy. We can now read the data into R. 
-NOte: about untidy data - ref to hadley wickham's article 
-NOte about files too big, chunking (working with a chromosome at a time)
-* working with random subset 
-* few tricks in R to make read.csv or read.delim functions load large data files faster
-* look at colClasses argument and set 
-* for R to skip columns by setting their vals in colClasses to "NULL" in quotes
-* setting nrow in read.delim() to the length of your dataset can help
-  * use wc -l 
-* if these don't work try readr or data.table packages, both improving read spead.
-* if data still too big, you'll want to keep bulk of data out of memory 
-  * use a database like SQLite (RSQLite package)
+
+**Note**: If your data is untidy (not ready for analysis because of various reasons), you will need to reshape or clean your. Read Hadley Wickham's article Tidy Data [-@JSSv059i10] for more information on how to do this in R. 
+
+**Note:** If your data is too big to read, try a few of the below stratedgies. 
+
+1. Chunking up your data (working with a chromosome at a time).
+2. Try working with random subset instead of the whole dataset 
+3. There are a few tricks in R to make read.csv or read.delim functions load large data files faster:
+    + Look at colClasses argument and set the datatype 
+    + R can skip columns by setting their vals in colClasses to "NULL" in quotes
+    + Try setting nrow in read.delim() to the length of your dataset can help
+
+If these don't work try the packages `readr` or `data.table`, both improving read speed.
+Finally, if data still too big, you'll want to keep the bulk of data out of memory use a database like `SQLite` (`RSQLite` package).
+
 ```{r}
 d <- read.csv("data/Dataset_S1.txt")
 ```
 
-In R, we can do this using the `head()` built in function. If you are famililar with any `UNIX`, the `head()` function immulates the functionality that `head` provide on the command line.  There is also a `tail` in R for inspecting the end lines of files. Let's use `head()` and `tail()` to look in the file
+In R, we can do this using the `head()` built in function. If you are famililar with `UNIX`, the `head()` function immulates the functionality that `head` provide on the command line, but against R objects.  There is also a `tail` in R for inspecting the end lines of files. Let's use `head()` and `tail()` to look in the file
 
 ```{r}
 head(d)
 ```
 
+* note that header is set to default true.
+* note on wide to long example for genomics
+* data often recorded by humans in wide format
+* `?read.csv` to see arguments 
+
+## Data Frames 
+
+* `data.frame` is the *de facto* data structure for most tabular data and what we use for statistics and plotting.
+* A `data.frame` is a collection of vectors of identical lengths. 
+    + Each vector represents a column, and each vector can be of a different data type (e.g., characters, integers, factors). 
+    + The str() function is useful to inspect the data types of the columns.
+* `data.frame` created `read.csv()` or `read.table()`
+* `data.frame` converts (= coerces) columns that contain characters (i.e., text) into the factor data type -- we'll return to this later
+
+```{r}
+str(d)
+```
+## Inspectcing data frames 
+
+`head()` and `str()` are helpful to to check contents of a data frame, but there are more functions that aid in telling what's in a data frame. 
+
+* Size: `dim()`, `nrow`, `ncol()`
+* Content: `head()`, `tail()`
+* Names: `names()` - returns column names
+* `rownames()`
+* Summary: `str()` structure of the object, `summary()` summary stats for each col
+
+## Challenge 
+
+Based on the give table of functions to asses data structure, can you answer the following questions?
+
+1. What is the class of the object metadata?
+2. How many rows and how many columns are in this object?
+3. Mean of the column `depth`?
+
+## Exploring and Transforming Dataframes
+
+We have Dataset_S1.txt as dataframe `d` with columns (variables) and rows. Let's step through finding out more about the dimensions, rows, columns, and row and column names of a dataframe. 
+
+* Each column of dataframe is a vector and has a type. 
+* But dataframe can contain many columns of all different types, heterogeneous types of vectors.
+* Let's look at the dataframe
+
+```{r}
+head(d, n=3)
+```
+* Find dimensions of the dataset.
+
+```{r}
+nrow(d)
+ncol(d)
+dim(d)
+```
+
+* Print the columns of this dataframe using `colnames()` and `row.names()`.
+
+```{r}
+colnames(d)
+```
+
+* R's read.csv renamed some cols for us - spaces become periods, the %GC has been changed to X.
+* Let's change `X.GC` to somethign better
+
+```{r}
+colnames(d)[12]
+colnames(d)[12] <- "percent.GC"
+colnames(d)[12]
+```
+
+* We also could set row names using `row.names() <-  (row names must be unique).
+
+* We can access a single column using the `$` operator.
+
+```{r}
+d$depth
+```
+
+* Returns the `depth` column as a vector
+* We can pass this to `mean()` or `summary()`
+
+```{r}
+mean(d$depth)
+summary(d$depth)
+```
+* `$` is a shortcut operator for the more general bracket operator used to access rows, columns, and cells. 
+* Remember when accessing elements of a vector we used vec[2]
+* Since dataframes are 2-dimensional we used two indexes separated by comma
+* df[row,col]
+
+* We can return all rows and just columns we can omit the row index. 
+
+```{r}
+d[ , 1:2]
+```
+* We can also use column names 
+```{r}
+d[, c("start", "end")]
+```
+* If we want just first row of `start` and `end` positions we'd: 
+
+```{r}
+d[1,c('start', 'end')]
+```
+
+* when accessing a single column from a dataframe, R returns a vector. 
+* Turn this behavior off by setting `drop` variable to FALSE
+
+```{r}
+d[, "start", drop=FALSE]
+```
+
+```{r}
+d$cent <- d$start >= 25800000 & d$end <= 29700000
+```
+
+* Single ampersand (&), which is the vectorized version of logical AND 
+* `&` operates on each element of the two vectors created by dd$start >= 25800000 and dd$end <= 29700000 and returns TRUE when both are >true. 
+* To tally we could use table():
+```{r}
+table(d$cent)
+```
+
+* We can also use `sum()` to count up the trues
+
+```{r}
+sum(d$cent)
+```
+Lastly, note that according to the supplementary material of this paper, the diversity estimates (columns Theta, Pi, and Heterozygosity) are all scaled up by 10x in the dataset (see supplementary Text S1 for more details). We’ll use the nucleotide diversity column Pi later in this chapter in plots, and it would be useful to have this scaled as per basepair nucleotide diversity (so as to make the scale more intuitive). We can create a new rescaled column called diversity with:
+
+```{r}
+d$diversity <- d$Pi / (10*1000)  # rescale, removing 10x and making per bp
+summary(d$diversity )
+```
+
+Average nucleotide diversity per basepair in this data is around 0.001 (0.12%), roughly what we’d expect from other estimates of human diversity (Hernandez et al., 2012, Perry et al., 2012).
+
+## Subsetting Dataframes
+
+* Let's look at the total of SNPs per window
+* We see that this varies 
+
+```{r}
+summary(d$total.SNPs)
+```
+
+* Right-skewed data:  3rd quartile is 12 SNPs, but max is 93 SNPs. 
+* We should investigate outliers
+* Subset to select out some rows that have 85 or more SNPs
+* create a logical vector containing whether each obs (row) has 85 or more SNPs 
+
+```{r}
+d$total.SNPs >= 85
+```
+
+* we are using a logical vector above
+
+```{r}
+d[d$total.SNPs >= 85,]
+```
+* Subset gives us window of 85 or greater SNPs
+* We can combine queries, e.g. let's see all windows where Pi (nucleotide diversity) is greater than 16 & GC is greater than 80
+
+```{r}
+d[d$Pi > 16 & d$percent.GC > 80, ]
+```
+
+* we are extracting all cols above
+* Let's return only a few
+
+```{r}
+d[d$Pi > 16 & d$percent.GC > 80, c("start", "end", "depth", "Pi")]
+```
+
+* we could reorder cols as well
+
+```{r}
+d[d$Pi > 16 & d$percent.GC > 80, c("start", "end", "Pi", "depth")]
+```
+* Subsetting columns can be good way to summarize data.
+* Average depth in a window (depth col) differes between very high GC content windows (greater than 80%) and all other windows: 
+
+```{r}
+summary(d$depth[d$percent.GC >= 80])
+summary(d$depth[d$percent.GC < 80])
+```
+
+Fairly large diff, but consider how many windows this includes.  There are only nine windows that have GC content over 80%.
+
+```{r}
+sum(d$percent.GC >= 80)
+```
+
+* Let's look at Pi by windows that fall in the centromere and those that do not. 
+* `d$cent is a logical vector we can subset directly and use the `!` operator to get its complement.
+
+```{r}
+summary(d$Pi[d$cent])
+summary(d$Pi[!d$cent])
+```
+* Centromere does appear to have higher Pi diversity that other regions in this data
+
+```{r}
+d$Pi > 3
+```
+
+```{r}
+which(d$Pi > 3)
+```
+which() also has two related functions that return the index of the first minimum or maximum element of a vector: which.min() and which.max(). For example:
+
+```{r}
+d[which.min(d$total.Bases),]
+
+```
 
 
+```{r}
+d[which.max(d$depth),]
+
+```
+
+ subset() takes two arguments: the dataframe to operate on, and then conditions to include a row. With subset(), d[d$Pi > 16 & d$percent.GC > 80, ] can be expressed as:
+
+```{r}
+subset(d, Pi > 16 & percent.GC > 80)
+
+```
+
+Optionally, a third argument can be supplied to specify which columns (and in what order) to include:
+
+```{r}
+subset(d, Pi > 16 & percent.GC > 80, c(start, end, Pi, percent.GC, depth))
+
+```
+## Challenge
+
+```{r}
+
+#install.packages("ggplot2")
+library(ggplot2)
+
+```
+ggplot2 to create a scatterplot of nucleotide diversity along the chromosome in the diversity column in our d dataframe. Because our data is window-based, we’ll first add a column called position to our dataframe that’s the midpoint between each window:
+
+```{r}
+d$position <- (d$end + d$start) / 2
+ggplot(d) + geom_point(aes(x=position, y=diversity))
+```
+
+
+## References 
 
