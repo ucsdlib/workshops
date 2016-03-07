@@ -27,7 +27,7 @@ Mary Linn Bergstrom (Research Data Curation Liaison Librarian)
 
 ## Code Samples: 
  
- * TBD 
+ * [Intro to R - day 1](http://ucsdlib.github.io/workshops/intro-r/intro-to-r.html)
 
 ## Description
 
