@@ -23,7 +23,8 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 
 ## Code Samples: 
  
- * TBD 
+ * [dplyr 1](dplyr.html)
+ * [dplyr 2](dc_dplyr.html)
 
 ## Resources
 
