@@ -23,8 +23,8 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 
 ## Code Samples: 
  
- * [dplyr 1](dplyr.html)
- * [dplyr 2](dc_dplyr.html)
+ * [dplyr 1](http://ucsdlib.github.io/workshops/dplyr.html)
+ * [dplyr 2](http://ucsdlib.github.io/workshops/dc_dplyr.html)
 
 ## Resources
 
