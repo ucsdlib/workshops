@@ -18,14 +18,20 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 
 ## Topics: 
 
-* Basic plots
-* Advanced plots (introducing ggplot)
-* Writing images (and other things) to file
-* The basics of the grammar of graphics
+* [Basic plots, Advanced plots & Writing images](http://www.datacarpentry.org/R-genomics/05-data-visualization.html) (from DataCarpentry)
+* [GGPLOT2](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480/8dot-a-rapid-introduction-to-the-r-language/ch08_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE0NDkzNjc0ODAlMkZpZHAxNTcxMjc4NF9odG1sJnF1ZXJ5PQ==) - from Bioinformatics Data Skills
+
 
 ## Code Samples: 
  
- * TBD 
+ * [ggplot2](http://ucsdlib.github.io/workshops/ggplot.html)
+
+## Resources
+
+* [Bioinformatics Data Skills](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480)
+* [R Graphics Cookbook](http://proquest.safaribooksonline.com/book/programming/r/9781449363086)
+* [Ggplot2: elegant grpahics for data analysis/Hadley Wickham](http://roger.ucsd.edu/record=b6914994~S9)
+
 
 ## Description
 
