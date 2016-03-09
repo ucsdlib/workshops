@@ -22,7 +22,7 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 * [GGPLOT2](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480/8dot-a-rapid-introduction-to-the-r-language/ch08_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE0NDkzNjc0ODAlMkZpZHAxNTcxMjc4NF9odG1sJnF1ZXJ5PQ==) - from Bioinformatics Data Skills
 
 
-## Code Samples: 
+## Lecture Notes: 
  
  * [ggplot2](http://ucsdlib.github.io/workshops/ggplot.html)
 
