@@ -7,6 +7,9 @@ category: posts
 ## Time/Date 
 
 * April 26, 1 - 4pm 
+
+## Location 
+
 * Biomedical Library Events Room 
 
 ## Audience 
