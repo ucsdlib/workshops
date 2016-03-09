@@ -20,7 +20,7 @@ Graduate students or researchers: [please register](http://ucsd.libcal.com/event
 
 * [Basic plots, Advanced plots & Writing images](http://www.datacarpentry.org/R-genomics/05-data-visualization.html) (from DataCarpentry)
 * [GGPLOT2](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480/8dot-a-rapid-introduction-to-the-r-language/ch08_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE0NDkzNjc0ODAlMkZpZHAxNTcxMjc4NF9odG1sJnF1ZXJ5PQ==) - from Bioinformatics Data Skills
-
+* [ggplot2 documentation](http://docs.ggplot2.org/current/)
 
 ## Lecture Notes: 
  
