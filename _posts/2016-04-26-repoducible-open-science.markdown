@@ -16,9 +16,7 @@ category: posts
 
 Faculty, staff, and students across disciplines, who are engaged in quantitative research. Register here. 
 
-## RSVP:  
-
-https://docs.google.com/a/cos.io/forms/d/1empbFwKslKhBHHamBzXKQzoI5tYXFmyPUgQo3YL05Rg/edit
+## [RSVP NOW](https://docs.google.com/a/cos.io/forms/d/1empbFwKslKhBHHamBzXKQzoI5tYXFmyPUgQo3YL05Rg/edit)
 
 ## Description
 
