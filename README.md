@@ -1,3 +1,9 @@
+# Workshop tasks in Waffle.io
+
+[![Tasks in Ready](https://badge.waffle.io/ucsdlib/workshops.svg?label=ready&title=Ready)](http://waffle.io/ucsdlib/workshops)
+[![Tasks in Backlog](https://badge.waffle.io/ucsdlib/workshops.svg?label=ready&title=Backlog)](http://waffle.io/ucsdlib/workshops)
+
+
 # Left
 
 Left is a clean, whitespace-happy layout for [Jekyll](https://github.com/mojombo/jekyll).
