@@ -1,7 +1,7 @@
 # Workshop tasks in Waffle.io
 
 [![Tasks in Ready](https://badge.waffle.io/ucsdlib/workshops.svg?label=ready&title=Ready)](http://waffle.io/ucsdlib/workshops)
-[![Tasks in Backlog](https://badge.waffle.io/ucsdlib/workshops.svg?label=waffle%3Ain%20progress&title=In%20Progress)](http://waffle.io/ucsdlib/workshops)
+[![Tasks in In-Progress](https://badge.waffle.io/ucsdlib/workshops.svg?label=waffle%3Ain%20progress&title=In%20Progress)](http://waffle.io/ucsdlib/workshops)
 
 
 # Left
