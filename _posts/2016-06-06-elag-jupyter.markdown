@@ -6,12 +6,20 @@ category: posts jupyter litpro
 
 ## Instructors
 
-* Harrison Dekker, University of California, Berkeley
-* Tim Dennis, University of California, San Diego
+* Harrison Dekker, University of California, Berkeley (@vagrantscholar)
+* Tim Dennis, University of California, San Diego (@jt14den)
 
 ## Audience:
 
 * Librarians, programmers, openscience advocates
+
+## Location 
+
+* [ELAG 2016](http://elag2016.org/), Copenhagen
+
+## Date/Time
+
+* June 6, 2016. all day
 
 ## Expertise:
 
