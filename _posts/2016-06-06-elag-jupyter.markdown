@@ -32,9 +32,10 @@ strong interest in learning Python.
 
 ## Description:
 
-Consider the following quote: “An article about computational results is advertising, not
+Consider the following quote: 
+> “An article about computational results is advertising, not
 scholarship. The actual scholarship is the full software environment, code and data, that
-produced the result.” [Buckheit and Donoho 1992]
+produced the result.” - Claerbout and Karrenbach, Proceedings of the 62nd Annual International Meeting of the Society of Exploration Geophysics. 1992
 
 This quote highlights a central tenet of the open science movement, namely that researchers
 doing computational work need to share their code and data to allow replication of their results
@@ -49,7 +50,7 @@ computational environment where text and code can be intermingled:
 The Jupyter Notebook is a web application that allows you to create and share
 documents that contain live code, equations, visualizations and explanatory text. Uses
 include: data cleaning and transformation, numerical simulation, statistical modeling,
-machine learning and much more. (Source: http://jupyter.org)
+machine learning and much more. (Source: [http://jupyter.org])
 
 Numerous examples of Jupyter Notebooks now exist across the disciplines and in both research
 and teaching. There are even examples of their usage in journalism. We contend that libraries
