@@ -6,11 +6,11 @@ category: posts
 
 ## Time/Date 
 
-* April 26, 1 - 4pm 
+* April 29, 9am - 12pm 
 
 ## Location 
 
-* Biomedical Library Events Room 
+* SDSC 
 
 ## Audience 
 
