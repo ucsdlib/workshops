@@ -1,6 +1,6 @@
-markdown: rdiscount
-rdiscount:
-  extensions: [smart]
+markdown: kramdown
+#rdiscount:
+#  extensions: [smart]
 permalink: /posts/:title/
 gems:
   - jekyll-sitemap
