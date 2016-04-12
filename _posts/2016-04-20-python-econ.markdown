@@ -2,7 +2,6 @@
 layout: post
 title: Python for Economics Department
 category: posts econ python
-draft: false
 ---
 
 ## Intro to Python for Economics
