@@ -23,18 +23,19 @@ Learning opportunities will cover topics that include:
 <p>We see data related training and workshops as an expansive part of library services.  We are interested in working with other partners and researchers in the campus community.</p>
 
 
-For more information about training opportunities:
+<p>For more information about training opportunities:</p>
 
-Contact Tim Dennis for Data Science related topics (R, Python, etc.): 
+<p>Contact Tim Dennis for Data Science related topics (R, Python, etc.): </p>
 
-<a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a>
+<p><a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a></p>
 
-OR: 
+<p>OR: <br />
 
 RDCP for Data Managment topics: [Research-Data-Curation@ucsd.edu](mailto:research-data-curation@ucsd.edu) 
-
+</p>
+<p>
 Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or <a href="http://ucsd.libguides.com/data-services">Data Services</a>web sites.
-
+</p>
 
 
 </section>
