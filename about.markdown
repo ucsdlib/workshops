@@ -19,6 +19,7 @@ Learning opportunities will cover topics that include:
 <li>Using, aquiring and manipulating data. </li>
 <li>Basic programming skills.</li>
 <li>Metadata Best Practices.</li>
+</ul>
 
 <p>We see data related training and workshops as an expansive part of library services.  We are interested in working with other partners and researchers in the campus community.</p>
 
