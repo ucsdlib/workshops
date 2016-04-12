@@ -12,24 +12,28 @@ title: About
 
 Learning opportunities will cover topics that include:
 
-* Best practices for basic data management.
-* Using the DMPTool to develop a data management plan.
-* Using data analysis tools (R, Python, Stata, Unix Shell, Github, SQL).
-* Basic programming skills.
-* Metadata Best Practices.
+<ul>
+<li>Best practices for basic data management.</li>
+<li>Using the DMPTool to develop a data management plan.</li>
+<li>Using data analysis tools (R, Python, Stata, Unix Shell, Github, SQL). </li>
+<li>Using, aquiring and manipulating data. </li>
+<li>Basic programming skills.</li>
+<li>Metadata Best Practices.</li>
 
 <p>We see data related training and workshops as an expansive part of library services.  We are interested in working with other partners and researchers in the campus community.</p>
 
 
 For more information about training opportunities:
 
-Contact Tim Dennis for Data Science related topics: [http://ucsd.libguides.com/data-services](http://ucsd.libguides.com/data-services)
+Contact Tim Dennis for Data Science related topics (R, Python, etc.): 
+
+<a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a>
 
 OR: 
 
 RDCP for Data Managment topics: [Research-Data-Curation@ucsd.edu](mailto:research-data-curation@ucsd.edu) 
 
-Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or [Data Services](http://ucsd.libguides.com/data-services) web sites.
+Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or <a href="http://ucsd.libguides.com/data-services">Data Services</a>web sites.
 
 
 
