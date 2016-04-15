@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python for Economics Department
+title: Python for the Economics Department
 category: posts econ python
 ---
 
@@ -14,11 +14,12 @@ Python is popular general purpose language that is becoming very popular for doi
 
 ## Location 
 
-* TBD
+* Sequoyah Hall Room 231
 
 ## Date/Time
 
-* 4/20 & 27, 5/4; 1-4pm
+* 4/20 - 2pm-5pm 
+* 4/27 & 5/4; 1-4pm
 
 ## Topics covered:
 
