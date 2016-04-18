@@ -4,9 +4,13 @@ title: Python for the Economics Department
 category: posts econ python
 ---
 
-## Intro to Python for Economics
+## Intro to Python for the Economics Department
 
 Python is popular general purpose language that is becoming very popular for doing data science. In this 3 session course we will focus on using python to work with data. You will learn how to store and work with data in addition to exploring data science tools to begin your own analysis.  
+
+This course if intended for beginners. No programming experience is necessary. Some experience with data and files & directories are.
+
+** Lessons from this workshop are taken from the (Software Carpentry Lessons)[http://software-carpentry.org/lessons/).**
 
 ## Instructor
 
@@ -23,14 +27,60 @@ Python is popular general purpose language that is becoming very popular for doi
 
 ## Topics covered:
 
-* Use Jupyter notebooks to code and communicate results
-* Working with data in Python
-* Repeating actions with loops
-* Python data structures (lists, dictionaries, tuples)
-* Working with files and directories
-* Writing conditional statements
-* Handling errors and exceptions
-* Debugging your script
-* Subset and perform analysis on data
+1. Using libraries
+1. Working with arrays
+1. Reading and plotting data
+1. Creating and using functions
+1. Loops and conditionals
+1. Defensive programming
+1. Using Python from the command line
+1. (Reference...)[http://swcarpentry.github.io//python-novice-inflammation/reference.html]
+
+### Optional 
+
 * Parallel computing
 * Working with Data on the Web
+* Python and databases
+
+## Setup
+
+To participate in this workshop, you will need access to the software described below. In addition, you will need an up-to-date web browser.
+
+We maintain a list of common issues that occur during installation as a reference for instructors that may be useful on the Configuration Problems and Solutions wiki page.
+
+
+### Python
+
+Python is a popular language for scientific computing, and great for general-purpose programming as well. Installing all of its scientific packages individually can be a bit difficult, so we recommend Anaconda, an all-in-one installer.
+
+Regardless of how you choose to install it, please make sure you install Python version 3.x (e.g., 3.4 is fine).
+
+We will teach Python using the IPython notebook, a programming environment that runs in a web browser. For this to work you will need a reasonably up-to-date browser. The current versions of the Chrome, Safari and Firefox browsers are all supported (some older browsers, including Internet Explorer version 9 and below, are not).
+
+### Windows
+
+1. Open http://continuum.io/downloads with your web browser.
+2. Download the Python 3 installer for Windows.
+3. Install Python 3 using all of the defaults for installation except make sure to check Make Anaconda the default Python.
+
+## Mac OS X
+
+1. Open http://continuum.io/downloads with your web browser.
+2. Download the Python 3 installer for OS X.
+3. Install Python 3 using all of the defaults for installation.
+
+###Linux
+
+1. Open http://continuum.io/downloads with your web browser.
+2. Download the Python 3 installer for Linux.
+3. Install Python 3 using all of the defaults for installation. (Installation requires using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop.)
+4. Open a terminal window.
+
+5. Type
+`bash Anaconda-`
+
+and then press tab. The name of the file you just downloaded should appear.
+
+6. Press enter. You will follow the text-only prompts. When there is a colon at the bottom of the screen press the down arrow to move down through the text. Type yes and press enter to approve the license. Press enter to approve the default location for the files. Type yes and press enter to prepend Anaconda to your PATH (this makes the Anaconda distribution the default Python).
+
+
