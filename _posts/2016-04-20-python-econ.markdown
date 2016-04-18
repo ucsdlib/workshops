@@ -8,7 +8,7 @@ category: posts econ python
 
 Python is popular general purpose language that is becoming very popular for doing data science. In this 3 session course we will focus on using python to work with data. You will learn how to store and work with data in addition to exploring data science tools to begin your own analysis.  
 
-This course if intended for beginners. No programming experience is necessary. Some experience with data and files & directories are.
+This course if intended for beginners. No programming experience is necessary. 
 
 **Lessons from this workshop are taken from the [Software Carpentry Lessons](http://software-carpentry.org/lessons/).**
 
