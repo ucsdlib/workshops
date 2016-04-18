@@ -10,7 +10,7 @@ Python is popular general purpose language that is becoming very popular for doi
 
 This course if intended for beginners. No programming experience is necessary. Some experience with data and files & directories are.
 
-** Lessons from this workshop are taken from the (Software Carpentry Lessons)[http://software-carpentry.org/lessons/).**
+** Lessons from this workshop are taken from the [Software Carpentry Lessons](http://software-carpentry.org/lessons/).**
 
 ## Instructor
 
