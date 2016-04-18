@@ -42,14 +42,14 @@ This course if intended for beginners. No programming experience is necessary. S
 * Working with Data on the Web
 * Python and databases
 
-## Setup
+## Setup <a name="setup"></a>
 
 To participate in this workshop, you will need access to the software described below. In addition, you will need an up-to-date web browser.
 
 We maintain a list of common issues that occur during installation as a reference for instructors that may be useful on the Configuration Problems and Solutions wiki page.
 
 
-### [Python][py]
+### Python
 
 Python is a popular language for scientific computing, and great for general-purpose programming as well. Installing all of its scientific packages individually can be a bit difficult, so we recommend Anaconda, an all-in-one installer.
 
