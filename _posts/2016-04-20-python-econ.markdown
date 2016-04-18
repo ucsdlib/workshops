@@ -10,7 +10,7 @@ Python is popular general purpose language that is becoming very popular for doi
 
 This course if intended for beginners. No programming experience is necessary. Some experience with data and files & directories are.
 
-** Lessons from this workshop are taken from the [Software Carpentry Lessons](http://software-carpentry.org/lessons/).**
+**Lessons from this workshop are taken from the [Software Carpentry Lessons](http://software-carpentry.org/lessons/).**
 
 ## Instructor
 
@@ -34,7 +34,7 @@ This course if intended for beginners. No programming experience is necessary. S
 1. Loops and conditionals
 1. Defensive programming
 1. Using Python from the command line
-1. (Reference...)[http://swcarpentry.github.io//python-novice-inflammation/reference.html]
+1. [Reference...](http://swcarpentry.github.io//python-novice-inflammation/reference.html)
 
 ### Optional 
 
@@ -49,38 +49,33 @@ To participate in this workshop, you will need access to the software described 
 We maintain a list of common issues that occur during installation as a reference for instructors that may be useful on the Configuration Problems and Solutions wiki page.
 
 
-### Python
+### [Python][py]
 
 Python is a popular language for scientific computing, and great for general-purpose programming as well. Installing all of its scientific packages individually can be a bit difficult, so we recommend Anaconda, an all-in-one installer.
 
-Regardless of how you choose to install it, please make sure you install Python version 3.x (e.g., 3.4 is fine).
+Regardless of how you choose to install it, please make sure you install Python version 3.x (e.g., 3.5 is fine).
 
 We will teach Python using the IPython notebook, a programming environment that runs in a web browser. For this to work you will need a reasonably up-to-date browser. The current versions of the Chrome, Safari and Firefox browsers are all supported (some older browsers, including Internet Explorer version 9 and below, are not).
 
 ### Windows
 
-1. Open http://continuum.io/downloads with your web browser.
+1. Open <http://continuum.io/downloads> with your web browser.
 2. Download the Python 3 installer for Windows.
 3. Install Python 3 using all of the defaults for installation except make sure to check Make Anaconda the default Python.
 
-## Mac OS X
+### Mac OS X
 
-1. Open http://continuum.io/downloads with your web browser.
+1. Open <http://continuum.io/downloads> with your web browser.
 2. Download the Python 3 installer for OS X.
 3. Install Python 3 using all of the defaults for installation.
 
-###Linux
+### Linux
 
-1. Open http://continuum.io/downloads with your web browser.
+1. Open <http://continuum.io/downloads> with your web browser.
 2. Download the Python 3 installer for Linux.
 3. Install Python 3 using all of the defaults for installation. (Installation requires using the shell. If you aren't comfortable doing the installation yourself stop here and request help at the workshop.)
 4. Open a terminal window.
-
-5. Type
-`bash Anaconda-`
-
-and then press tab. The name of the file you just downloaded should appear.
-
+5. Type `bash Anaconda-` and then press tab. The name of the file you just downloaded should appear.
 6. Press enter. You will follow the text-only prompts. When there is a colon at the bottom of the screen press the down arrow to move down through the text. Type yes and press enter to approve the license. Press enter to approve the default location for the files. Type yes and press enter to prepend Anaconda to your PATH (this makes the Anaconda distribution the default Python).
 
 
