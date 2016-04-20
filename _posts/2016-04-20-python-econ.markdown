@@ -10,7 +10,7 @@ Python is popular general purpose language that is becoming very popular for doi
 
 This course if intended for beginners. No programming experience is necessary. 
 
-**Lessons from this workshop are taken from the [Software Carpentry Lessons](http://software-carpentry.org/lessons/).**
+**We are using [Software Carpentry Lessons](http://software-carpentry.org/lessons/) materials for this workshop.**
 
 ## Instructor
 
@@ -18,12 +18,17 @@ This course if intended for beginners. No programming experience is necessary.
 
 ## Location 
 
-* Sequoyah Hall Room 231
+* SSB 107
 
 ## Date/Time
 
 * 4/20 - 2pm-5pm 
-* 4/27 & 5/4; 1-4pm
+* 4/27 - 1pm - 4pm 
+* 5/4 - 1:30-4:39pm
+
+## Notebooks 
+
+* Numpy, Loops, Lists, Files & conditionals, & Functions
 
 ## Topics covered:
 
