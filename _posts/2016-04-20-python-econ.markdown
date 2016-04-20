@@ -26,6 +26,9 @@ This course if intended for beginners. No programming experience is necessary.
 * 4/27 - 1pm - 4pm 
 * 5/4 - 1:30-4:39pm
 
+## Resources:
+[Etherpad class notes](http://pad.software-carpentry.org/econ-python)
+
 ## Notebooks 
 
 * Numpy, Loops, Lists, Files & conditionals, & Functions
