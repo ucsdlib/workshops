@@ -26,6 +26,9 @@ This course if intended for beginners. No programming experience is necessary.
 * 4/27 - 1pm - 4pm 
 * 5/4 - 1:30-4:39pm
 
+## Resources:
+[Etherpad class notes](http://pad.software-carpentry.org/econ-python)
+
 ## Notebooks 
 
 * [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
