@@ -31,7 +31,7 @@ This course if intended for beginners. No programming experience is necessary.
 
 ## Notebooks 
 
-* [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
+* Week 1 - [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
 
 ## Topics covered:
 
