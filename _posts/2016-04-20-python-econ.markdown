@@ -53,9 +53,9 @@ This course if intended for beginners. No programming experience is necessary.
 1. Defensive programming
 1. Using Python from the command line
 1. [Reference...](http://swcarpentry.github.io//python-novice-inflammation/reference.html)
-2 Parallel computing
-2 Working with Data on the Web
-2 Python and databases
+2. Parallel computing
+2. Working with Data on the Web
+2. Python and databases
 
 ## Setup <a name="setup"></a>
 
