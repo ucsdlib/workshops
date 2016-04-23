@@ -12,13 +12,11 @@ This course if intended for beginners. No programming experience is necessary.
 
 **We are using [Software Carpentry Lessons](http://software-carpentry.org/lessons/) for this workshop.**
 
-<div style="float: right">
 
 ## TOC 
 * TOC
 {:toc}
 
-</div>
 
 ## Instructor
 
