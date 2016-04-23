@@ -27,7 +27,7 @@ Learning opportunities will cover topics that include:
 
 <p>For more information about training opportunities:</p>
 
-<p>Contact **Tim Dennis** <timdennis@ucsd.edu> for Data Science related topics (R, Python, Stata, literate computing, etc.): </p>
+<p>Contact <strong>Tim Dennis</strong> <a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a for Data Science related topics (quantitative reasoning, R, Python, Stata, literate computing, etc.): </p>
 
 <p><a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a></p>
 
