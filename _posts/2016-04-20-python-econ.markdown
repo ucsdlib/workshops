@@ -27,16 +27,21 @@ This course if intended for beginners. No programming experience is necessary.
 
 * 4/20 - 2pm-5pm 
 * 4/27 - 1pm - 4pm 
-* 5/4 - 1:30-4:39pm
+* 5/4 - 1:30-4:30pm
 
-## Resources:
+## Schedule
+
+* Week 1 - [Programming with python](http://swcarpentry.github.io/python-novice-inflammation/)(Topics 1-6)
+* Week 2 - Creating functions, Pandas & writing modules
+* Week 3 - Working with data on the web
+
+### Other materials:
 * [Etherpad class notes](http://pad.software-carpentry.org/econ-python)
 * Software Carpentry's [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/) lesson
-## Notebooks 
-
-* Week 1 - [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
-* Week 2 - Pandas
-* Week 3 
+* Notebooks
+  * Week 1 - [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
+  * Week 2 - Pandas
+  * Week 3 
 
 ## Topics covered:
 
@@ -48,12 +53,9 @@ This course if intended for beginners. No programming experience is necessary.
 1. Defensive programming
 1. Using Python from the command line
 1. [Reference...](http://swcarpentry.github.io//python-novice-inflammation/reference.html)
-
-### Optional 
-
-* Parallel computing
-* Working with Data on the Web
-* Python and databases
+2 Parallel computing
+2 Working with Data on the Web
+2 Python and databases
 
 ## Setup <a name="setup"></a>
 
@@ -91,4 +93,7 @@ We will teach Python using the IPython notebook, a programming environment that 
 5. Type `bash Anaconda-` and then press tab. The name of the file you just downloaded should appear.
 6. Press enter. You will follow the text-only prompts. When there is a colon at the bottom of the screen press the down arrow to move down through the text. Type yes and press enter to approve the license. Press enter to approve the default location for the files. Type yes and press enter to prepend Anaconda to your PATH (this makes the Anaconda distribution the default Python).
 
+## Your Librarian
 
+* Adele Barsh <abarsh@ucsd.edu>, Economics & Business Librarian
+* Adele's guides to [Economic Resources](http://ucsd.libguides.com/allEconguides)
