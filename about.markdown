@@ -13,29 +13,30 @@ title: About
 Learning opportunities will cover topics that include:
 
 <ul>
-<li>Best practices for basic data management.</li>
+<li>Best practices for basic data management and research reproducibility.</li>
 <li>Using the DMPTool to develop a data management plan.</li>
 <li>Using data analysis tools (R, Python, Stata, Unix Shell, Github, SQL). </li>
 <li>Using, aquiring and manipulating data. </li>
 <li>Basic programming skills.</li>
+<li>Emerging literate computing and programming techniques in publishing and teaching</li>
 <li>Metadata Best Practices.</li>
 </ul>
 
-<p>We see data related training and workshops as an expansive part of library services.  We are interested in working with other partners and researchers in the campus community.</p>
+<p>We see data and research tool related training workshops as an expansive part of library services.  **We are interested in working with other partners and researchers in the campus community to provide a broader range of relavant instruction.**</p>
 
 
 <p>For more information about training opportunities:</p>
 
-<p>Contact Tim Dennis for Data Science related topics (R, Python, etc.): </p>
+<p>Contact **Tim Dennis** <timdennis@ucsd.edu> for Data Science related topics (R, Python, Stata, literate computing, etc.): </p>
 
 <p><a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a></p>
 
 <p>OR: <br />
 
-RDCP for Data Managment topics: [Research-Data-Curation@ucsd.edu](mailto:research-data-curation@ucsd.edu) 
+RDCP for Data Managment topics: <mailto:research-data-curation@ucsd.edu>
 </p>
 <p>
-Or visit: The UC San Diego Library [Research Data Curation Program](http://lib.ucsd.edu/rdcp) or <a href="http://ucsd.libguides.com/data-services">Data Services</a>web sites.
+Or visit: The UC San Diego Library <a href="http://lib.ucsd.edu/rdcp">Research Data Curation Program</a> or <a href="http://ucsd.libguides.com/data-services">Data Services</a>web sites.
 </p>
 
 
