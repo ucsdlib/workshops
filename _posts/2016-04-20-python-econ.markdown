@@ -12,6 +12,9 @@ This course if intended for beginners. No programming experience is necessary.
 
 **We are using [Software Carpentry Lessons](http://software-carpentry.org/lessons/) materials for this workshop.**
 
+* TOC
+{:toc}
+
 ## Instructor
 
 * Tim Dennis, Data Librarian, UCSD (@jt14den)
