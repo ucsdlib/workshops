@@ -10,7 +10,7 @@ Python is popular general purpose language that is becoming very popular for doi
 
 This course if intended for beginners. No programming experience is necessary. 
 
-**We are using [Software Carpentry Lessons](http://software-carpentry.org/lessons/) materials for this workshop.**
+**We are using [Software Carpentry Lessons](http://software-carpentry.org/lessons/) for this workshop.**
 
 ## TOC 
 * TOC
@@ -38,7 +38,6 @@ This course if intended for beginners. No programming experience is necessary.
 
 ### Other materials:
 * [Etherpad class notes](http://pad.software-carpentry.org/econ-python)
-* Software Carpentry's [Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/) lesson
 * Notebooks
   * Week 1 - [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
   * Week 2 - Pandas
