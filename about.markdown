@@ -27,7 +27,7 @@ Learning opportunities will cover topics that include:
 
 <p>For more information about training opportunities:</p>
 
-<p>Contact <strong>Tim Dennis</strong> <a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a for Data Science related topics (quantitative reasoning, R, Python, Stata, literate computing, etc.): </p>
+<p>Contact <a href="http://ucsd.libguides.com/data-services"><strong>Tim Dennis</strong></a> for Data Science related topics (quantitative reasoning, R, Python, Stata, literate computing, etc.): </p>
 
 <p><a href="http://ucsd.libguides.com/data-services">http://ucsd.libguides.com/data-services</a></p>
 
@@ -35,6 +35,7 @@ Learning opportunities will cover topics that include:
 
 RDCP for Data Managment topics: <mailto:research-data-curation@ucsd.edu>
 </p>
+
 <p>
 Or visit: The UC San Diego Library <a href="http://lib.ucsd.edu/rdcp">Research Data Curation Program</a> or <a href="http://ucsd.libguides.com/data-services">Data Services</a>web sites.
 </p>
