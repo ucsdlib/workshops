@@ -29,6 +29,6 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Websites
 
-* Workshop website 
-* Etherpad
+* [Workshop website](http://ucsdlib.github.io/2016-05-17-ucsd/)
+* [Etherpad](http://pad.software-carpentry.org/2016-05-17-ucsd)
 
