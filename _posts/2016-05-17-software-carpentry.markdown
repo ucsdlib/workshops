@@ -17,11 +17,12 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 * May 17-18, 2016
 * 9-5pm 
 
-## Instructors
+## Instructors/Helpers
 
 * @u2ng - Reid Otsuji
 * @jt14den - Tim Dennis 
 * @mcritchlow Matt Critchlow
+* @pitviper6 Juliane Schneider
 
 ## Register 
 
