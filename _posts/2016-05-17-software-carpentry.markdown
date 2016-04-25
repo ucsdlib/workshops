@@ -27,4 +27,8 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 * TBA 
 
+## Websites
+
+* Workshop website 
+* Etherpad
 
