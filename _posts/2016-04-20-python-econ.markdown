@@ -45,6 +45,10 @@ This course if intended for beginners. No programming experience is necessary.
   * Week 2 - Pandas
   * Week 3 
 
+## Data 
+
+* Download data for day 2 <http://ucsdlib.github.io/workshops/data.zip>
+
 ## Topics covered:
 
 1. Using libraries
