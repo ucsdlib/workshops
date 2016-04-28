@@ -35,14 +35,14 @@ This course if intended for beginners. No programming experience is necessary.
 ## Schedule
 
 * Week 1 - [Programming with python](http://swcarpentry.github.io/python-novice-inflammation/)(Topics 1-6)
-* Week 2 - Creating functions, Pandas & writing modules
+* Week 2 - [Creating functions, Pandas & writing modules](http://bids.github.io/2015-06-04-berkeley/intermediate-python/)
 * Week 3 - Working with data on the web
 
 ### Other materials:
 * [Etherpad class notes](http://pad.software-carpentry.org/econ-python)
 * Notebooks
   * Week 1 - [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb), [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb), [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb), [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb), & [Functions](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/functions.ipynb)
-  * Week 2 - Pandas
+  * Week 2 - [Pandas and writing modules](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/Analyzing%20Mosquito%20Data.md)
   * Week 3 
 
 ## Data 
