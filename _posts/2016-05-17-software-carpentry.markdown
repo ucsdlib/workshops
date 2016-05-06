@@ -26,7 +26,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Register 
 
-* TBA 
+* [Register Here](http://ucsd.libcal.com/event/2561343) 
 
 ## Websites
 
