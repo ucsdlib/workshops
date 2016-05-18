@@ -19,10 +19,14 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Instructors/Helpers
 
-* @u2ng - Reid Otsuji
-* @jt14den - Tim Dennis 
-* @mcritchlow Matt Critchlow
+* @u2ng - Reid Otsuji - Unix Shell
+* @jt14den - Tim Dennis - Python
+* @mcritchlow Matt Critchlow - Git
 * @pitviper6 Juliane Schneider
+* Scott McAvoy
+* Ryan Johnson
+* John Gunvaldson
+
 
 ## Register 
 
