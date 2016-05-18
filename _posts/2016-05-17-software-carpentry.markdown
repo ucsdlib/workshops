@@ -26,6 +26,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 * Scott McAvoy
 * Ryan Johnson
 * John Gunvaldson
+* Andrea Zonca - Advising Instructor
 
 
 ## Register 
