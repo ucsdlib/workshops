@@ -8,10 +8,10 @@ Library Carpentry is an exploratory program of four three-hour software skills s
 
 ## Topics 
 
-* Jargon Busting & Regular Expressions
-* Unix shell, tabulated data, text data, named entity recognition
-* Version control, github, gh-pages
-* Open refine, cleaning data
+1. Jargon Busting & Regular Expressions
+2. Unix shell, tabulated data, text data, named entity recognition
+3. Version control, github, gh-pages
+4. Open refine, cleaning data
 
 ## Audience 
 
