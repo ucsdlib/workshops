@@ -6,6 +6,15 @@ category: posts library carpentry
 
 Library Carpentry is an exploratory program of four three-hour software skills sessions focused on the needs and requirements of the library professionals. 
 
+## Time/Dates
+
+* 7/18 - 7/22 (7/22 will be office hours, no instruction)
+* 9am - noon 
+
+## Location
+
+Seuss Room 
+
 ## Topics 
 
 1. Jargon Busting & Regular Expressions
@@ -17,22 +26,7 @@ Library Carpentry is an exploratory program of four three-hour software skills s
 
 Library staff interested in learning software skills
 
-## Time/Dates
-
-* 7/18 - 7/22 (7/22 will be office hours, no instruction)
-* 9am - noon 
-
-## Instructors 
-
-* @pitviper6 - Juliane Schneider
-* @u2ng - Reid Otsuji
-* @jt14den - Tim Dennis 
-
-
 ## Register 
 
 * TBA
 
-## Location
-
-Seuss Room 
