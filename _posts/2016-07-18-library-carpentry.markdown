@@ -24,9 +24,10 @@ Library staff interested in learning software skills
 
 ## Instructors 
 
+* @pitviper6 - Juliane Schneider
 * @u2ng - Reid Otsuji
 * @jt14den - Tim Dennis 
-* @pitviper6 - Juliane Schneider
+
 
 ## Register 
 
