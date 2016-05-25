@@ -33,7 +33,7 @@ strong interest in learning Python.
 
 Thanks to SageMathCloud for the Jupyter infrastructure: 
 
-![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)
+[![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)](https://cloud.sagemath.com/)
 
 ## Description:
 
