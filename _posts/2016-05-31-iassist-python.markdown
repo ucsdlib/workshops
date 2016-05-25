@@ -37,4 +37,4 @@ Users will be able to:
 
 Thanks to SageMathCloud for providing the Jupyter infrastructure: 
 
-![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)
+[![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)](https://cloud.sagemath.com/)
