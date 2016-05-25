@@ -34,3 +34,7 @@ Users will be able to:
 * integrate disparate csv files
 * transform web-fetched json data into csv format
 * reference great materials for deeper learning
+
+Thanks to SageMathCloud for providing the Jupyter infrastructure: 
+
+![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)

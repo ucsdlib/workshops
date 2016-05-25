@@ -30,6 +30,11 @@ Programming experience:
 Some programming experience will be helpful, but the workshop will also benefit those with a
 strong interest in learning Python.
 
+
+Thanks to SageMathCloud for the Jupyter infrastructure: 
+
+![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)
+
 ## Description:
 
 Consider the following quote: 
