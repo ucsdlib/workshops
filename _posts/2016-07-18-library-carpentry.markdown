@@ -9,7 +9,7 @@ Library Carpentry is an exploratory program of four three-hour software skills s
 ## Time/Dates
 
 * 7/18 - 7/22 (7/22 will be office hours, no instruction)
-* 9am - noon 
+* 9am - 12:30pm
 
 ## Location
 
@@ -28,5 +28,5 @@ Library staff interested in learning software skills
 
 ## Register 
 
-* TBA
+* http://ucsd.libcal.com/event/2614294
 
