@@ -10,12 +10,18 @@ category: post data python
 
 ## Location 
 
-* Computer Lab 205
+* Computer Lab 205 - Ulrike Pihl's House
 
 ## Time/Date 
 
 * May 31, 2016
 * 09:00-15:30 (lunch break 12:00-13:30)
+
+## Schedule 
+
+1. 9am - noon - Building programs with Python
+2. noon-1:30p - Lunch
+3. 1:30-3:30p - Pandas, APIs & JSON
 
 ## Description 
 
@@ -25,15 +31,19 @@ This full day workshop will provide an introduction to Python - one of the most 
 
 No prior programming experience required! The workshop will be split into two parts: "Basic Python Programming" in the morning, and "Working with Data using Python" in the afternoon.
 
+## Requirements
+
+Participants are required to abide by a [Code of Conduct](http://software-carpentry.org/conduct.html). We are using the Software Carpentry Code for this workshop.
+
 ## Outcomes
 
 Users will be able to:
 
 * proficiently use scientific notebooks in the cloud
 * write basic python programs
-* integrate disparate csv files
+* operate on csv files
 * transform web-fetched json data into csv format
-* reference great materials for deeper learning
+* reference materials
 
 Thanks to SageMathCloud for providing the Jupyter infrastructure: 
 
