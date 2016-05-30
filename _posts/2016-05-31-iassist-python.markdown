@@ -10,7 +10,7 @@ category: post data python
 
 ## Location 
 
-* Computer Lab 205 - Ulrike Pihl's House
+* Computer Lab 205 - Ulrike Pihl's House <https://goo.gl/rrtHq7>
 
 ## Time/Date 
 
@@ -30,6 +30,10 @@ Data professionals supporting researchers provide valuable services throughout t
 This full day workshop will provide an introduction to Python - one of the most popular and versatile languages in use today.
 
 No prior programming experience required! The workshop will be split into two parts: "Basic Python Programming" in the morning, and "Working with Data using Python" in the afternoon.
+
+## Set up 
+
+Sign-up for an account with SageMathCloud using the email you use to register for the workshop with <https://cloud.sagemath.com/>.
 
 ## Requirements
 
