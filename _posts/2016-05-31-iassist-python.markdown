@@ -33,6 +33,17 @@ category: post data python
   * [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb)
   * [Pandas and writing modules](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/Analyzing%20Mosquito%20Data.md)
 
+## Python Resources
+
+Your library might subscribe to numerous programming e-books. 
+
+* [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do) - Excellent book written by the guy who created Pandas
+* [Web Scraping with Python](http://shop.oreilly.com/product/0636920034391.do) - If you need get data from websites or an API
+* [Python documentation](https://docs.python.org/3/)
+* [Jupyter Documentation](https://jupyter.readthedocs.io/en/latest/) - If you want to get more out of the Jupyter notebooks.
+* [A gallery of Jupyter (Ipython) Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
+* [Exercism.io](http://exercism.io/) - Download and solve practice problems in nearly 30 different languages including Python
+
 ## Description 
 
 Data professionals supporting researchers provide valuable services throughout the data management life cycle. According to recent surveys, up to 80% of a data scientist's time can be spent cleaning, harmonizing and integrating data (a.k.a.: data wrangling). While there are many useful tools available to assist with these types of workflows, knowledge of basic programming can be extremely empowering.
