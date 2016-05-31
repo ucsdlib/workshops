@@ -23,6 +23,8 @@ category: post data python
 2. noon-1:30p - Lunch
 3. 1:30-3:30p - Pandas, APIs & JSON
 
+**Etherpad:** <http://pad.software-carpentry.org/iassist-python>
+
 ## Description 
 
 Data professionals supporting researchers provide valuable services throughout the data management life cycle. According to recent surveys, up to 80% of a data scientist's time can be spent cleaning, harmonizing and integrating data (a.k.a.: data wrangling). While there are many useful tools available to assist with these types of workflows, knowledge of basic programming can be extremely empowering.
