@@ -21,7 +21,7 @@ category: post data python
 
 1. 9am - noon - [Building programs with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 2. noon-1:30p - Lunch
-3. 1:30-3:30p - [Pandas](http://bids.github.io/2015-06-04-berkeley/intermediate-python/02-modularization-documentation.html), [APIs & JSON](https://github.com/rochelleterman/scrape-interwebz/blob/master/1_APIs/3_api_workbook.ipynb)
+3. 1:30-3:30p - [Pandas](http://bids.github.io/2015-06-04-berkeley/intermediate-python/02-modularization-documentation.html), [APIs & JSON](https://github.com/rochelleterman/scrape-interwebz/blob/master/1_APIs/3_api_workbook.ipynb) (Check out the full [scrape interwebz github repo](https://github.com/rochelleterman/scrape-interwebz) from Rochelle Terman)
 
 ### Other materials
 
