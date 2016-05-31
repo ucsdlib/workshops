@@ -19,11 +19,19 @@ category: post data python
 
 ## Schedule 
 
-1. 9am - noon - Building programs with Python
+1. 9am - noon - [Building programs with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 2. noon-1:30p - Lunch
-3. 1:30-3:30p - Pandas, APIs & JSON
+3. 1:30-3:30p - [Pandas](http://bids.github.io/2015-06-04-berkeley/intermediate-python/02-modularization-documentation.html), [APIs & JSON](https://github.com/rochelleterman/scrape-interwebz/blob/master/1_APIs/3_api_workbook.ipynb)
 
-**Etherpad:** <http://pad.software-carpentry.org/iassist-python>
+### Other materials
+
+* **Etherpad:** <http://pad.software-carpentry.org/iassist-python>
+* Notebooks
+  * [Numpy](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/1-intro-to-numpy.ipynb)
+  * [Loops](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/loops.ipynb)
+  * [Lists](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/lists.ipynb)
+  * [Files & conditionals](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/files%20%26%20conditionals.ipynb)
+  * [Pandas and writing modules](https://github.com/ucsdlib/python-novice-inflammation/blob/gh-pages/Analyzing%20Mosquito%20Data.md)
 
 ## Description 
 
