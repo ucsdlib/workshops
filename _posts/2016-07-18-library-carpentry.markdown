@@ -28,5 +28,5 @@ Library staff interested in learning software skills
 
 ## Register 
 
-* http://ucsd.libcal.com/event/2614294
+* <http://ucsd.libcal.com/event/2614294>
 
