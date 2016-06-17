@@ -30,3 +30,6 @@ Library staff interested in learning software skills
 
 * <http://ucsd.libcal.com/event/2614294>
 
+## Etherpad (a collaborative space for note-taking and info)
+*  <https://public.etherpad-mozilla.org/p/library-carpentry-ucsd>
+
