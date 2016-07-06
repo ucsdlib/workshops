@@ -45,7 +45,6 @@ Library staff interested in learning software skills
 .e2614297 { background-color:#FC0A0A; border:1px solid #FC0A0A; color: #F7EAEA!important; -moz-box-shadow:inset 0px 1px 0px 0px #ffffff; -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff; box-shadow:inset 0px 1px 0px 0px #ffffff;font-size: 14px; font-family: arial; padding:6px 12px; display:inline-block;text-decoration:none; -moz-border-radius:6px; -webkit-border-radius:6px; border-radius:6px; border-color: #F7EAEA; } .e2614297:hover { background-color:#F7EAEA; color: #FC0A0A!important; }</style><a href="http://ucsd.libcal.com/event/2614297" class="e2614297">REGISTER FOR DAY 4</a> - Open Refine and Data Cleaning (7/21)
 </li>
 </ul>
-* <http://ucsd.libcal.com/event/2614294>
 
 ## Workshop Website
 
