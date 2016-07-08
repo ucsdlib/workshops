@@ -13,7 +13,15 @@ Library Carpentry is an exploratory program of four three-hour software skills s
 
 ## Location
 
-Seuss Room 
+Seuss Room
+
+## Instructors/Helpers:  
+
+* Juliane Schneider pitviper6 (Worksohp Lead, Jargon Busing & Open Refine)
+* Matt Crichlow @mcritchlow (Git) 
+* Reid Otsuji @U2NG (Bash)
+* Tim Dennis @jt14den (Bash)
+* Ryan Johnson @remerjohnson
 
 ## Topics 
 
