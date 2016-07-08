@@ -17,7 +17,7 @@ Seuss Room
 
 ## Instructors/Helpers:  
 
-* Juliane Schneider @pitviper6 (Worksohp Lead, Jargon Busing & Open Refine)
+* Juliane Schneider @pitviper6 (Worksohp Lead, Jargon Busing/RegEx & Open Refine)
 * Matt Crichlow @mcritchlow (Git) 
 * Reid Otsuji @U2NG (Bash)
 * Tim Dennis @jt14den (Bash)
