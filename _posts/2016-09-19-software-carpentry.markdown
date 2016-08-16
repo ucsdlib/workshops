@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Software Carpentry Workshop - Scripps Instutution of Oceanography
+title: Software Carpentry Workshop - Scripps Institution of Oceanography
 category: posts
 ---
 
