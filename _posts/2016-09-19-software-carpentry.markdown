@@ -25,6 +25,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 * Helpers:
 * Aditya Ranganath
 * Ryan Johnson
+* Scott Mcavoy
 
 
 
