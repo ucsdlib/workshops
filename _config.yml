@@ -1,7 +1,8 @@
 markdown: kramdown
+highlighter: rouge
 #rdiscount:
 #  extensions: [smart]
-permalink: /posts/:title/
+permalink: /posts/:categories/:title/
 gems:
   - jekyll-sitemap
   - jekyll-mentions
@@ -10,6 +11,8 @@ name: Data Workshops
 url: http://ucsdlib.github.io/workshops
 description: A list of our workshops.
 twitter: ucsdlibrary
+datasvs: http://ucsd.libguides.com/data-services
+rdcp: http://libraries.ucsd.edu/services/data-curation
 
 # Enables/Disable future posts (posts with dates in the future) and drafts.  set using: True | False
 future: True

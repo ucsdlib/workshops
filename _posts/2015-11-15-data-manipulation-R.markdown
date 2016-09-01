@@ -2,7 +2,7 @@
 layout: post
 title: Data Manipulation, Analysis and Visualization in R
 category: posts
-tags: workshop r
+tags: [past, rstats]
 ---
 
 ## Time/Date 

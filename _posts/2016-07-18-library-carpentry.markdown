@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Library Carpentry
-category: posts library carpentry
+category: [library-carpentry, past]
 ---
 
 Library Carpentry is an exploratory program of four three-hour software skills sessions focused on the needs and requirements of the library professionals. 

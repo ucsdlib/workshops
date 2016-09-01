@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python Programming
-category: posts
+category: [past, rstats]
 ---
 
 ## Time/Date 

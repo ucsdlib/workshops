@@ -2,7 +2,7 @@
 layout: post
 title: Intro to R
 category: posts
-tags: workshop r
+tags: [past, rstats]
 ---
 
 ## Time/Dates 

@@ -2,7 +2,7 @@
 layout: post
 title: Introduction to Apache Spark and PySpark
 category: posts
-tags: event python spark
+tags: [ds3, past]
 ---
 
 ## Time/Date 

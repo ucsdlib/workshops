@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intro to R for Genomics
-category: posts
+category: [past, rstats]
 ---
 
 ## Time/Date 

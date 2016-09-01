@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python for IASSIST
-category: post data python
+category: [python, iassist]
 ---
 
 ## Instructor

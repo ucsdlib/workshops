@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Data Management 101
+tags: [past, datamgmt, gps]
 ---
 
 ## Time/Date 

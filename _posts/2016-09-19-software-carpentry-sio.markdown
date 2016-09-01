@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Software Carpentry Workshop - Scripps Institution of Oceanography
-category: posts
+category: [upcoming, swc]
 ---
 
 Software Carpentry's mission is to help scientists and engineers get more research done in less time and with less pain by teaching them basic lab skills for scientific computing. This hands-on workshop will cover basic concepts and tools, including program design, version control, data management, and task automation. Participants will be encouraged to help one another and to apply what they have learned to their own research problems.
@@ -16,6 +16,11 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 * September 19-20, 2016
 * 9-5pm 
+
+## Location
+
+* Hubbs Hall 4500, San Diego, CA 92037. 
+* <https://maps.google.com/maps?q=32.867488,-117.252998>
 
 ## Instructors/Helpers
 

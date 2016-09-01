@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Jupyter Jumpstart – An Introduction to Literate Programming
-category: posts jupyter litpro
+category: [jupyter, scholcomm]
 ---
 
 ## Instructors
