@@ -1,0 +1,22 @@
+---
+layout: post
+title: Data Visualization in R
+category: posts r
+---
+
+## Time/Dates
+
+* 9:00am - 12:00pm, Wednesday, November 9, 2016
+
+## Instructors
+
+* @u2ng - Reid Otsuji
+* @jt14den - Tim Dennis  
+
+## Audience
+
+Graduate students and researchers
+
+## Description
+
+This workshop is geared to researchers wanting to use R for basic data visualization. It will cover ggplot2 and touch on ggvis for data visualization.  Some experience with R or attendance of the Intro to R course on 11/8 is required.

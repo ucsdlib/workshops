@@ -1,0 +1,23 @@
+---
+layout: post
+title: Introduction to R 
+category: posts r
+---
+
+## Time/Dates
+
+* 9:00am - 12:00pm, Tuesday, November 8, 2016
+
+## Instructors
+
+* @u2ng - Reid Otsuji
+* @jt14den - Tim Dennis  
+
+## Audience
+
+Graduate students and researchers.
+
+
+## Description
+
+This 3 hour course includes a basic introduction to the R syntax, data structures, and language constructs.  We will also cover using RStudio, a tool to help manage R projects and write R scripts.  Following the basics, we will cover how to import data into R and how to work with R's most used data structure,  a dataframe.  This course is geared to participants who are new to R.
