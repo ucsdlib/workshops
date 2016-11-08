@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to R 
+title: Introduction to R
 category: posts r
 ---
 
@@ -17,6 +17,9 @@ category: posts r
 
 Graduate students and researchers.
 
+## Materials & Notes
+
+* Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd> - use for collaborative notetaking 
 
 ## Description
 
