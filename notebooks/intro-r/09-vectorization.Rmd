@@ -1,0 +1,68 @@
+---
+title: "Vectorization"
+author: "Tim Dennis"
+date: "11/7/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+* most of R's functions are vectorized -- meaning the function will operate on all elements of a vector without needing to loop throu and act on each element one at a time
+* this makes writing code more concise, easy to read, and less error prone
+
+```{r}
+x <- 1:4
+x * 2
+```
+
+* multiplication above happened to each element of a vector
+* we can also add two vectors together
+
+```{r}
+y <- 6:9
+x + y
+```
+something liek this:
+
+```{r eval=FALSE}
+x:  1  2  3  4
+    +  +  +  +
+y:  6  7  8  9
+---------------
+    7  9 11 13
+```
+
+## Challenge 1 
+
+<http://swcarpentry.github.io/r-novice-gapminder/09-vectorization#challenge-1>
+
+* comparison operators, logical operators and functions are vectorized
+
+**comparison operators**
+
+```{r}
+x
+x > 2
+```
+
+* any() will return TRUE if any element of a vector is TRUE all() will return TRUE if all elements of a vector are TRUE
+
+* most functions also operate element-wise on vectors
+
+**functions**
+
+```{r}
+x <- 1:4
+log(x)
+```
+* vectorized operatos work element-wise on matrices
+
+```{r}
+m <- matrix(1:12, nrow=3, ncol=4)
+m * -1
+```
+
+
+

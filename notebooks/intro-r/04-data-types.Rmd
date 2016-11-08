@@ -1,0 +1,420 @@
+---
+title: "Intro to R"
+author: "Tim Dennis"
+date: "11/7/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Data Structures
+
+* How to read data into R?
+* What are the basic data types?
+* How to represent categorical information in R?
+
+* R deals with tabular data very well.
+* Let's create a csv file of cats.
+* You can create `data/feline-data.csv` using a text editor (Nano), or within RStudio with the File -> New File -> Text File menu item.
+
+```{r eval=FALSE}
+coat,weight,likes_string
+calico,2.1,1
+black,5.0,0
+tabby,3.2,1
+```
+
+* Read the file in: 
+
+```{r read}
+cats <- read.csv(file = "data/feline-data.csv")
+cats
+```
+* `read.csv` used fr reading in tablula data stored in a text file, comma
+* Tabs also common, use read.delim 
+* If not tabs or commas, you can use the more general read.table 
+* we can begin exploring using the $ operator
+
+```{r}
+cats$weight
+```
+
+```{r}
+cats$coat
+```
+
+* We can do operations on columns:
+```{r}
+## say we discovered that the scale weighs two Kg light:
+cats$weight + 2
+```
+```{r}
+paste("My cat is", cats$coat)
+```
+
+**but what about**
+```{r}
+cats$weight + cats$coat
+```
+
+* understanding what happened here is **important**
+
+## Data Types 
+
+* If you guessed that 2.1 plus "black" is nonsense, you are right 
+* important concept in programming language is `data types`
+* we can inquire what type of data something is:
+
+```{r}
+typeof(cats$weight)
+```
+
+5 main types: 
+
+* double
+* integer
+* complex
+* logical 
+* character
+
+```{r}
+typeof(3.14)
+typeof(1L)
+typeof(1+1i)
+typeof(TRUE)
+typeof('banna')
+```
+**note** the L suffix for indicating an number is an iteger
+
+* no matter how complicated our analysis is all data in R is interepeted as of one of these basic types
+* a user added details of another cat
+
+```{r}
+file.show("data/feline-data_v2.csv")
+```
+* load the new file & check what type of data we find in `weight`
+
+```{r}
+cats <- read.csv(file="data/feline-data_v2.csv")
+typeof(cats$weight)
+```
+
+* oh no, our weights aren't the double type anymore!
+* if we try to do the dsme math we did on them before we get unexpected results
+
+```{r}
+cats$weight + 2
+```
+
+**what happened?**
+
+* R reads a csv into a table, it insists that everything in the tabl is the same basic type
+* if it can't understand in the column as a `double` then nobody in the column gets to be a double
+* the **table** that R loaded our cats data into is called a **data.frame** and our first example of something called a **data structure**
+   * a structure that R knows how to build out of basic data types.
+
+* we can see that it is a `data.frame` by calling the class function on it:
+
+```{r}
+class(cats)
+```
+
+* in order to use our data in R, we need to understand what the basic data sructures are & how they behave
+* for now let's remove that extra line from out cats data and reload the data
+* open the file and delete the bottom line
+
+before: 
+```{r eval=FALSE}
+coat,weight,likes_string
+calico,2.1,1
+black,5.0,0
+tabby,3.2,1
+tabby,2.3 or 2.4,1
+```
+after:
+```{r eval=FALSE}
+coat,weight,likes_string
+calico,2.1,1
+black,5.0,0
+tabby,3.2,1
+```
+```{r}
+cats <- read.csv(file="data/feline-data.csv")
+```
+
+## Vectors and Type Coercion
+
+```{r}
+my_vector <- vector(length = 3)
+my_vector
+```
+
+* a vector is an ordered list of things, with a special condition that *everything in the vector must be the same bacis data type* 
+* fi you dont choose a datatype, it'll default to logcial
+* you can declare an empty vector of whatever type you like
+
+```{r}
+another_vector <- vector(mode='character', length = 3)
+another_vector
+```
+* check the vector with str
+
+```{r}
+str(another_vector)
+```
+
+* somewhat cryptic but indicates the type is vector and a chr, character
+* also indicates the indexes of the vector [1:3]
+* and a few examples of what's in the vector - empty strings here
+
+```{r}
+str(cats$weight)
+```
+* a vector, too-- the columns of data we load into R `data.frames` are all vectors
+* and that's the root of why R forces everything in a coloumn to be the same type
+
+###Why is R so opinionated about what we put in our columns of data? How does this help us?
+### By keeping everything in a column the same, we allow ourselves to make simple assumptions about our data; if you can interpret one entry in the column as a number, then you can interpret all of them as numbers, so we don’t have to check every time. This consistency, like consistently using the same separator in our data files, is what people mean when they talk about clean data; in the long run, strict consistency goes a long way to making our lives easier in R.
+
+* you can make vectors with explicit contents with a c function 
+
+```{r}
+concat_vector <- c(2,6,3)
+concat_vector
+```
+
+* given what we've learned so far, what would this produce:
+
+```{r}
+quiz_vector <- c(2,6,'3')
+```
+
+```{r}
+str(quiz_vector)
+```
+
+* what happened above was *type conversion* and is the source of surprises and the reason we need to be aware of basic data types and how R deals with them
+* When R encounters a mix of types (here numeric and character) to be combined in to a vector, it will force them to be the same type
+
+```{r}
+coercion <- c('a', TRUE)
+str(coercion)
+```
+```{r}
+another_coercion_vector <- c(0, TRUE)
+another_coercion_vector
+```
+* the coercion rules go: **logical -> integer -> numeric -> complex ->**
+  * Where `->` can be read as **are transformed into**
+* You can try to force coercion against this flow using the `as.` functions
+
+```{r}
+character_vector_example <- c('0','2','4')
+character_vector_example
+```
+
+```{r}
+character_coerced_to_numeric <- as.numeric(character_vector_example)
+character_coerced_to_numeric
+```
+```{r}
+numeric_coerced_to_logical <- as.logical(character_coerced_to_numeric)
+numeric_coerced_to_logical
+```
+
+* as you can see surprising things can happen when R forces one basic data type into another
+* Nitty gritty of type coercion aside the point is:
+  * if your data doesn't look like what you thought it was going to look like, type coercion may well be to blame 
+* make sure everything is the same type in your vectors and your columns of `data.frames` or you will get bad surprises
+
+* but coercion can be useful!
+* ex. in our cat's data *likes_string* is number, but we know that the 1s and 0s actually represent TRUE and FALSE 
+* we should use logical datatype here - TRUE or FALSE 
+* we can coerce this column by using `as.logical`
+
+```{r}
+cats$likes_string
+```
+
+```{r}
+cats$likes_string <- as.logical(cats$likes_string)
+cats$likes_string
+```
+
+* concatenate will also append things to an existing vector:
+
+```{r}
+
+ab_vector <- c('a', 'b')
+ab_vector
+```
+
+```{r}
+concat_example <- c(ab_vector, 'SWC')
+concat_example
+```
+
+* you can also make a series of numbers
+
+```{r}
+mySeries <- 1:10
+mySeries
+```
+```{r}
+seq(10)
+```
+
+```{r}
+seq(1,10, by=0.1)
+```
+
+* we can ask a few questions of vectors
+
+```{r}
+sequence_example <- seq(10)
+head(sequence_example, n=2)
+tail(sequence_example, n=4)
+length(sequence_example)
+class(sequence_example)
+typeof(sequence_example)
+```
+* finally, you can give names to elements in your vector
+```{r}
+names_example <- 5:8
+names(names_example) <- c("a", "b", "c", "d")
+names_example
+names(names_example)
+```
+
+##Challenge 1
+<http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1#challenge-1>
+
+## Data Frames
+
+* we said that columns in `data.frames` were vectors
+
+```{r}
+str(cats$weight)
+str(cats$likes_string)
+str(cats$coat)
+```
+## Factors
+
+* another important data structure is a **factor**
+* factors appear to be character data, but are used to represent categorical information
+* EX: a vector of strings labelling cat colorations for all cats in our study:
+
+```{r}
+coats <- c('tabby', 'tortoiseshell', 'tortoiseshell', 'black', 'tabby')
+coats
+str(coats)
+```
+
+* we can turn a vector into a factor like so
+
+```{r}
+CATegories <- factor(coats)
+class(CATegories)
+str(CATegories)
+```
+
+* now R has noticed that there are three possible categories in our data
+* but prints out a bunch of numbers
+* R has replaced our human-readable categories with numbered indices 
+
+```{r}
+typeof(coats)
+typeof(CATegories)
+```
+
+## Challenge 2
+<http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1#challenge-2>
+
+* in modelling functions, it's important to know what the baseline levels are
+* this is assumed to be the first factor, but by default factors are labelled in aphabetical order
+* you can change this by specifying levels:
+
+```{r}
+mydata <- c("case", "control", "control", "case")
+factor_ordering_example <- factor(mydata, levels = c("control", "case"))
+str(factor_ordering_example)
+```
+
+* in this case we explicitly told R that 'control' should be represented by 1 and case by 2
+* this designation can be very important for interpreting the results of stats model
+
+## Lists
+
+* another data structure you'll want to learn is a `list`
+* simpler in some ways than other types b/c you can put anything in it
+
+```{r}
+list_example <- list(1, "a", TRUE, 1+4i)
+list_example
+```
+```{r}
+another_list <- list(title = "Research Bazaar", numbers = 1:10, data = TRUE )
+another_list
+```
+
+* we can now understand something surprising in our `data.frame` what happens if we: 
+
+```{r}
+typeof(cats)
+```
+
+* we see that `data.frames` look like lists under the hood 
+* data.frame is really a list of vectors and factors 
+* in order to hold those columns that are a mix of vectors and factors, the data.frame needs something a bit more flexible than a vector to put all those columns together into a table
+* data.frame is a special ist in which all vectors must have same length
+
+* in our cats exampel we have an integer, a double and logical variable
+
+```{r}
+cats$coat
+cats[,1]
+typeof(cats[,1])
+str(cats[,1])
+```
+
+*each row is an observation of different variables, itself a `data.frame` and thus can be composed of element of diff. types
+
+```{r}
+cats[1,]
+typeof(cats[1,])
+str(cats[1,])
+```
+
+## Challenge 3
+<http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1#challenge-3>
+
+## Matrices 
+
+* Last but not least - matrix
+* we can declare a matrix of zeros:
+
+```{r}
+matrix_example <- matrix(0, ncol=6, nrow=3)
+matrix_example
+```
+* And similar to other data structures, we can ask things about our matrix:
+
+```{r}
+class(matrix_example)
+typeof(matrix_example)
+str(matrix_example)
+dim(matrix_example)
+nrow(matrix_example)
+```
+
+
+## Challege 4
+
+<http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1#challenge-4>
+
+## Challenge 5
+
+<http://swcarpentry.github.io/r-novice-gapminder/04-data-structures-part1#challenge-5>
+

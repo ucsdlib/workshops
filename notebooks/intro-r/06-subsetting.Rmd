@@ -1,0 +1,301 @@
+---
+title: "Subsetting Data"
+author: "Tim Dennis"
+date: "11/7/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+* To be able to subset vectors, factors, matrices, lists, and data frames
+* To be able to extract individual and multiple elements: by index, by name, using comparison operations
+* To be able to skip and remove elements from various data structures.
+
+## Subsetting Data
+
+* Six different ways we can subset any kind of object
+* Three different subsetting operators for the different data structures
+* let's start with vectors
+
+```{r}
+x <- c(5.4, 6.2, 7.1, 4.8, 7.5)
+names(x) <- c('a', 'b', 'c', 'd', 'e')
+x
+```
+
+## Accessing elements using their indices
+
+* extract elements of a vector we can give their corresp. indes
+```{r}
+x[1]
+x[4]
+```
+
+* it may not look like it but the square brackets operator is a function
+* it means: "get me the nth element"
+* ask for multiple elements at once
+
+```{r}
+x[c(1, 3)]
+```
+
+* or slices of the vector
+
+```{r}
+x[1:4]
+```
+
+* the `:` operator creates a sequence of numbers from the left element to the right
+
+```{r}
+1:4
+c(1, 2, 3, 4)
+```
+
+* we can ask for the same element multiple times
+
+```{r}
+x[c(1,1,3)]
+```
+* if we ask for a number outside the vecotr, R will return missing values:
+
+```{r}
+x[6]
+```
+
+* this is a vector of length of one containing an NA, whose name is also NA
+* if we ask for the 0th element, we get an empty vector:
+
+```{r}
+x[0]
+```
+
+* R indexing starts at 1 - many programming languages (c & python) indexing starts at 0
+
+## Skipping and removing elements
+
+* if we use a negative number as the index of a vector, R will return every element EXCEPT for the one specified
+
+```{r}
+x[-2]
+```
+
+* we can skip multiple elements
+
+```{r}
+x[c(-1,-5)] #or x[-c(1,5)]
+```
+* a common trip up for novices occurs when trying to skip slices of a vector
+* most ppl first try to negate a sequence like so:
+
+```{r eval=FALSE}
+x[-1:3]
+```
+cryptic error: 
+
+```{r eval=FALSE}
+Error in x[-1:3]: only 0's may be mixed with negative subscripts
+```
+
+* remember order of operations. 
+* : is really a function
+  * what happens is it takes first arguemnt as -1, and a second as 3, so getnerates a sequence of numbers: c(-1, 0, 2, 3)
+
+* correct solution is to wrap that function call in brackets, so that the - operator applies tot he result
+
+```{r}
+x[-(1:3)]
+```
+
+* to remove elements from a vector we need to assign the results back onto the object
+
+```{r}
+x <- x[-4]
+x
+```
+## challenge 1
+
+<http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting##challenge-1>
+
+## Subsetting by name
+
+* extract elements by using their name
+* `x[c("a","c")]` 
+    - usuall more reliable way to subset objects, index changes more than names
+    - unfort can't skip or remove as easily
+```{r}
+x[-which(names(x)=="a")]
+```
+
+* which function returns all true elements of its argument, which is negated 
+* let's step through this: 
+
+```{r}
+names(x) == "a" # the condition applied to vector x, only a true
+which(names(x)=="a") # which converts this to a index
+x[-which(names(x)=="a")] # using the "-" will remove the element at that index
+```
+
+* skipping multiple named indicies uses %in%
+
+* `x[-which(names(x) %in% c("a", "c"))]`
+* So why canâ€™t we use == like above? 
+* Because '==' expects objects of the same length and if not, will start repeating the shorter object
+* Called recycling rule 
+
+## challenge 2
+
+<http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting##challenge-1>
+**R recycling rule** 
+
+```{r eval=F}
+names(x) == c('a', 'c') #warnings 
+#== works slightly differently than %in%. It will compare each element of its left argument to the corresponding element of its right argument.
+# R recycles the shorter vector in a equality comparison
+
+c("a", "b", "c", "e")  # names of x
+   |    |    |    |    # The elements == is comparing
+c("a", "c")
+
+c("a", "b", "c", "e")  # names of x
+   |    |    |    |    
+c("a", "c", "a", "c") # The elements == is comparing
+```
+
+*  Non-unique names are allowable for multiple elements in a vector 
+
+```{r}
+x <- 1:3
+x
+names(x) <- c('a', 'a', 'a')  
+x
+x['a']  # only returns first value
+x[which(names(x) == 'a')]  # returns all three values
+```
+
+* Getting help for operators; 
+    - `help("%in%")` or `?"%in%"`
+
+**Subsetting through other logical operators**
+
+* we can subset through logical operations
+* `x[c(TRUE, TRUE, FALSE, FALSE)]`
+* Note that in this case, the logical vector is also recycled to the length of the vector weâ€™re subsetting!
+* `x[c(TRUE, FALSE)]`
+* Since comparison operators evaluate to logical vectors, we can also use them to succinctly subset vectors:
+    - `x[x > 7]`
+
+There are many situations in which you will wish to combine multiple conditions. To do so several logical operations exist in R:
+
+* | logical OR: returns TRUE, if either the left or right are TRUE.
+* & logical AND: returns TRUE if both the left and right are TRUE
+* ! logical NOT: converts TRUE to FALSE and FALSE to TRUE
+* && and || compare the individual elements of two vectors. Recycling rules also apply here.
+
+**Handling special values**
+
+At some point you will encounter functions in R which cannot handle missing, infinite, or undefined data.
+
+special functions to deal with this: 
+
+* is.na will return all positions in a vector, matrix, or data.frame containing NA.
+* likewise, is.nan, and is.infinite will do the same for NaN and Inf. 
+* is.finite will return all positions in a vector, matrix, or data.frame that do not contain NA, NaN or Inf.
+* na.omit will filter out all missing values from a vector
+
+**factor subsetting**
+
+Factor subsetting works the same way as vector subsetting.
+
+```{r}
+f <- factor(c("a", "a", "b", "c", "c", "d"))
+f[f == "a"]
+f[f %in% c("b", "c")]
+f[1:3]
+
+```
+* An important note is that skipping elements will not remove the level even if no more of that category exists in the factor:
+    - f[-3]
+
+**Matrix subsetting**
+
+Matrices are also subsetted using the [ function. In this case it takes two arguments: the first applying to the rows, the second to its columns:
+
+```{r}
+set.seed(1)
+m <- matrix(rnorm(6*4), ncol=4, nrow=6)
+m[3:4, c(3,1)]
+```
+* You can leave the first or second arguments blank to retrieve all the rows or columns respectively:
+
+```{r}
+m[, c(3,4)] #column
+m[3,] #if grabbing 1 row, R will convert to vector
+m[3, , drop=FALSE] # keep as a matrix specify a third argument; drop = FALSE:
+#m[, c(3,6)] #will throw error if out of range
+```
+
+* because matricies are really vectors, you can just use single indexing
+    - m[5] #not very useful
+* matricies are populated by column-major format by default, elements are arraged column wise
+
+```{r}
+matrix(1:6, nrow=2, ncol=3)
+matrix(1:6, nrow=2, ncol=3, byrow=TRUE) #populate by row use  byrow=TRUE
+
+```
+## challenge 4
+
+<http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting#challenge-4>
+
+## List subsetting
+
+Three functions to subset lists [, [[, $
+
+* Using [ will always return a list. If you want to subset a list, but not extract an element, then you will likely use [.
+
+```{r}
+xlist <- list(a = "Software Carpentry", b = 1:10, data = head(iris))
+xlist[1]
+```
+
+* we can subset elements teh same way as atomic vector
+* xlist[1:2]
+* to get at individual elements of a list you need to use [[
+    - `xlist[[1]]`
+    - but you cant extract more than one element at once `xlist[[1:2]]`
+    - nor skip elements `xlist[[-1]]`
+    - but you can use names to subset and extract `xlist[['a']]`
+    - $ function extracts by name xlist$data
+
+## challenge 5
+
+<http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting##challenge-5>
+
+## Data frame
+
+* Data frames are lists under the hood, so similar methods apply.
+* [ with one argument will act the same was as for lists, where each list element corresponds to a column. The resulting object will be a data frame:
+
+```{r}
+gapminder <- read.csv(file="data/gapminder-FiveYearData.csv")
+head(gapminder[3])
+head(gapminder[["lifeExp"]]) # [[ will act to extract a single column
+head(gapminder$year) #$ provides shorthand to extract columns by name
+#With two arguments, [ behaves the same way as for matrices:
+gapminder[1:3,]
+gapminder[3,] #is a data frame b/c of the mixed types
+```
+## Challenge 7 
+
+<http://swcarpentry.github.io/r-novice-gapminder/06-data-subsetting##challenge-7>
+
+
+
+
+
+
+
+

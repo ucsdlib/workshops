@@ -1,0 +1,169 @@
+---
+title: "Plotting with GGPLOT2"
+author: "Tim Dennis"
+date: "January 8, 2016"
+output: html_document
+---
+```{r, include=FALSE}
+source("tools/chunk-options.R")
+opts_chunk$set(fig.path = "fig/08-plot-ggplot2-")
+# Silently load in the data so the rest of the lesson works
+#gapminder <- read.csv("data/gapminder-FiveYearData.csv", header=TRUE)
+```
+```{r}
+#install.packages('ggplot2')
+library(ggplot2)
+```
+
+
+GOALS: Students should be able to use ggplot2 to generate publication quality graphics and understand and use the basics of the grammar of graphics. 
+
+* GGPLOT2 developed by Hadley Wickham based on a *grammar-of-graphics*
+* Grammar of graphics consists of a **dataset**, **coordinate system**, and **geoms** -- the visual representation of data points. 
+* Think about figure in layers:  like you would in photoshop, illustrator or inkscape.
+
+
+```{r lifeExp-vs-gdpPercap-scatter, message=FALSE}
+library(ggplot2)
+gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+  geom_point()
+```
+
+NOTE: 
+
+* First we call the `ggplot` function -any arguments we provide the `ggplot` function are considered global options: they apply to all layers
+* We passed two arguments to `ggplot`: 
+  * data 
+  * an `aes` function - which tells ggplot how variables map to aesthetic properties 
+  * `x` & `y` locations 
+  
+Alone the ggplot call isn't enough to redner the plot. 
+
+```{r no_geom, eval=FALSE}
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap))
+## If run, would produce an error. 
+```
+
+Need to tell ggplot how we want to present variables by specifying a geom layer. In the above example we used `geom_point` to create a scatter plot. 
+
+```{r lifeExp-vs-gdpPercap-scatter2}
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+  geom_point()
+```
+
+## Layers
+
+Using scatter plot not the best way to visualize change over time. Let's use line plot. 
+
+```{r}
+ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
+  geom_line()
+```
+
+* used geom_line instead of geom_point 
+* added a **by** *aesthetic* to get a line per country and color by contintent 
+
+
+* visualise both lines and points on the plot? 
+
+```{r lifeExp-line-point}
+ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
+  geom_line() + geom_point()
+```
+
+* note this is layered: so points have been drawn on top of the lines. 
+* example of this
+
+```{r lifeExp-layer-example-1}
+ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country)) +
+  geom_line(aes(color=continent)) + geom_point()
+```
+
+* the *aesthetic* mapping of **color** has been moved from the
+global plot options in `ggplot` to the `geom_line` layer so it no longer applies to the points 
+
+## Transformations and statistics
+
+* overlay statistical models over the data
+* let's use our first example
+
+```{r lifeExp-vs-gdpPercap-scatter3, message=FALSE}
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap, color=continent)) +
+  geom_point()
+```
+
+* hard to see relationships b/t points because of strong outliers in GDP/cap
+* change the scale of units on the y axis using the *scale* functions (controls the mapping between the data values and
+visual values of an aesthetic)
+
+```{r axis-scale}
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+  geom_point() + scale_y_log10()
+```
+
+* `log10` function applied a transformation to the values of the gdpPercap
+column before rendering them on the plot
+* each multiple of 10 now only corresponds to an increase in 1 on the transformed scale, e.g. a GDP per capita
+of 1,000 is now 3 on the y axis, a value of 10,000 corresponds to 4 on the y
+axis and so on
+* This makes it easier to visualise the spread of data on the y-axis.
+
+* We can fit a simple relationship to the data by adding another layer, `geom_smooth`:
+
+```{r lm-fit}
+ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+  geom_point() + scale_y_log10() + geom_smooth(method="lm")
+```
+
+*  make the line thicker by *setting* the **size** aesthetic in the `geom_smooth` layer:
+
+```{r lm-fit2}
+pwd <- ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+  geom_point() + scale_y_log10() + geom_smooth(method="lm", size=1.5)
+```
+
+* two ways an *aesthetic* can be specified:
+  1. Here we *set* the **size** aesthetic by passing it as an argument to `geom_smooth`. 
+  2. use the `aes` function to define a *mapping* between data variables and their visual representation.
+
+## Multi-panel figures
+
+* we can split this out over multiple panels by adding a layer of **facet** panels:
+
+```{r facet}
+ggplot(data = gapminder, aes(x = year, y = lifeExp, color=continent)) +
+  geom_line() + facet_wrap( ~ country)
+```
+
+* `facet_wrap` layer took a "formula" as its argument, denoted by the tilde
+(~). 
+* tells R to draw a panel for each unique value in the country column
+of the gapminder dataset.
+
+## Modifying text
+
+* would like to add text to elements in the graph
+* do this by adding a few more layers:  
+   * **theme** layer controls axis text & text size
+   * **scales** layer to change legend title
+
+```{r theme}
+ggplot(data = gapminder, aes(x = year, y = lifeExp, color=continent)) +
+  geom_line() + facet_wrap( ~ country) +
+  xlab("Year") + ylab("Life expectancy") + ggtitle("Figure 1") +
+  scale_fill_discrete(name="Continent") +
+  theme(axis.text.x=element_blank(), axis.ticks.x=element_blank())
+```
+
+## Resources: 
+
+This is just a taste of what you can do with `ggplot2`. RStudio provides a
+really useful [cheat sheet][cheat] of the different layers available, and more
+extensive documentation is available on the [ggplot2 website][ggplot-doc].
+Finally, if you have no idea how to change something, a quick google search will
+usually send you to a relevant question and answer on Stack Overflow with reusable
+code to modify!
+
+[cheat]: http://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
+[ggplot-doc]: http://docs.ggplot2.org/current/

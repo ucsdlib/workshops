@@ -1,0 +1,210 @@
+---
+title: "Exploring Data Frames"
+author: "Tim Dennis"
+date: "11/7/2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**How can I manipulate a dataframe?**
+
+* At this point, you’ve see it all - in the last lesson, we toured all the basic data types and data structures in R. Everything you do will be a manipulation of those tools. 
+* star of show == data.frame
+* we learned that data.frames were vecotrs, so that we have consistent data down a column
+* if we want a new column we start by making a vector
+
+```{r}
+cats <- read.csv(file="data/feline-data.csv")
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+age <- c(2,3,5,12)
+cats
+```
+
+* we can then add a column via: 
+
+```{r eval=FALSE}
+cats <- cbind(cats, age)
+```
+* what happened? 
+*  Of course, R wants to see one element in our new column for every row in the table:
+
+```{r}
+cats
+age <- c(4,5,8)
+cats <- cbind(cats, age)
+cats
+```
+
+Now how about adding rows - in this case, we saw last time that the rows of a data.frame are made of lists:
+
+```{r}
+newRow <- list("tortoiseshell", 3.3, TRUE, 9)
+cats <- rbind(cats, newRow)
+```
+
+* another thing - when R creates a factor, it only allows whatever is originally there when our data was loaded ('black', 'calico', 'tabby')
+* anything that doesn't fit into one of its categories is rejected
+* we need to explicitly add it as a level
+
+```{r}
+levels(cats$coat)
+levels(cats$coat) <- c(levels(cats$coat), 'tortoiseshell')
+cats <- rbind(cats, list("tortoiseshell", 3.3, TRUE, 9))
+```
+
+* Alternatively we can change a factor column to a character vector
+* but we lose handy categories of the factor but can subseqently add any word we want to the column 
+
+```{r}
+str(cats)
+cats$coat <- as.character(cats$coat)
+str(cats)
+```
+
+* we now know how to add rows and columns to our data.fram in R 
+* but in our work we've accidentlly added a garbage row
+
+```{r}
+cats
+```
+* we can ask for a data.fram minus this offending row: 
+```{r}
+cats[-4,]
+```
+
+* notice the comma with nothing after it to indicate we want to drop that row
+* **Note** we can remove both new rows at once by putting the row numbers inside of a vector: `cats[c(-4,-5)]
+* we can also drop all rows with NA values
+
+```{r}
+na.omit(cats)
+```
+
+* let's reassign the output to cats, so our canges are made permanent
+
+```{r}
+cats <- na.omit(cats)
+```
+* the key to remember when adding data to a data.frame is that columns are **vectors or factors, and rows are lists**
+* we can also glue two data.frames together with rbind:
+
+```{r}
+cats <- rbind(cats, cats)
+cats
+```
+
+* but now row names are complicated 
+* we can remove the rownames and R will auto re-name them sequentially
+
+```{r}
+rownames(cats) <- NULL
+cats
+```
+
+## Challenge 1
+<http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2/#challenge-1>
+
+**So far:**
+
+* basics of manipulating `data.frames` with our cat data
+* let's work on a real data set
+
+```{r}
+gapminder <- read.csv("data/gapminder-FiveYearData.csv")
+```
+
+* mention tab-separated values files (.tsv)
+* to specify a tab separator use "\\tab" or read.delim()
+* files can be downloading via the internet using the `download.file` and the read.csv can be executed to read the downloaded file such as: 
+
+```{r}
+download.file("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv", destfile = "data/gapminder-FiveYearData.csv")
+gapminder <- read.csv("data/gapminder-FiveYearData.csv")
+```
+
+* alternately you can read files directly into R from the internet by replacing file paths with a web address in read.csv
+* **note** when you do this there is not **local copy** saved
+
+```{r}
+gapminder <- read.csv("https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder-FiveYearData.csv")
+```
+
+* You can read directly from excel spreadsheets without converting them to plain text by using the readxl package 
+* let's investigate gapminder
+```{r}
+str(gapminder)
+```
+```{r}
+typeof(gapminder$year)
+typeof(gapminder$lifeExp)
+typeof(gapminder$country)
+str(gapminder$country)
+
+```
+
+* we can also interrogat the data.frame for info about itself
+* remember that str(gapminder) said there were 1704 observations of 6 variables in gapminder
+* what do you think the following will produce?
+
+```{r}
+length(gapminder)
+```
+
+* a fair guess would say that the length of a data.frame would be the number of rows it has (1704)
+* not the case, remember, a data.frame is a *list of vectors and factors*:
+
+```{r}
+typeof(gapminder)
+```
+
+* when length gave us 6 it's because gapminder is built out of a list of 6 columns 
+* to get number of rows and columns in our data set try:
+
+```{r}
+nrow(gapminder)
+ncol(gapminder)
+```
+
+* or both at once
+
+```{r}
+dim(gapminder)
+```
+
+* we also would want to know what the titles of all the columns are, so we can ask for them by name:
+
+```{r}
+colnames(gapminder)
+```
+* it is important to ask if the structure R is reporting matches our intuition or expectations
+* do the basic dat a types reported make sense?
+* if not we need to sort out problems now before they turn into negative surprises down the road
+
+* once we are happy that the data types and structures seem reasonable, it's time to start digging into our data properly
+
+```{r}
+head(gapminder)
+```
+* to make sure out analysis is reproducible we should put the code into a script file so we can come back later
+
+
+## Challenge 2
+<http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2/#challenge-2>
+
+## Challege 3
+<http://swcarpentry.github.io/r-novice-gapminder/05-data-structures-part2/#challenge-3>
+
+
+
+
+
+
