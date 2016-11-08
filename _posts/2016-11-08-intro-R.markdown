@@ -19,7 +19,8 @@ Graduate students and researchers.
 
 ## Materials & Notes
 
-* Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd> - use for collaborative notetaking 
+* Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd> - use for collaborative note taking
+* Lessons for this class: <http://swcarpentry.github.io/r-novice-gapminder/>
 
 ## Description
 
