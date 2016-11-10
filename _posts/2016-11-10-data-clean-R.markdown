@@ -14,13 +14,13 @@ category: posts r
 
 1. Gapminder, you can get that by running this code in R:
 
-```{r}
+~~~
 gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
-```
+~~~
 
 2. A zip file of several csv's:
 
-https://github.com/ucsdlib/workshops/raw/gh-pages/notebooks/data.zip
+<https://github.com/ucsdlib/workshops/raw/gh-pages/notebooks/data.zip>
 
 Unzip those into your 'data' folder inside your workshop project folder.
 
