@@ -24,7 +24,7 @@ gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
 
 Unzip those into your 'data' folder inside your workshop project folder.
 
-
+### Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd>
 ## Instructors
 
 * @u2ng - Reid Otsuji
