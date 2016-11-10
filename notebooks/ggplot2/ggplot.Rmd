@@ -4,6 +4,9 @@ author: "Tim Dennis"
 date: "January 8, 2016"
 output: html_document
 ---
+
+First part of this notebook based on Karthik Ram's [GGPLOT2 Lecture](https://github.com/karthik/ggplot-lecture) ([CC-By 2.0](https://creativecommons.org/licenses/by/2.0/))
+
 ```{r, include=FALSE}
 source("tools/chunk-options.R")
 opts_chunk$set(fig.path = "fig/08-plot-ggplot2-")
@@ -12,67 +15,232 @@ opts_chunk$set(fig.path = "fig/08-plot-ggplot2-")
 ```
 ```{r}
 #install.packages('ggplot2')
-library(ggplot2)
+#library(ggplot2)
 ```
 
 
-GOALS: Students should be able to use ggplot2 to generate publication quality graphics and understand and use the basics of the grammar of graphics. 
+GOALS: Students should be able to use ggplot2 to generate publication quality graphics and understand and use the basics of the grammar of graphics.
 
 * GGPLOT2 developed by Hadley Wickham based on a *grammar-of-graphics*
-* Grammar of graphics consists of a **dataset**, **coordinate system**, and **geoms** -- the visual representation of data points. 
+* Grammar of graphics consists of a **dataset**, **coordinate system**, and **geoms** -- the visual representation of data points.
 * Think about figure in layers:  like you would in photoshop, illustrator or inkscape.
 
+##Data viz
 
-```{r lifeExp-vs-gdpPercap-scatter, message=FALSE}
+* plotting our data is one of the best was to quickly explore it and the various relationships between variables
+* 3 main plotting systems in R: the base [plotting system](http://www.statmethods.net/graphs/), the [lattice package](http://www.statmethods.net/advgraphs/trellis.html), and [ggplot2](http://www.statmethods.net/advgraphs/ggplot2.html)
+*`ggplot2` is built on the grammar-of-graphics:
+   * idea that any plot can be expressed from the same set of components: a **data** set, a **coodinate system** and a set of **geoms**-- the visual representation of data points
+* **Key** to understanding `ggplot2` is thinking aobut a figure in layers -- think of arcgis or programs like Photoshop
+
+## Terminology:
+
+* ggplot - The main function where you specify the dataset and variables to plot
+* geoms - geometric objects
+   - geom point(), geom bar(), geom density(), geom line(), geom area()
+* aes - aesthetics
+   - shape, transparency (alpha), color, fill, linetype.
+* scales Define how your data will be plotted
+   - continuous, discrete, log
+
+## First Plots
+
+This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
+
+
+```{r head_iris}
 library(ggplot2)
-gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
-ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
+head(iris)
+```
+
+
+```{r}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point()
 ```
 
-NOTE: 
+**Basic structure**
+
+```{r}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) + geom_point()
+myplot <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))
+myplot + geom_point()
+```
+
+* Specify the data and variables inside the `ggplot` function.
+* Anything else that goes in here becomes a global setting.
+* Then add layers of geometric objects, statistical models, andpanels.
+
+**Increase size of points**
+
+```{r size-points}
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point(size = 3)
+```
+
+**make if colorful**
+```{r icolor}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point(size = 3)
+```
+
+**differentiate points by shape**
+
+```{r iris-shape}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point(aes(shape = Species), size = 3)
+```
+
+## Exercise 1
+
+```{r ex-1}
+# Make a small sample of the diamonds dataset
+d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
+```
+
+Then generate this plot below. (open 09-plot-ggplot2-ex-1-1.png)
+
+```{r answer-ex-1}
+ggplot(d2, aes(carat, price, color = color)) + geom_point() + theme_gray()
+
+```
+
+
+## Switch to Gapminder Data
+
+```{r lifeExp-vs-gdpPercap-scatter, message=FALSE}
+#gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
+gapminder <- read.csv('data/gapminder-FiveYearData.csv', header=T)
+```
+
+```{r gap-scatter}
+ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
+  geom_point()
+```
+
+NOTE:
 
 * First we call the `ggplot` function -any arguments we provide the `ggplot` function are considered global options: they apply to all layers
-* We passed two arguments to `ggplot`: 
-  * data 
-  * an `aes` function - which tells ggplot how variables map to aesthetic properties 
-  * `x` & `y` locations 
-  
-Alone the ggplot call isn't enough to redner the plot. 
+* We passed two arguments to `ggplot`:
+  * data
+  * an `aes` function - which tells ggplot how variables map to aesthetic properties
+  * `x` & `y` locations
+
+Alone the ggplot call isn't enough to render the plot.
 
 ```{r no_geom, eval=FALSE}
 ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap))
-## If run, would produce an error. 
+## If run, would produce an error.
 ```
 
-Need to tell ggplot how we want to present variables by specifying a geom layer. In the above example we used `geom_point` to create a scatter plot. 
+Need to tell **ggplot** how we want to present variables by specifying a geom layer. In the above example we used `geom_point` to create a scatter plot.
 
 ```{r lifeExp-vs-gdpPercap-scatter2}
 ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
   geom_point()
 ```
 
-## Layers
+##Challenge 1
 
-Using scatter plot not the best way to visualize change over time. Let's use line plot. 
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-1>
+
+##Challenge 2
+
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-2>
+
+## Box plots
+
+See ?geom boxplot for list of options
+
+```{r load-mass}
+library(MASS)
+head(birthwt)
+```
+
+```{r box-plot}
+ggplot(birthwt, aes(factor(race), bwt)) + geom_boxplot()
+```
+
+
+## Histograms
+
+See ?geom histogram for list of options
+
+```{r histogram}
+h <- ggplot(faithful, aes(x = waiting))
+h + geom_histogram(binwidth = 30, colour = "black")
+```
+
+* adding color and adjusting the binwidth
+
+```{r histogram-2}
+h <- ggplot(faithful, aes(x = waiting))
+h + geom_histogram(binwidth = 8, fill = "steelblue",
+colour = "black")
+```
+## Line plots
+
+**Download data**
+
+```{r download-cli-data}
+download.file('https://raw.github.com/karthikram/ggplot-lecture/master/climate.csv', 'data/climate.csv')
+#climate <- read.csv(text=RCurl::getURL(https://raw.github.com/karthikram/ggplot-lecture/master/climate.csv))
+```
+
+* In the climate data set, `Anomaly10y` is a 10-year running average of the deviation (in Celsius) from the average 1950–1980 temperature, and `Unc10y` is the 95% confidence interval. We’ll set ymax and ymin to Anomaly10y plus or minus Unc10y (Figure 4-25):
+
+
+```{r line-plots}
+climate <- read.csv("data/climate.csv", header = T)
+ggplot(climate, aes(Year, Anomaly10y)) +
+  geom_line()
+```
+
+**We can also plot confidence regions**
+* In the climate data set, `Anomaly10y` is a 10-year running average of the deviation (in Celsius) from the average 1950–1980 temperature, and `Unc10y` is the 95% confidence interval. We’ll set ymax and ymin to Anomaly10y plus or minus Unc10y (Figure 4-25):
+
+```{r}
+ggplot(climate, aes(Year, Anomaly10y)) +
+  geom_ribbon(aes(ymin = Anomaly10y - Unc10y, ymax = Anomaly10y + Unc10y),
+              fill = "blue", alpha = .1) +
+  geom_line(color = "steelblue")
+```
+
+## Exercise 2
+Modify the previous plot and change it such that there are three lines instead of one with a confidence band.
+
+```{r answer-ex2}
+cplot <- ggplot(climate, aes(Year, Anomaly10y))
+cplot <- cplot + geom_line(size = 0.7, color = "black")
+cplot <- cplot + geom_line(aes(Year, Anomaly10y + Unc10y), linetype = "dashed", size = 0.7, color = "red")
+cplot <- cplot + geom_line(aes(Year, Anomaly10y - Unc10y), linetype = "dashed", size = 0.7, color = "red")
+cplot + theme_gray()
+#theme_classic
+#theme_bw()
+#theme_minimal()
+```
+
+## Gapminder line graph
+
+Using scatter plot not the best way to visualize change over time. Let's use line plot.
 
 ```{r}
 ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
   geom_line()
 ```
 
-* used geom_line instead of geom_point 
-* added a **by** *aesthetic* to get a line per country and color by contintent 
+* used geom_line instead of geom_point
+* added a **by** *aesthetic* to get a line per country and color by contintent
 
 
-* visualise both lines and points on the plot? 
+* visualise both lines and points on the plot?
 
 ```{r lifeExp-line-point}
 ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
   geom_line() + geom_point()
 ```
 
-* note this is layered: so points have been drawn on top of the lines. 
+* note this is layered: so points have been drawn on top of the lines.
 * example of this
 
 ```{r lifeExp-layer-example-1}
@@ -81,7 +249,126 @@ ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country)) +
 ```
 
 * the *aesthetic* mapping of **color** has been moved from the
-global plot options in `ggplot` to the `geom_line` layer so it no longer applies to the points 
+global plot options in `ggplot` to the `geom_line` layer so it no longer applies to the points
+
+##Challenge 3
+
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3>
+
+## Bar Plots
+
+```{r barplot}
+ggplot(iris, aes(Species, Sepal.Length)) +
+  geom_bar(stat = "identity")
+```
+
+```{r}
+library(tidyr)
+#df <- melt(iris, id.vars = "Species")
+df <- gather(iris, variable, value, -Species )
+ggplot(df, aes(Species, value, fill = variable)) +
+  geom_bar(stat = "identity")
+```
+
+## Dplyr and Tidyr 
+
+*These two packages are the swiss army knives of R.
+* dplyr
+  * filter
+  * select
+  * mutate
+* tidyr.
+  * gather
+  * spread
+  * separate   
+  
+  
+```{r}
+iris[1:2, ]
+df <- gather(iris, variable, value, -Species ) 
+```
+
+```{r}
+df[1:2, ]
+```
+
+```{r}
+ggplot(df, aes(Species, value, fill = variable)) +
+  geom_bar(stat = "identity", position = "dodge")
+```
+
+
+## Exercise 3
+TODO: get image
+Using the d2 dataset you created earlier, generate this plot below. Take a quick look at the data first to see if it needs to be binned
+
+```{r exercise-3ans}
+d2 <- diamonds[sample(1:dim(diamonds)[1], 1000), ]
+ggplot(d2, aes(clarity, fill = cut)) +
+  geom_bar(position = "dodge")
+```
+
+
+## Exercise 4
+TODO: add image
+* Using the climate dataset, create a new variable called sign. Make it logical (true/false) based on the sign of Anomaly10y.
+* Plot a bar plot and use sign variable as the fill.
+
+
+```{r}
+clim <- read.csv('data/climate.csv', header = TRUE)
+clim$sign <- ifelse(clim$Anomaly10y<0, FALSE, TRUE)
+# or as simple as
+# clim$sign <- clim$Anomaly10y < 0
+ggplot(clim, aes(Year, Anomaly10y)) + geom_bar(stat = "identity", aes(fill = sign)) + theme_gray()
+```
+
+## Density Plots 
+
+```{r}
+ggplot(faithful, aes(waiting)) + geom_density()
+```
+
+```{r}
+ggplot(faithful, aes(waiting)) +
+  geom_density(fill = "blue", alpha = 0.1)
+```
+
+
+```{r}
+ggplot(faithful, aes(waiting)) +
+  geom_line(stat = "density")
+```
+
+## Colors
+
+```{r eval=FALSE}
+aes(color = variable) aes(color = "black")
+# Or add it as a scale
+scale_fill_manual(values = c("color1", "color2"))
+```
+```{r color}
+library(RColorBrewer) 
+display.brewer.all() 
+```
+
+## Using a color brewer palette
+
+```{r brewer}
+#df  <- melt(iris, id.vars = "Species")
+ggplot(df, aes(Species, value, fill = variable)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  scale_fill_brewer(palette = "Set1")
+```
+
+##Manual color scale
+```{r manual-color}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+geom_point() +
+facet_grid(Species ~ .) +
+scale_color_manual(values = c("red", "green", "blue"))
+```
+
 
 ## Transformations and statistics
 
@@ -94,19 +381,18 @@ ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap, color=continent)) +
 ```
 
 * hard to see relationships b/t points because of strong outliers in GDP/cap
-* change the scale of units on the y axis using the *scale* functions (controls the mapping between the data values and
-visual values of an aesthetic)
+* We can change the scale of units on the `y` axis using the *scale* functions
+* These control the mapping between the data values and visual values of an aesthetic.
+* We'll also use the `alpha` function, which is helpful when you have a large amount of data which is v. clustered
 
 ```{r axis-scale}
 ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
   geom_point() + scale_y_log10()
 ```
 
-* `log10` function applied a transformation to the values of the gdpPercap
-column before rendering them on the plot
-* each multiple of 10 now only corresponds to an increase in 1 on the transformed scale, e.g. a GDP per capita
-of 1,000 is now 3 on the y axis, a value of 10,000 corresponds to 4 on the y
-axis and so on
+* `log10` function applied a transformation to the values of the gdpPercap column before rendering them on the plot
+   * each multiple of 10 now only corresponds to an increase in 1 on the transformed scale, e.g. a GDP per capita
+of 1,000 is now 3 on the y axis, a value of 10,000 corresponds to 4 on the y axis and so on
 * This makes it easier to visualise the spread of data on the y-axis.
 
 * We can fit a simple relationship to the data by adding another layer, `geom_smooth`:
@@ -124,39 +410,149 @@ pwd <- ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
 ```
 
 * two ways an *aesthetic* can be specified:
-  1. Here we *set* the **size** aesthetic by passing it as an argument to `geom_smooth`. 
+  1. Here we *set* the **size** aesthetic by passing it as an argument to `geom_smooth`.
   2. use the `aes` function to define a *mapping* between data variables and their visual representation.
 
-## Multi-panel figures
+## with iris data - smooth
+
+```{r smooth-lm}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point(aes(shape = Species), size = 3) +
+  geom_smooth(method = "lm")
+```
+
+### Within facet 
+
+```{r}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point(aes(shape = Species), size = 3) +
+  geom_smooth(method = "lm") +
+  facet_grid(. ~ Species)
+```
+
+
+## Challenge 4a
+
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3#challenge-4a>
+
+## Challenge 4b
+
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3#challenge-4b>
+
+## Multi-panel figures: FACEting
 
 * we can split this out over multiple panels by adding a layer of **facet** panels:
 
 ```{r facet}
-ggplot(data = gapminder, aes(x = year, y = lifeExp, color=continent)) +
+starts.with <- substr(gapminder$country, start = 1, stop = 1)
+az.countries <- gapminder[starts.with %in% c("A", "Z"), ]
+ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
   geom_line() + facet_wrap( ~ country)
 ```
 
 * `facet_wrap` layer took a "formula" as its argument, denoted by the tilde
-(~). 
+(~).
 * tells R to draw a panel for each unique value in the country column
 of the gapminder dataset.
 
 ## Modifying text
 
 * would like to add text to elements in the graph
-* do this by adding a few more layers:  
+* do this by adding a few more layers:
    * **theme** layer controls axis text & text size
    * **scales** layer to change legend title
 
 ```{r theme}
-ggplot(data = gapminder, aes(x = year, y = lifeExp, color=continent)) +
+ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
   geom_line() + facet_wrap( ~ country) +
   xlab("Year") + ylab("Life expectancy") + ggtitle("Figure 1") +
-  scale_fill_discrete(name="Continent") +
+  scale_colour_discrete(name="Continent") +
   theme(axis.text.x=element_blank(), axis.ticks.x=element_blank())
 ```
 
-## Resources: 
+<http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-5>
+
+### With iris along coloumns 
+
+```{r facet-columns}
+#str(iris)
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  facet_grid(Species ~ .)
+```
+### and along rows
+
+```{r facet-rows}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  facet_grid(. ~ Species)
+```
+
+###or wrap your panels
+
+```{r}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+  geom_point() +
+  facet_wrap( ~ Species)
+```
+
+## themes
+
+Themes are a great way to define custom plots.
+
++theme()
+#### see ?theme() for more options
+
+```{r}
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+geom_point(size = 1.2, shape = 16) +
+facet_wrap( ~ Species) +
+theme(legend.key = element_rect(fill = NA),
+legend.position = "bottom",
+strip.background = element_rect(fill = NA),
+axis.title.y = element_text(angle = 0)) 
+```
+```{r}
+#install.packages('ggthemes')
+library(ggthemes)
+```
+
+## Then add one of these themes to your plot
+ + theme_stata()
+ + theme_excel()
+ + theme_wsj()
+ + theme_solarized()
+
+```{r} 
+ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
+geom_point(size = 1.2, shape = 16) +
+facet_wrap( ~ Species) +
+theme_solarized() +
+theme(legend.key = element_rect(fill = NA),
+legend.position = "bottom",
+strip.background = element_rect(fill = NA),
+axis.title.y = element_text(angle = 0)) 
+```
+
+## How to save your plots
+
+```{r eval=FALSE}
+ggsave('~/path/to/figure/filename.png')
+ggsave(plot1, file = "~/path/to/figure/filename.png")
+```
+
+```{r eval=FALSE}
+ggsave(file = "/path/to/figure/filename.png", width = 6,
+height =4)
+```
+
+```{r eval=FALSE}
+ggsave(file = "/path/to/figure/filename.eps")
+ggsave(file = "/path/to/figure/filename.jpg")
+ggsave(file = "/path/to/figure/filename.pdf")
+```
+
+## Resources:
 
 This is just a taste of what you can do with `ggplot2`. RStudio provides a
 really useful [cheat sheet][cheat] of the different layers available, and more

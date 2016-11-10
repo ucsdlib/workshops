@@ -1,0 +1,142 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+## PLyr
+
+```{r}
+setwd("~/workshops/data-workshops/notebooks/dplyr-tidyr/")
+download.file('https://goo.gl/BtBnPg', "data/gapminder.csv")
+gapminder <- read.csv('data/gapminder.csv')
+head(gapminder)
+```
+
+Previously we looked at how you can use functions to simplify your code. We defined the calcGDP function, which takes the gapminder dataset, and multiplies the population and GDP per capita column. We also defined additional arguments so we could filter by year and country:
+
+```{r gdp-function}
+# Takes a dataset and multiplies the population column
+# with the GDP per capita column.
+calcGDP <- function(dat, year=NULL, country=NULL) {
+  if(!is.null(year)) {
+    dat <- dat[dat$year %in% year, ]
+  }
+  if (!is.null(country)) {
+    dat <- dat[dat$country %in% country,]
+  }
+  gdp <- dat$pop * dat$gdpPercap
+
+  new <- cbind(dat, gdp=gdp)
+  return(new)
+}
+```
+
+
+* common task working with data is that you run calculations on different groups within in the data 
+* in the above we were simply calculating the GDP by multiplying two columns together
+* What do we do if we want to calculate the mean GDP per continent
+
+* we could run `calcGDP` and hten take the mean of each continent
+
+```{r mean-gdp-fun}
+withGDP <- calcGDP(gapminder)
+mean(withGDP[withGDP$continent == "Africa", "gdp"])
+mean(withGDP[withGDP$continent == "Americas", "gdp"])
+mean(withGDP[withGDP$continent == "Asia", "gdp"])
+```
+
+* But this is onerous
+* using a function can help reduce a sustantial amount of repetition
+* but there's still repetition
+* repeating yourself will cost you time
+* introduce nasty bugs
+
+* we could write a new function that is flexible like calcGDP but this is work
+* the abstract problem we are encounter is known as "split-apply-combine"
+
+![Split Apply Combine](http://swcarpentry.github.io/r-novice-gapminder/fig/splitapply.png)
+
+We want to split our data into groups, in this case continents, apply some caluculations on that grou, then combine the results together afterwards.
+
+## the PLYR Package
+
+* for experienced R users you might be familiar with the apply family of functions - builtins
+* they work, but we are introducting you to another way to solve the split-apply-combine
+* the plyr package gives us functions for solving this problem
+
+```{r plyr-sac}
+library(plyr)
+```
+
+* plyr has functions for lists, data.frames and arrays that perform:
+1. a splitting function
+2. apply a function on each split in turn
+3. Recombine output data as a single data object
+
+* names are based on the datastructure they operate on
+* and the output object you want it to return
+* [a]rray, [l]ist, or [d]ata.frame
+* 9 core funtions of **ply
+
+![plyr](http://swcarpentry.github.io/r-novice-gapminder/fig/full_apply_suite.png)
+
+* each of xxply functions(daply, ddply, llply, laply, ...) has the same structure and has four key features and structure
+
+```{r plyr-syntax, eval=FALSE}
+xxply(.data, .variables, .fun)
+```
+* the first letter of the function names gives the input and second the output
+* `.data` gives the data object
+* `.variables` indetifies the splitting variable
+* `.fun` the function to be called on each peice
+
+* Now we can quickly calculate the mean GDP per continent
+
+```{r plyr-mean-cont}
+ddply(
+  .data = calcGDP(gapminder),
+  .variables = "continent",
+  .fun = function(x) mean(x$gdp)
+)
+```
+
+* Let's walk through the previous code:
+1. ddply feeds in the data.fram (function starts with **d**) and returns another data.frame
+2. first argument we gave was the data.frame we wanted to operate on
+3. second argument indicated our split critera, 'continent' column
+4. third arguement is the function we want to apply to each group of data -- we had to define our own short function here - each subset of the data gets stored in x
+   * anonymous function we haven't defined it elsewhere and has no name 
+   
+* what if we wanted a different output 
+   
+```{r}
+dlply(
+  .data=calcGDP(gapminder),
+  .variables = "continent",
+  .fun = function(x) mean(x$gdp))
+```
+
+We called the same function again, but changed the second letter to an l, so the output was returned as a list.
+
+We can specify multiple columns to group by:
+
+```{r}
+ddply(
+ .data = calcGDP(gapminder),
+ .variables = c("continent", "year"),
+ .fun = function(x) mean(x$gdp)
+)
+```
+
+```{r}
+daply(
+  .data = calcGDP(gapminder), 
+  .variables = c("continent", "year"),
+  .fun = function(x) mean(x$gdp)
+)
+```
+
+<http://swcarpentry.github.io/r-novice-gapminder/12-plyr#challenge-1>  
+<http://swcarpentry.github.io/r-novice-gapminder/12-plyr#challenge-2>  
+<http://swcarpentry.github.io/r-novice-gapminder/12-plyr#challenge-3>  
+<http://swcarpentry.github.io/r-novice-gapminder/12-plyr#advanced-challenge>  
+<http://swcarpentry.github.io/r-novice-gapminder/12-plyr#alternate-challenge-if-class-seems-lost>  

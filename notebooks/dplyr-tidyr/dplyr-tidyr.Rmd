@@ -1,0 +1,346 @@
+---
+title: "Data Manipulation with Dplyr"
+author: "Tim Dennis"
+date: "January 10, 2016"
+output: html_document
+---
+
+GOAL: To be able to use the 6 data frame manipulation in dplyr. 
+
+* we select certain observations (rows) or variables (columns) 
+* we often group the data by a certain variable(s), or we even calculate summary statistics 
+* we can do these operations using the normal base R operations: 
+
+### Load data
+
+```{r}
+#setwd('~/workshops/r-novice-gapminder/')
+#gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
+gapminder <- read.csv("data/gapminder-FiveYearData.csv", header = T)
+```
+
+Manipulation of dataframes means many things to many researchers, 
+
+* we often select certain observations (rows) or variables (columns), 
+* we often group the data by a certain variable(s), 
+* or we even calculate summary statistics. 
+
+We can do these operations using the normal base R operations:
+
+```{r}
+mean(gapminder[gapminder$continent == "Africa", "gdpPercap"])
+mean(gapminder[gapminder$continent == "Americas", "gdpPercap"])
+mean(gapminder[gapminder$continent == "Asia", "gdpPercap"])
+```
+
+* but not great b/c there's a fair amount of repetition. 
+* Repeating yourself will cost you time, both now and later, and potentially introduce some nasty bugs.
+
+## dplyr package
+
+package provides a number of very useful functions for manipulating dataframes in a way that will
+* reduces repetition 
+* introduces functions to help 
+* dplyr grammar easier to read
+
+Here we’re going to cover 6 of the most commonly used functions as well as using pipes (%>%) to combine them.
+
+1. select()
+2. filter()
+3. group_by()
+4. summarize()
+5. mutate()
+
+Install this package: 
+
+```{r results='hide'}
+#install.packages('dplyr')
+library(dplyr)
+head(gapminder)
+```
+
+### Using select() 
+
+If we want to **select** just a few variables in our data frame. 
+
+```{r}
+year_country_gdp <- select(gapminder, year, country, gdpPercap)
+```
+
+Show fig 1  in lesson. 
+
+![dplyr select](fig/13-dplyr-fig1.png)
+* If we open up year_country_gdp we’ll see that it only contains the `year`, `country` and `gdpPercap`. Above we used ‘normal’ grammar, but the strengths of dplyr lie in combining several functions using pipes. Since the pipes grammar is unlike anything we’ve seen in R before, let’s repeat what we’ve done above using pipes.
+
+Using pipes (`%>%`), forward pipe left to right, obviates need to include dataframe
+
+```{r}
+year_country_gdp <- gapminder %>% select(year,country,gdpPercap)
+#base-r way
+year_country_gdp_br <- gapminder[, c("year", "country", "gdpPercap")]
+```
+
+If we now wanted to move forward with the above, but only with European countries, we can combine select and filter
+
+## Filter 
+
+```{r}
+year_country_gdp_euro <- gapminder %>%
+  filter(continent == "Europe") %>%
+  select(year, country, gdpPercap)
+
+```
+
+<http://swcarpentry.github.io/r-novice-gapminder/13-dplyr#challenge-1>  
+
+* above notice we pass the data from filter to select
+* order of operations matter
+
+## Using group_by() and summarize()
+
+* Now, we were supposed to be reducing the error prone repetitiveness of what can be done with base R, but up to now we haven’t done that since we would have to repeat the above for each continent.
+* Instead of filter(), which will only pass observations that meet your criteria (in the above: continent=="Europe"), we can use group_by(), which will essentially use every unique criteria that you could have used in filter.
+
+
+```{r}
+str(gapminder)
+```
+
+```{r}
+str(gapminder %>% group_by(continent))
+
+```
+
+* You will notice that the structure of the dataframe where we used group_by() (grouped_df) is not the same as the original gapminder (data.frame).
+* A grouped_df can be thought of as a list where each item in the listis a data.frame which contains only the rows that correspond to the a particular value continent (at least in the example above).
+
+![gapminder-group](http://swcarpentry.github.io/r-novice-gapminder/fig/13-dplyr-fig2.png)
+
+## Using summarize()
+
+* The above was a bit on the uneventful side because group_by() much more exciting in conjunction with summarize()
+* This will allow use to create new variable(s) by using functions that repeat for each of the continent-specific data frames.
+* using the group_by() function, we split our original dataframe into multiple pieces, then we can run functions (e.g. mean() or sd()) within summarize().
+
+```{r summarize}
+gdp_bycontinents <- gapminder %>%
+    group_by(continent) %>%
+    summarize(mean_gdpPercap=mean(gdpPercap))
+```
+
+![gap-summarize](http://swcarpentry.github.io/r-novice-gapminder/fig/13-dplyr-fig3.png)
+
+* That allowed us to calculate the mean gdpPercap for each continent, but it gets even better.
+
+<http://swcarpentry.github.io/r-novice-gapminder/13-dplyr#challenge-2>  
+
+* The function group_by() allows us to group by multiple variables. Let’s group by year and continent.
+
+```{r grou-by-multi}
+gdp_bycontinents_byyear <- gapminder %>%
+    group_by(continent,year) %>%
+    summarize(mean_gdpPercap=mean(gdpPercap))
+```
+
+* That is already quite powerful, but it gets even better! You’re not limited to defining 1 new variable in summarize().
+
+```{r pop-by-cont}
+gdp_pop_bycontinents_byyear <- gapminder %>%
+    group_by(continent,year) %>%
+    summarize(mean_gdpPercap=mean(gdpPercap),
+              sd_gdpPercap=sd(gdpPercap),
+              mean_pop=mean(pop),
+              sd_pop=sd(pop))
+```
+
+## Using mutate()
+
+* We can also create new variables prior to (or even after) summarizing information using mutate().
+
+```{r mutate-ex}
+gdp_pop_bycontinents_byyear <- gapminder %>%
+    mutate(gdp_billion=gdpPercap*pop/10^9) %>%
+    group_by(continent,year) %>%
+    summarize(mean_gdpPercap=mean(gdpPercap),
+              sd_gdpPercap=sd(gdpPercap),
+              mean_pop=mean(pop),
+              sd_pop=sd(pop),
+              mean_gdp_billion=mean(gdp_billion),
+              sd_gdp_billion=sd(gdp_billion))
+
+```
+
+<http://swcarpentry.github.io/r-novice-gapminder/13-dplyr#advanced-challenge>  
+
+## Tidyr
+
+Researchers often want to manipulate their data from the ‘wide’ to the ‘long’ format, or vice-versa. The ‘long’ format is where:
+
+* each column is a variable
+* each row is an observation
+
+* In the ‘long’ format, you usually have 1 column for the observed variable and the other columns are ID variables.
+
+* For the ‘wide’ format each row is often a site/subject/patient and you have multiple observation variables containing the same type of data. 
+* These can be either repeated observations over time, or observation of multiple variables (or a mix of both). 
+* You may find data input may be simpler or some other applications may prefer the ‘wide’ format. 
+* However, many of R’s functions have been designed assuming you have ‘long’ format data. This tutorial will help you efficiently transform your data regardless of original format.
+
+![widevlong](http://swcarpentry.github.io/r-novice-gapminder/fig/14-tidyr-fig1.png)
+
+* These data formats mainly affect readability. 
+* For humans, the wide format is often more intuitive since we can often see more of the data on the screen due to it’s shape. 
+* However, the long format is more machine readable and is closer to the formatting of databases. 
+* The ID variables in our dataframes are similar to the fields in a database and observed variables are like the database values.
+
+```{r install-packages}
+#install.packages("tidyr")
+#install.packages("dplyr")
+```
+
+* Load the packages
+
+```{r load-packages}
+library("tidyr")
+library("dplyr")
+```
+* let's look at the structure of gapminder
+
+```{r structure}
+str(gapminder)
+```
+<http://swcarpentry.github.io/r-novice-gapminder/14-tidyr#challenge-1>  
+
+* Sometimes, as with the gapminder dataset, we have multiple types of observed data. 
+* It is somewhere in between the purely ‘long’ and ‘wide’ data formats.
+* we have 3 "ID variables" (continent, country, year) and 2 "observation variables" (pop,lifeExp,gdpPercap)
+* this intermediate format in most cases despite not having ALL observations in 1 column given that all 3 observation variables have different units. 
+* There are few operations that would need us to stretch out this dataframe any longer (i.e. 4 ID variables and 1 Observation variable).
+
+* which are often vector based, you usually do not want to do mathematical operations on values with different units. 
+* using the purely long format, a single mean for all of the values of population, life expectancy, and GDP would not be meaningful since it would return the mean of values with 3 incompatible units. 
+* The solution is that we first manipulate the data either by grouping (see the lesson on dplyr), or we change the structure of the dataframe. 
+* Note: Some plotting functions in R actually work better in the wide format data.
+
+## From wide to long format with gather()
+
+* Until now, we’ve been using the nicely formatted original gapminder dataset, but ‘real’ data (i.e. our own research data) will never be so well organized. Here let’s start with the wide format version of the gapminder dataset.
+
+* We’ll load the data file and look at it. Note: we don’t want our continent and country columns to be factors, so we use the stringsAsFactors argument for read.csv() to disable that.
+
+```{r download-wide}
+download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv', 'data/gapminder_wide.csv')
+```
+```{r load-wide}
+gap_wide <- read.csv("data/gapminder_wide.csv", stringsAsFactors = FALSE)
+str(gap_wide)
+```
+![Wide](http://swcarpentry.github.io/r-novice-gapminder/fig/14-tidyr-fig2.png)
+* The first step towards getting our nice intermediate data format is to first convert from the wide to the long format.
+* The tidyr function `gather()` will ‘gather’ your observation variables into a single variable.
+
+```{r}
+gap_long <- gap_wide %>% 
+  gather(obstype_year, obs_values, starts_with('pop'), 
+starts_with('lifeExp'), starts_with('gdpPercap'))
+str(gap_long)
+```
+* we've used piping syntax like we did in dplyr
+* in fact, these are compatible and you can use a mix of tidyr and dplyr funcitons togeth
+
+* inside `gather()` we first name the new column for the new ID variable (obstyper_year), the name for the new amalgamated observation variable (obs_value), then the names of the old observation variables.
+* we could have typed out all the observation variables but as in the `select()` function in dplyr, we can use `starts_with()` argument to select all variables that start with the desired string
+* gather also allows alternate syntax of using the `-` symbol to identify which variabels are not to be gathered (i.e. ID variables)
+
+![longformat](http://swcarpentry.github.io/r-novice-gapminder/fig/14-tidyr-fig3.png)
+```{r with-exclude}
+gap_long <- gap_wide %>% gather(obstype_year,obs_values,-continent,-country)
+str(gap_long)
+```
+
+* this may seem trival with this dataset, but sometimes you have 1 ID variable and 40 Observations variables with irregular variable names
+* flexibility is a big time saver!
+
+* now `obstype_year` contains 2 pieces of information, the observation type(pop, lifeExp, or gdpPercap) and the year. 
+* we can use the `separate()` function to split the character strings into multiple variables
+
+```{r separate-obs}
+gap_long <- gap_long %>% separate(obstype_year,into=c('obs_type','year'),sep="_")
+gap_long$year <- as.integer(gap_long$year)
+```
+<http://swcarpentry.github.io/r-novice-gapminder/14-tidyr#challenge-2>  
+
+## From long to intermediate format with `spread()`
+
+* let's use the opposite of `gather` to spread our observation variables back out
+* we cna then spread `gap_long()` to the original intermediate format or the widest format
+* let's start with intermediate format
+
+```{r gap-norm}
+gap_normal <- gap_long %>% spread(obs_type,obs_values)
+dim(gap_normal)
+names(gap_normal)
+names(gapminder)
+```
+
+Now we’ve got an intermediate dataframe gap_normal with the same dimensions as the original gapminder, but the order of the variables is different. Let’s fix that before checking if they are all.equal().
+
+
+```{r}
+gap_normal <- gap_normal[,names(gapminder)]
+all.equal(gap_normal,gapminder)
+head(gap_normal)
+head(gapminder)
+```
+We’re almost there, the original was sorted by country, continent, then year.
+```{r}
+gap_normal <- gap_normal %>% arrange(country,continent,year)
+all.equal(gap_normal,gapminder)
+```
+* great we've gone from longest format back to the intermediate and didn't introcude any errors in our code
+* now let's conver the long all the way back to the wide
+* in the wide format, we will keep country and continent as ID variables and spread the observations across the 3 metrics (pop, lifeExp, gdpPercap) and time (year)
+* we need appropriate lables for all our new variables (time*metric combinations)
+* we also need to unify our ID varialbes to simplify the process of defining gap_wide
+
+```{r}
+gap_temp <- gap_long %>% unite(var_ID,continent,country,sep="_")
+str(gap_temp)
+```
+
+```{r}
+gap_temp <- gap_long %>%
+    unite(ID_var,continent,country,sep="_") %>%
+    unite(var_names,obs_type,year,sep="_")
+str(gap_temp)
+```
+* Using unite() we now have a single ID variable which is a combination of continent,country,and we have defined variable names. We’re now ready to pipe in spread()
+```{r}
+gap_wide_new <- gap_long %>%
+    unite(ID_var,continent,country,sep="_") %>%
+    unite(var_names,obs_type,year,sep="_") %>%
+    spread(var_names,obs_values)
+str(gap_wide_new)
+```
+<http://swcarpentry.github.io/r-novice-gapminder/14-tidyr#challenge-3>  
+
+Now we have a great ‘wide’ format dataframe, but the ID_var could be more usable, let’s separate it into 2 variables with separate()
+
+```{r}
+gap_wide_betterID <- separate(gap_wide_new,ID_var,c("continent","country"),sep="_")
+gap_wide_betterID <- gap_long %>%
+    unite(ID_var, continent,country,sep="_") %>%
+    unite(var_names, obs_type,year,sep="_") %>%
+    spread(var_names, obs_values) %>%
+    separate(ID_var, c("continent","country"),sep="_")
+str(gap_wide_betterID)
+```
+
+```{r}
+all.equal(gap_wide, gap_wide_betterID)
+```
+
+**There and back again!**
+
+
+

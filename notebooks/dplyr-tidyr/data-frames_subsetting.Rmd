@@ -1,0 +1,20 @@
+---
+title: "MED264: Data frames & Subsetting"
+author: "Tim Dennis"
+date: "January 7, 2016"
+output: html_document
+---
+
+## Data frame
+
+Data frames are lists under the hood, so similar methods apply.
+[ will act the same way as for lists, where each list is a column
+
+```{r}
+head(gapminder[3])
+head(gapminder[["lifeExp"]]) # [[ will act to extract a single column
+head(gapminder$year) #$ provides shorthand to extract columns by name
+#With two arguments, [ behaves the same way as for matrices:
+gapminder[1:3,]
+gapminder[3,] #is a data frame b/c of the mixed types
+```

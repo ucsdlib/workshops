@@ -1,0 +1,36 @@
+---
+title: "dplyr solutions"
+author: "Tim Dennis"
+date: "January 20, 2016"
+output: html_document
+---
+
+
+> ## Advanced Challenge {.challenge}
+  > Calculate the average life expectancy in 2002 of 2 randomly selected countries for each continent. Then arrange the continent names in reverse order.
+> **Hint:** Use the `dplyr` functions `arrange()` and `sample_n()`, they have similar syntax to other dplyr functions.
+>
+  
+  > ## Solution to Challenge 1 {.challenge}
+  >```{r}
+>year_country_lifeExp_Africa <- gapminder %>%
+  >                            filter(continent=="Africa") %>%
+  >                            select(year,country,lifeExp)
+> ```
+
+> ## Solution to Challenge 2 {.challenge}
+  >```{r}
+>lifeExp_bycountry <- gapminder %>%
+  >    group_by(country) %>%
+  >    summarize(mean_lifeExp=mean(lifeExp))
+>```
+
+> ## Solution to Advanced Challenge {.challenge}
+  >```{r}
+>lifeExp_2countries_bycontinents <- gapminder %>% 
+  >    filter(year==2002) %>%
+  >    group_by(continent) %>%
+  >    sample_n(2) %>%
+  >    summarize(mean_lifeExp=mean(lifeExp)) %>%
+  >    arrange(desc(mean_lifeExp))
+>```
