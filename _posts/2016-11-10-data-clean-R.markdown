@@ -8,6 +8,23 @@ category: posts r
 
 * 9:00am - 12:00pm, Thursday, November 10, 2016
 
+## Course materials
+
+### Data - We will use a few csvs:
+
+1. Gapminder, you can get that by running this code in R:
+
+```{r}
+gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
+```
+
+2. A zip file of several csv's:
+
+https://github.com/ucsdlib/workshops/raw/gh-pages/notebooks/data.zip
+
+Unzip those into your 'data' folder inside your workshop project folder.
+
+
 ## Instructors
 
 * @u2ng - Reid Otsuji
@@ -19,4 +36,4 @@ Graduate students and researchers
 
 ## Description
 
-This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 11/8. 
+This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 11/8.
