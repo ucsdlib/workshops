@@ -6,6 +6,10 @@ category: posts r
 
 ## Topics
 
+* Preprocessing text  
+* Dictionary Methods (i.e. Sentiment Analysis)
+* Discriminating / Distinctive Words
+* Document Similarity
 
 ## Time/Dates
 
