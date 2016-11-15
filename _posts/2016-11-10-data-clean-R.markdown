@@ -18,6 +18,10 @@ category: posts r
 gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
 ~~~
 
+~~~
+download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv', 'data/gapminder_wide.csv')
+~~~
+
 2. A zip file of several csv's:
 
 <https://github.com/ucsdlib/workshops/raw/gh-pages/notebooks/data.zip>
@@ -25,6 +29,7 @@ gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
 Unzip those into your 'data' folder inside your workshop project folder.
 
 ### Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd>
+
 ## Instructors
 
 * @u2ng - Reid Otsuji

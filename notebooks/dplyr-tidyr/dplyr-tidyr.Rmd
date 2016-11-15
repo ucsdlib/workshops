@@ -171,6 +171,7 @@ gdp_pop_bycontinents_byyear <- gapminder %>%
 ```
 
 <http://swcarpentry.github.io/r-novice-gapminder/13-dplyr#advanced-challenge>  
+https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
 
 ## Tidyr
 
