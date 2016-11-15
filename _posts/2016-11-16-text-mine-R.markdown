@@ -15,7 +15,7 @@ category: posts r
 
 * 9:00am - 12:00pm, Wednesday, November 16, 2016
 
-##Location
+## Location
 
 * [Biomedical Library Classroom 4](http://maps.google.com/maps?q=32.875270,%20-117.236917)
 
@@ -54,6 +54,8 @@ RStudio is an environment for developing using R. It can be downloaded [here](ht
 15. `wordcloud` # to visualize wordclouds
 16. `rJava` # dependency for mallet
 17. Any dependencies to the packages above.
+
+## Data
 
 ## Audience
 
