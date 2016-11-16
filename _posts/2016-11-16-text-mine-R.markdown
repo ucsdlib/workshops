@@ -12,11 +12,13 @@ category: posts r
 * Word frequencies
 * Wordclouds - of course!
 * Discriminating / Distinctive Words
+* Time permitting: Dictionary Methods (i.e. Sentiment Analysis)
 
-**Time permitting:** 
+**Things not covered**
 
-* Dictionary Methods (i.e. Sentiment Analysis)
 * Document Similarity
+* Topic modeling
+* Clustering
 
 ## Time/Dates
 
@@ -73,3 +75,8 @@ Graduate students and researchers
 ## Description
 
 This workshop will introduce you to text analysis techniques in R, an open source programming language. Some familiarity with R is expected as a requirement to attend this course.  You can attend the Intro to R course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp.
+
+## Credits
+
+* Rochelle Terman <https://github.com/rochelleterman/text-analysis-dhbsi>
+* DataCamp.com for some examples
