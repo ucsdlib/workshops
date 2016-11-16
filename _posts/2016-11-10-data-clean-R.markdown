@@ -4,6 +4,14 @@ title: Data Cleaning, Preparation and Analysis in R
 category: posts r
 ---
 
+## Resources and materials
+
+* [R for Reproducible Scientific Analysis](http://swcarpentry.github.io/r-novice-gapminder/)
+  * [Dataframe manipulation with dplyr](http://swcarpentry.github.io/r-novice-gapminder/13-dplyr/)
+  * [Dataframe manipulation with tidyr](http://swcarpentry.github.io/r-novice-gapminder/14-tidyr/)
+* [Data wrangling cheat sheet from RStduio](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
+* [Introduction to dplyr](http://stat545.com/block009_dplyr-intro.html)
+
 ## Time/Dates
 
 * 9:00am - 12:00pm, Thursday, November 10, 2016

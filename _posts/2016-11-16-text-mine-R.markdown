@@ -7,7 +7,7 @@ category: posts r
 ## Materials & Resources
 * We followed the workshop materials created by Rochelle Terman (@rochelleterman): [Computational Text Analysis Workshop Materials
 ](https://github.com/rochelleterman/text-analysis-dhbsi)
-* Text analysis with R for students <http://roger.ucsd.edu/record=b8216276~S9>
+* Text analysis with R for students of literature  <http://roger.ucsd.edu/record=b8216276~S9>
 * Guide to Text Corpora <http://ucsd.libguides.com/data-statistics/textmining>
 * We subscribe to [Crimson Hexagon](http://ucsd.libguides.com/data-statistics/crimsonhexagon)
 
