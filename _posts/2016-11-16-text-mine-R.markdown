@@ -68,6 +68,9 @@ RStudio is an environment for developing using R. It can be downloaded [here](ht
 
 <https://drive.google.com/open?id=0ByRar-ghNtRlNGpENWJmNGNlS2s>
 
+## Etherpad
+http://pad.software-carpentry.org/r-txt-analysis
+
 ## Audience
 
 Graduate students and researchers
