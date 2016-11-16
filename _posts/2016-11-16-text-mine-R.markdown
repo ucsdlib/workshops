@@ -7,8 +7,15 @@ category: posts r
 ## Topics
 
 * Preprocessing text  
-* Dictionary Methods (i.e. Sentiment Analysis)
+* Creating a DTM (document term matrix)
+* Working with DTMs
+* Word frequencies
+* Wordclouds - of course!
 * Discriminating / Distinctive Words
+
+**Time permitting:** 
+
+* Dictionary Methods (i.e. Sentiment Analysis)
 * Document Similarity
 
 ## Time/Dates
@@ -56,6 +63,8 @@ RStudio is an environment for developing using R. It can be downloaded [here](ht
 17. Any dependencies to the packages above.
 
 ## Data
+
+<https://drive.google.com/open?id=0ByRar-ghNtRlNGpENWJmNGNlS2s>
 
 ## Audience
 
