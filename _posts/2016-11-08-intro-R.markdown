@@ -4,6 +4,13 @@ title: Introduction to R
 category: posts r
 ---
 
+## Materials & Notes
+
+* Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd> - use for collaborative note taking
+* Lessons for this class: <http://swcarpentry.github.io/r-novice-gapminder/>
+* The library has lots of R ebooks <https://goo.gl/zBiQ7U>
+* If you get stuck, come to the [Data/GIS Lab](http://ucsd.libguides.com/data-gis-lab), contact me <timdennis@ucsd.edu>, or set up an appointment <https://calendly.com/timdennis>
+
 ## Time/Dates
 
 * 9:00am - 12:00pm, Tuesday, November 8, 2016
@@ -16,11 +23,6 @@ category: posts r
 ## Audience
 
 Graduate students and researchers.
-
-## Materials & Notes
-
-* Etherpad: <http://pad.software-carpentry.org/intro-r-ucsd> - use for collaborative note taking
-* Lessons for this class: <http://swcarpentry.github.io/r-novice-gapminder/>
 
 ## Description
 
