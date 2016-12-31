@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Introduction to text mining in R
+title: GPS Skills Courses
 category: posts r python opensci
 ---
 
