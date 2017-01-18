@@ -37,12 +37,12 @@ GOALS: Students should be able to use ggplot2 to generate publication quality gr
 
 ## Terminology:
 
-* ggplot - The main function where you specify the dataset and variables to plot
-* geoms - geometric objects
+* **ggplot** - The main function where you specify the dataset and variables to plot
+* **geoms** - geometric objects
   * `geom_point()`, `geom bar()`, `geom density()`, `geom line()`, `geom area()`
-* aes - aesthetics 
+* **aes** - aesthetics 
   * shape, transparency (alpha), color, fill, line-type.
-* scales Define how your data will be plotted
+* **scales** Define how your data will be plotted
   * continuous, discrete, log
 
 ## First Plots with GGPLOT
@@ -55,6 +55,12 @@ library(ggplot2)
 head(iris)
 ```
 
+WE can use the `data()` function to show the available built-in data sets in R. 
+
+
+```{r show-datasets}
+data()
+```
 
 ```{r}
 ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
@@ -301,7 +307,6 @@ ggplot(df, aes(Species, value, fill = variable)) +
 
 
 ### Exercise 3
-TODO: get image
 Using the d2 dataset you created earlier, generate this plot below. Take a quick look at the data first to see if it needs to be binned
 
 ```{r exercise-3ans}
