@@ -39,7 +39,7 @@ GOALS: Students should be able to use ggplot2 to generate publication quality gr
 
 * ggplot - The main function where you specify the dataset and variables to plot
 * geoms - geometric objects
-  * geom point(), geom bar(), geom density(), geom line(), geom area()
+  * `geom_point()`, `geom bar()`, `geom density()`, `geom line()`, `geom area()`
 * aes - aesthetics 
   * shape, transparency (alpha), color, fill, line-type.
 * scales Define how your data will be plotted
