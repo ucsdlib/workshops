@@ -1,8 +1,10 @@
 ---
 title: "Plotting with GGPLOT2"
-author: "Tim Dennis"
+author: "Tim Dennis & Reid Otsuji"
 date: "January 8, 2016"
-output: html_document
+output: 
+  html_document: 
+    toc: yes
 ---
 
 First part of this notebook based on Karthik Ram's [GGPLOT2 Lecture](https://github.com/karthik/ggplot-lecture) ([CC-By 2.0](https://creativecommons.org/licenses/by/2.0/))
@@ -23,27 +25,27 @@ GOALS: Students should be able to use ggplot2 to generate publication quality gr
 
 * GGPLOT2 developed by Hadley Wickham based on a *grammar-of-graphics*
 * Grammar of graphics consists of a **dataset**, **coordinate system**, and **geoms** -- the visual representation of data points.
-* Think about figure in layers:  like you would in photoshop, illustrator or inkscape.
+* Think about figure in layers:  like you would in Photoshop, illustrator or Inkscape.
 
-##Data viz
+##DataViz
 
 * plotting our data is one of the best was to quickly explore it and the various relationships between variables
 * 3 main plotting systems in R: the base [plotting system](http://www.statmethods.net/graphs/), the [lattice package](http://www.statmethods.net/advgraphs/trellis.html), and [ggplot2](http://www.statmethods.net/advgraphs/ggplot2.html)
 *`ggplot2` is built on the grammar-of-graphics:
    * idea that any plot can be expressed from the same set of components: a **data** set, a **coodinate system** and a set of **geoms**-- the visual representation of data points
-* **Key** to understanding `ggplot2` is thinking aobut a figure in layers -- think of arcgis or programs like Photoshop
+* **Key** to understanding `ggplot2` is thinking about a figure in layers -- think of ArcGIS or programs like Photoshop
 
 ## Terminology:
 
 * ggplot - The main function where you specify the dataset and variables to plot
 * geoms - geometric objects
-   - geom point(), geom bar(), geom density(), geom line(), geom area()
-* aes - aesthetics
-   - shape, transparency (alpha), color, fill, linetype.
+  * geom point(), geom bar(), geom density(), geom line(), geom area()
+* aes - aesthetics 
+  * shape, transparency (alpha), color, fill, line-type.
 * scales Define how your data will be plotted
-   - continuous, discrete, log
+  * continuous, discrete, log
 
-## First Plots
+## First Plots with GGPLOT
 
 This famous (Fisher's or Anderson's) iris data set gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica.
 
@@ -67,9 +69,9 @@ myplot <- ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width))
 myplot + geom_point()
 ```
 
-* Specify the data and variables inside the `ggplot` function.
+* Specify the **data and variables** inside the `ggplot` function.
 * Anything else that goes in here becomes a global setting.
-* Then add layers of geometric objects, statistical models, andpanels.
+* Then add layers of geometric objects, statistical models, and panels.
 
 **Increase size of points**
 
@@ -78,20 +80,20 @@ ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point(size = 3)
 ```
 
-**make if colorful**
+**Make it colorful**
 ```{r icolor}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   geom_point(size = 3)
 ```
 
-**differentiate points by shape**
+**Differentiate points by shape**
 
 ```{r iris-shape}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   geom_point(aes(shape = Species), size = 3)
 ```
 
-## Exercise 1
+### Exercise 1
 
 ```{r ex-1}
 # Make a small sample of the diamonds dataset
@@ -106,7 +108,7 @@ ggplot(d2, aes(carat, price, color = color)) + geom_point() + theme_gray()
 ```
 
 
-## Switch to Gapminder Data
+**Switch to Gapminder Data**
 
 ```{r lifeExp-vs-gdpPercap-scatter, message=FALSE}
 #gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
@@ -140,11 +142,11 @@ ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
   geom_point()
 ```
 
-##Challenge 1
+### Challenge 1
 
 <http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-1>
 
-##Challenge 2
+### Challenge 2
 
 <http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-2>
 
@@ -182,7 +184,7 @@ colour = "black")
 
 **Download data**
 
-```{r download-cli-data}
+```{r download-cli-data, eval=FALSE}
 download.file('https://raw.github.com/karthikram/ggplot-lecture/master/climate.csv', 'data/climate.csv')
 #climate <- read.csv(text=RCurl::getURL(https://raw.github.com/karthikram/ggplot-lecture/master/climate.csv))
 ```
@@ -206,7 +208,7 @@ ggplot(climate, aes(Year, Anomaly10y)) +
   geom_line(color = "steelblue")
 ```
 
-## Exercise 2
+### Exercise 2
 Modify the previous plot and change it such that there are three lines instead of one with a confidence band.
 
 ```{r answer-ex2}
@@ -230,10 +232,10 @@ ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
 ```
 
 * used geom_line instead of geom_point
-* added a **by** *aesthetic* to get a line per country and color by contintent
+* added a **by** *aesthetic* to get a line per country and color by continent
 
 
-* visualise both lines and points on the plot?
+* visualize both lines and points on the plot?
 
 ```{r lifeExp-line-point}
 ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country, color=continent)) +
@@ -251,7 +253,7 @@ ggplot(data = gapminder, aes(x=year, y=lifeExp, by=country)) +
 * the *aesthetic* mapping of **color** has been moved from the
 global plot options in `ggplot` to the `geom_line` layer so it no longer applies to the points
 
-##Challenge 3
+### Challenge 3
 
 <http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3>
 
@@ -272,7 +274,7 @@ ggplot(df, aes(Species, value, fill = variable)) +
 
 ## Dplyr and Tidyr 
 
-*These two packages are the swiss army knives of R.
+*These two packages are the Swiss army knives of R.
 * dplyr
   * filter
   * select
@@ -298,7 +300,7 @@ ggplot(df, aes(Species, value, fill = variable)) +
 ```
 
 
-## Exercise 3
+### Exercise 3
 TODO: get image
 Using the d2 dataset you created earlier, generate this plot below. Take a quick look at the data first to see if it needs to be binned
 
@@ -352,7 +354,7 @@ library(RColorBrewer)
 display.brewer.all() 
 ```
 
-## Using a color brewer palette
+### Using a color brewer palette
 
 ```{r brewer}
 #df  <- melt(iris, id.vars = "Species")
@@ -361,7 +363,7 @@ ggplot(df, aes(Species, value, fill = variable)) +
   scale_fill_brewer(palette = "Set1")
 ```
 
-##Manual color scale
+### Manual color scale
 ```{r manual-color}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 geom_point() +
@@ -393,7 +395,7 @@ ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
 * `log10` function applied a transformation to the values of the gdpPercap column before rendering them on the plot
    * each multiple of 10 now only corresponds to an increase in 1 on the transformed scale, e.g. a GDP per capita
 of 1,000 is now 3 on the y axis, a value of 10,000 corresponds to 4 on the y axis and so on
-* This makes it easier to visualise the spread of data on the y-axis.
+* This makes it easier to visualize the spread of data on the y-axis.
 
 * We can fit a simple relationship to the data by adding another layer, `geom_smooth`:
 
@@ -413,7 +415,7 @@ pwd <- ggplot(data = gapminder, aes(x = lifeExp, y = gdpPercap)) +
   1. Here we *set* the **size** aesthetic by passing it as an argument to `geom_smooth`.
   2. use the `aes` function to define a *mapping* between data variables and their visual representation.
 
-## with iris data - smooth
+### With iris data - smooth
 
 ```{r smooth-lm}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
@@ -431,11 +433,11 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 ```
 
 
-## Challenge 4a
+### Challenge 4a
 
 <http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3#challenge-4a>
 
-## Challenge 4b
+### Challenge 4b
 
 <http://swcarpentry.github.io/r-novice-gapminder/08-plot-ggplot2#challenge-3#challenge-4b>
 
@@ -480,7 +482,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   geom_point() +
   facet_grid(Species ~ .)
 ```
-### and along rows
+### And along rows
 
 ```{r facet-rows}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
@@ -488,7 +490,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   facet_grid(. ~ Species)
 ```
 
-###or wrap your panels
+### Or wrap your panels
 
 ```{r}
 ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
@@ -496,7 +498,7 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
   facet_wrap( ~ Species)
 ```
 
-## themes
+## Themes
 
 Themes are a great way to define custom plots.
 
@@ -557,7 +559,7 @@ ggsave(file = "/path/to/figure/filename.pdf")
 This is just a taste of what you can do with `ggplot2`. RStudio provides a
 really useful [cheat sheet][cheat] of the different layers available, and more
 extensive documentation is available on the [ggplot2 website][ggplot-doc].
-Finally, if you have no idea how to change something, a quick google search will
+Finally, if you have no idea how to change something, a quick Google search will
 usually send you to a relevant question and answer on Stack Overflow with reusable
 code to modify!
 
