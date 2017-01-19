@@ -1,0 +1,61 @@
+---
+title: "Homework 2 - R"
+author: "Tim Dennis"
+date: "1/19/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+setwd('~/workshops/data-workshops/notebooks/intro-r')
+gapminder <- read.csv('data/gapminder-FiveYearData.csv')
+library(ggplot2)
+```
+
+1. The following code produces multiple panels of life expectancy over time from `gapminder` focusing only on those countries with names that start with the letter “A” or “Z”.
+
+We start by subsetting the data. We use the substr function to pull out a part of a character string; in this case, the letters that occur in positions start through stop, inclusive, of the gapminder$country vector. The operator %in% allows us to make multiple comparisons rather than write out long subsetting conditions (in this case, starts.with %in% c("A", "Z") is equivalent to starts.with == "A" | starts.with == "Z"). Run the code to get a feel for the steps involved. 
+
+```{r}
+starts.with <- substr(gapminder$country, start = 1, stop = 1)
+az.countries <- gapminder[starts.with %in% c("A", "Z"), ]
+ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
+  geom_line() + facet_wrap( ~ country)
+```
+
+To clean this figure up for a publication we need to change some of the text elements. The x-axis is too cluttered, and the y axis should read “Life expectancy”, rather than the column name in the data frame.
+
+We can do this by adding a couple of different layers. The theme layer controls the axis text, and overall text size, and there are special layers for changing the axis labels. To change the legend title, we need to use the scales layer. 
+
+Set the title to "Figure 1", Y label to "Year", X Label to "Life expectancy", and Legend title to "Continent". Use these functions to set those. 
+
+* title = ggtitle()
+* X label = xlab()
+* Y label = ylab()
+* Legend title = scale_colour_discrete()
+
+ANSWER: 
+```{r eval=FALSE}
+starts.with <- substr(gapminder$country, start = 1, stop = 1)
+az.countries <- gapminder[starts.with %in% c("A", "Z"), ]
+ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
+  geom_line() + facet_wrap( ~ country)
+## your added functions to set the title, xlab, ylab and legend here
+```
+
+
+
+2. (10pts) Creating an area graph
+
+Using the gapminder data we used on Wed.’s class, create a density plot of GDP per capita, filled by continent
+that looks like the following: NOTE: Transform the x axis to better visualise the data spread. - Add a facet layer
+to panel the density plots by year.
+
+```{r echo=FALSE}
+ggplot(data = gapminder, aes(x = gdpPercap, fill=continent)) +
+ geom_density(alpha=0.6) + facet_wrap( ~ year) + scale_x_log10()
+```
+
+

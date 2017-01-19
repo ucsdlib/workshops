@@ -128,7 +128,7 @@ ggplot(data = gapminder, aes(x = gdpPercap, y = lifeExp)) +
 
 NOTE:
 
-* First we call the `ggplot` function -any arguments we provide the `ggplot` function are considered global options: they apply to all layers
+* First we call the `ggplot` function -any arguments we provide the `ggplot` function are considered **global** options: they apply to all layers
 * We passed two arguments to `ggplot`:
   * data
   * an `aes` function - which tells ggplot how variables map to aesthetic properties
@@ -183,9 +183,9 @@ h + geom_histogram(binwidth = 30, colour = "black")
 
 ```{r histogram-2}
 h <- ggplot(faithful, aes(x = waiting))
-h + geom_histogram(binwidth = 8, fill = "steelblue",
-colour = "black")
+h + geom_histogram(binwidth = 8, fill = "steelblue", colour = "black")
 ```
+
 ## Line plots
 
 **Download data**
@@ -205,6 +205,7 @@ ggplot(climate, aes(Year, Anomaly10y)) +
 ```
 
 **We can also plot confidence regions**
+
 * In the climate data set, `Anomaly10y` is a 10-year running average of the deviation (in Celsius) from the average 1950–1980 temperature, and `Unc10y` is the 95% confidence interval. We’ll set ymax and ymin to Anomaly10y plus or minus Unc10y (Figure 4-25):
 
 ```{r}
@@ -215,6 +216,7 @@ ggplot(climate, aes(Year, Anomaly10y)) +
 ```
 
 ### Exercise 2
+
 Modify the previous plot and change it such that there are three lines instead of one with a confidence band.
 
 ```{r answer-ex2}
@@ -278,6 +280,8 @@ ggplot(df, aes(Species, value, fill = variable)) +
   geom_bar(stat = "identity")
 ```
 
+>>The heights of the bars commonly represent one of two things: either a count of cases in each group, or the values in a column of the data frame. By default, geom_bar uses stat="bin". This makes the height of each bar equal to the number of cases in each group, and it is incompatible with mapping values to the y aesthetic. If you want the heights of the bars to represent values in the data, use stat="identity" and map a value to the y aesthetic.
+
 ## Dplyr and Tidyr 
 
 *These two packages are the Swiss army knives of R.
@@ -289,7 +293,8 @@ ggplot(df, aes(Species, value, fill = variable)) +
   * gather
   * spread
   * separate   
-  
+
+Let's look at iris again. 
   
 ```{r}
 iris[1:2, ]
@@ -317,10 +322,9 @@ ggplot(d2, aes(clarity, fill = cut)) +
 
 
 ## Exercise 4
-TODO: add image
 * Using the climate dataset, create a new variable called sign. Make it logical (true/false) based on the sign of Anomaly10y.
 * Plot a bar plot and use sign variable as the fill.
-
+* HINT: Look up `ifelse` function to create `clim$sign`
 
 ```{r}
 clim <- read.csv('data/climate.csv', header = TRUE)
@@ -350,7 +354,8 @@ ggplot(faithful, aes(waiting)) +
 ## Colors
 
 ```{r eval=FALSE}
-aes(color = variable) aes(color = "black")
+aes(color = variable) 
+aes(color = "black")
 # Or add it as a scale
 scale_fill_manual(values = c("color1", "color2"))
 ```
