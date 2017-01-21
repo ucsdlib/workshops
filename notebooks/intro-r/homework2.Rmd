@@ -15,6 +15,7 @@ library(ggplot2)
 ```
 
 Question 1. 
+
 The following code produces multiple panels of life expectancy over time from `gapminder` focusing only on those countries with names that start with the letter “A” or “Z”.
 
 We start by subsetting the data. We use the substr function to pull out a part of a character string; in this case, the letters that occur in positions start through stop, inclusive, of the gapminder$country vector. The operator %in% allows us to make multiple comparisons rather than write out long subsetting conditions (in this case, starts.with %in% c("A", "Z") is equivalent to starts.with == "A" | starts.with == "Z"). Run the code to get a feel for the steps involved. 
@@ -48,7 +49,8 @@ ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
 
 
 Question 2. Basic scatter plot
-Use the **mtcars** database available in RStudio, create a scatter plot that shows the relationship between various car weights (wt), miles per gallon (mpg) and engine cylinders (cyl). Use colored points to show the different cylinders in the plot.
+
+Use the **mtcars** database available in RStudio.  The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).   Create a scatter plot that shows the relationship between various car weights (wt), miles per gallon (mpg) and engine cylinders (cyl). Use colored points to show the different cylinders in the plot.
 
 ANSWER:
 ```{r echo=FALSE}
@@ -57,6 +59,7 @@ ggplot(mtcars, aes(wt, mpg)) +
 ```
 
 Question 3. Adding shapes
+
 Using the solution from the previous example, create a new plot using shapes to differentiate the various engine cylinders.  
 
 ANSWER:
