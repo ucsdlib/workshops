@@ -65,11 +65,25 @@ Using the solution from the previous example, create a new plot using shapes to 
 ANSWER:
 ```{r echo=FALSE}
 ggplot(mtcars, aes(wt, mpg)) + 
-  geom_point(aes(shape = factor(cyl), colour = factor(cyl)))
+  geom_point(aes(shape = factor(cyl), color = factor(cyl)))
+```
+
+Question 4. Assign a ggplot function to an object.
+
+Create a ggplot function that contains the built in diamonds data and an aesthetics layer.  Map carat on the x axis and price on the y axis.  Assign the ggplot function to an object: **myplot**
+
+Using **+** , add a geom point with an alpha of 0.1, smooth, and gray theme layers to the myplot object.  Map **clarity** to the color argument in the geom_smooth function (add **se=FALSE** to geom_smooth to turn off error shading). 
+ 
+Note: the plot will take a few seconds to generate. 
+
+ANSWER:
+```{r echo=FALSE}
+Myplot <- ggplot(data = diamonds, aes(carat, price))
+Myplot + geom_point(alpha=0.1) + geom_smooth(aes(color=clarity), se=FALSE) + theme_gray()
 ```
 
 
-Question 4. Creating an area graph
+Question 5. Creating an area graph
 
 Using the gapminder data we used on Wed.’s class, create a density plot of GDP per capita, filled by continent
 that looks like the following: NOTE: Transform the x axis to better visualise the data spread. - Add a facet layer
