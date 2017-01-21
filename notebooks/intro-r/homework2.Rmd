@@ -58,4 +58,11 @@ ggplot(data = gapminder, aes(x = gdpPercap, fill=continent)) +
  geom_density(alpha=0.6) + facet_wrap( ~ year) + scale_x_log10()
 ```
 
+3. Using the **mtcars** database available in RStudio, create a scatter plot that shows the relationship between various car weights (wt), miles per gallon (mpg) and engine cylinders (cyl). Use colored points to show the different cylinders in the plot. Tip: Use head(mtcars) to view the data. 
+
+```{r echo=FALSE}
+ggplot(mtcars, aes(wt, mpg)) + 
+  geom_point(aes(colour = factor(cyl)))
+```
+
 
