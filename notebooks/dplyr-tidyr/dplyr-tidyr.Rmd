@@ -14,9 +14,9 @@ GOAL: To be able to use the 6 data frame manipulation in dplyr.
 ### Load data
 
 ```{r}
-#setwd('~/workshops/r-novice-gapminder/')
+setwd('~/workshops/data-workshops/notebooks/dplyr-tidyr/')
 #gapminder <- read.csv("https://goo.gl/BtBnPg", header = T)
-gapminder <- read.csv("data/gapminder-FiveYearData.csv", header = T)
+gapminder <- read.csv("data/gapminder.csv", header = T)
 ```
 
 Manipulation of dataframes means many things to many researchers, 
@@ -230,7 +230,7 @@ str(gapminder)
 * We’ll load the data file and look at it. Note: we don’t want our continent and country columns to be factors, so we use the stringsAsFactors argument for read.csv() to disable that.
 
 ```{r download-wide}
-download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv', 'data/gapminder_wide.csv')
+#download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_wide.csv', 'data/gapminder_wide.csv')
 ```
 ```{r load-wide}
 gap_wide <- read.csv("data/gapminder_wide.csv", stringsAsFactors = FALSE)

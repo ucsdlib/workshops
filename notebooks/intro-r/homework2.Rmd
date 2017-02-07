@@ -1,20 +1,35 @@
 ---
-title: "Homework 2 - R"
-author: "Tim Dennis"
-date: "1/19/2017"
-output: html_document
+title: "Homework 2 - R GGPLOT2"
+author: "Tim Dennis & Reid Otsuji"
+date: "1/21/2017"
+output: 
+  html_document: 
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+## Due 2/4 - By Midnight 
+
+### How to submit your homework:
+1. Download the [r-homework2.R](r-homework2.R) script and open in Rstudio
+2. Rename `r-homework2.R` to `yourlastname_sudentID_r-homework1.R`
+3. Type the answers in the uncommented lines (those without #). Notice, for some lines, we have gotten you started with names of objects.
+4. Save the script file.
+5. Upload the file to tritonEd (we are working on getting that set up).  
+
+
+**Remeber to load the ggplot2 package and read in gapminder data**
+
 ```{r}
 setwd('~/workshops/data-workshops/notebooks/intro-r')
 gapminder <- read.csv('data/gapminder-FiveYearData.csv')
 library(ggplot2)
 ```
 
-Question 1. 
+## Question 1. Adding text to the graph
 
 The following code produces multiple panels of life expectancy over time from `gapminder` focusing only on those countries with names that start with the letter “A” or “Z”.
 
@@ -48,9 +63,9 @@ ggplot(data = az.countries, aes(x = year, y = lifeExp, color=continent)) +
 ```
 
 
-Question 2. Basic scatter plot
+## Question 2. Basic scatter plot
 
-Use the **mtcars** database available in RStudio.  The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).   Create a scatter plot that shows the relationship between various car weights (wt), miles per gallon (mpg) and engine cylinders (cyl). Use colored points to show the different cylinders in the plot.
+Use the **mtcars** dataset available in RStudio (look at the help: `?mtcars`).  The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973–74 models).   Create a scatter plot that shows the relationship between various car weights (wt), miles per gallon (mpg) and engine cylinders (cyl). Use colored points to show the different cylinders in the plot. Note: you will need to convert cyl to a factor. You will need the function `factor()` to do this. 
 
 ANSWER:
 ```{r echo=FALSE}
@@ -58,7 +73,7 @@ ggplot(mtcars, aes(wt, mpg)) +
   geom_point(aes(colour = factor(cyl)))
 ```
 
-Question 3. Adding shapes
+## Question 3. Adding shapes
 
 Using the solution from the previous example, create a new plot using shapes to differentiate the various engine cylinders.  
 
@@ -68,11 +83,11 @@ ggplot(mtcars, aes(wt, mpg)) +
   geom_point(aes(shape = factor(cyl), color = factor(cyl)))
 ```
 
-Question 4. Assign a ggplot function to an object.
+## Question 4. Assign a ggplot function to an object.
 
-Create a ggplot function that contains the built in diamonds data and an aesthetics layer.  Map carat on the x axis and price on the y axis.  Assign the ggplot function to an object: **myplot**
+Create a ggplot function that contains the built-in `diamonds` dataset and an aesthetics layer.  Map `carat` on the x axis and `price` on the y axis.  Assign the ggplot function to an object: **myplot**
 
-Using **+** , add a geom point with an alpha of 0.1, smooth, and gray theme layers to the myplot object.  Map **clarity** to the color argument in the geom_smooth function (add **se=FALSE** to geom_smooth to turn off error shading). 
+Using **+** , add a `geom_point` with an alpha of 0.1. Then add (`+`) geom_smooth and `theme_minimal` layers to the `myplot` object.  Map **clarity** to the color argument in the `geom_smooth` function (add **se=FALSE** to `geom_smooth` to turn off error shading). 
  
 Note: the plot will take a few seconds to generate. 
 
@@ -83,18 +98,16 @@ Myplot + geom_point(alpha=0.1) + geom_smooth(aes(color=clarity), se=FALSE) + the
 ```
 
 
-Question 5. Creating an area graph
+## Question 5. Creating an area graph
 
 Using the gapminder data we used on Wed.’s class, create a density plot of GDP per capita, filled by continent
-that looks like the following: NOTE: Transform the x axis to better visualise the data spread. - Add a facet layer
-to panel the density plots by year.
+that looks like the following: 
+NOTE: Transform the x axis using a log10 to better visualise the data spread. - Add a facet layer to panel the density plots by year. 
+
+Hint: Look up the `facet_wrap` and `scale_x_*` functions to help you accomplish this. 
 
 ANSWER:
 ```{r echo=FALSE}
 ggplot(data = gapminder, aes(x = gdpPercap, fill=continent)) +
  geom_density(alpha=0.6) + facet_wrap( ~ year) + scale_x_log10()
 ```
-
-
-
-

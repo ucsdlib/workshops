@@ -18,7 +18,7 @@ Functions gather a sequence of operations into a whole, preserving it for ongoin
 * a defined set of inputs and expected outputs
 * rich connections to the larger programming environment
 
-As the basic building block of most programming languages, user-defined functions constitute â€œprogrammingâ€ as much as any single abstraction can. If you have written a function, you are a computer programmer.
+As the basic building block of most programming languages, user-defined functions constitute **programming** as much as any single abstraction can. If you have written a function, you are a computer programmer.
 
 ## Creating a function 
 
