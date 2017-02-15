@@ -29,7 +29,7 @@ We will be offering the first 7 things of the 23 research data things starting o
 5. Identifiers and linked data
 6. Data management plans
 7. What are publishers and funders saying about data
-8. Data literacy and outreach
+8. Data literacy and outreach 
 9. Exploring APIs and apps
 10. Find it with data!
 11. Tools of the trade
