@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Software Carpentry Workshop - Scripps Institution of Oceanography
+title: Software Carpentry Workshop - UC San Diego Library
 category: [upcoming, swc]
 ---
 
