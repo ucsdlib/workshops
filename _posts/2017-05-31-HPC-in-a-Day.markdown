@@ -17,7 +17,7 @@ These High-performance Computing (HPC) clusters are used for large scale data pr
 
 ## Dates
 
-* May 31, 2016
+* May 31, 2017
 * 9:00a -4:30p 
 
 ## Location
@@ -28,7 +28,7 @@ These High-performance Computing (HPC) clusters are used for large scale data pr
 ## Instructors/Helpers
 
 * Andrea Zonca - SDSC 
-* 
+
 * Helpers:
 * @u2ng - Reid Otsuji
 * Ryan Johnson
@@ -43,5 +43,5 @@ These High-performance Computing (HPC) clusters are used for large scale data pr
 ## Websites
 
 * [Workshop website](https://psteinb.github.io/hpc-in-a-day/)
-[comment:] <> * [Etherpad](http://pad.software-carpentry.org/ucsd-2017)
+
 
