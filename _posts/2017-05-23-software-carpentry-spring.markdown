@@ -31,7 +31,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 * Helpers:
 * Ryan Johnson
 * Hao Ye
-* Bia Villas Boas
+
 
 
 
