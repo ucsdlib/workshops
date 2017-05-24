@@ -24,13 +24,14 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Instructors/Helpers
 
-* Jessica Blanton - Unix
-* Hao Ye - Unix
-* @mcritchlow Matt Critchlow - Git
-* Guilherme Castelao - Python
+* Jessica Blanton (SIO) - Unix
+* @u2ng - Reid Otsuji (Library)- Git
+* Guilherme Castelao (SIO) - Python
+
 * Helpers:
-* @u2ng - Reid Otsuji
 * Ryan Johnson
+* Hao Ye
+* Bia Villas Boas
 
 
 
