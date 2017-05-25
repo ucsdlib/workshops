@@ -29,8 +29,9 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 * Guilherme Castelao (SIO) - Python
 
 * Helpers:
-* Ryan Johnson
-* Hao Ye
+* Ryan Johnson (Library)
+* Hao Ye (SIO)
+* Bia Villas Boas (SIO)
 
 
 
