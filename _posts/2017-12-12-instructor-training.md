@@ -23,15 +23,7 @@ This two-day class has the following overall goals:
 * December 12-13, 2017
 * 8-4pm 
 
-## Instructors/Helpers
-
-* @u2ng - Reid Otsuji - (host/helper)
-
-## Register 
-
-* [Register Here](http://ucsd.libcal.com/event/2561343)
-
 ## Websites
 
 * Workshop 
-* Etherpad
+
