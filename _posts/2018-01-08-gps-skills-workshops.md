@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GPS Skills Courses
+title: GPS Skills Courses 2018
 category: posts r python opensci
 ---
 January 8, 2018
