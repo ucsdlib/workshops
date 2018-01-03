@@ -19,8 +19,8 @@ Graduate students in the School of Global Policy and Strategy. Registration is c
 
 ## Course Syllabus & Website:
 
-* [Intro to R](https://ucsdlib.github.io/win2018-gps-intro-r/)
-* [Python](https://ucsdlib.github.io/win2018-gps-python/)
+* [Intro to R](https://ucsdlib.github.io/win2018-gps-r/)
+* Python
 * Data Management
 
 ## Description
