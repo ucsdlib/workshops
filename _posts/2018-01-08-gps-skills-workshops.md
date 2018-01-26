@@ -7,7 +7,7 @@ January 8, 2018
 
 ## Time/Dates/Location
 
-* All courses are from 6:30-9:30pm in TBD
+* All courses are from 6:30-9:20pm in Robinson Auditorium
 
 * R: Jan. 8, 17, & 22nd.
 * Python: Jan. 29, Feb. 5 & 12
