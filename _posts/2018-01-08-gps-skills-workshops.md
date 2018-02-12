@@ -26,3 +26,6 @@ Graduate students in the School of Global Policy and Strategy. Registration is c
 ## Description
 
 These skill courses will introduce the R & Python programming languages and basic concepts of working with and managing data. In order to earn a certificate of proficiency, a student must attend all of the class meetings for the individual course, complete short coding assignments, and pass the short, in-class quizzes. Courses begin on Monday, January 8th.
+
+## Resources:
+[Python Information](https://github.com/ucsdlib/win2018-gps-python/blob/master/pyinfo/python-Information-resources.ipynb)
