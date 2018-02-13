@@ -17,7 +17,7 @@ category: posts r python opensci
 
 Graduate students in the School of Global Policy and Strategy. Registration is closed to GPS students only. Contact timdennis@ucsd.edu for more information.
 
-## Course Syllabus & Website:
+### Course Syllabus & Website:
 
 * [Intro to R](https://ucsdlib.github.io/win2017-gps-intro-r/)
 * [Python](https://ucsdlib.github.io/gps-py2017/)
