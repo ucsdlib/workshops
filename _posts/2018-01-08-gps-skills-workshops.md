@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GPS Skills Courses 2018
-category: posts r python opensci
+category: posts r python Bash SQL opensci
 ---
 January 8, 2018
 
@@ -21,7 +21,7 @@ Graduate students in the School of Global Policy and Strategy. Registration is c
 
 * [Intro to R](https://ucsdlib.github.io/win2018-gps-r/)
 * [Python](https://ucsdlib.github.io/win2018-gps-python/)
-* Data Management
+* [Data Management](https://ucsdlib.github.io/win2018-gps-intro-dm/)
 
 ## Description
 
