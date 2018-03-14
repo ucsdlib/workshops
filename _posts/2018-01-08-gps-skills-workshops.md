@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GPS Skills Courses 2018
-category: posts r python Bash SQL opensci
+category: [past,r, python, Bash, SQL, opensci]
 ---
 January 8, 2018
 
