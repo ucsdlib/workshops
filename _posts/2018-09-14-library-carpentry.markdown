@@ -20,7 +20,6 @@ UC San Diego Biomedical Library Building, Classroom 4
 * Reid Otsuji @U2NG
 * Annelise Sklar
 * Stephanie Labou
-* Matt Crichlow @mcritchlow
 * Ryan Johnson @remerjohnson
 * Peter Rolla
 
@@ -29,11 +28,11 @@ UC San Diego Biomedical Library Building, Classroom 4
 1. Data Intro for Librarians
 2. Unix shell
 3. Tidy Data for librarians
-4. OpenRefine
+4. Intro to OpenRefine
 
 ## Audience
 
-Library professionals interested in learning software skills
+Library professionals interested in learning software skills.
 
 ## Register
 Library staff event calendar
@@ -43,4 +42,4 @@ Library staff event calendar
 * <https://ucsdlib.github.io/2018-09-14-UCSDLC/>
 
 ## HackMD (a collaborative space for note-taking and info)
-*  link will be posted after workshop is completed
+*  [Collaborative Notes link](https://ucsdlib.github.io/2018-09-14-UCSDLC/)
