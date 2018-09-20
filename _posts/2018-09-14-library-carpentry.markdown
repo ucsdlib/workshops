@@ -42,4 +42,4 @@ Library staff event calendar
 * <https://ucsdlib.github.io/2018-09-14-UCSDLC/>
 
 ## HackMD (a collaborative space for note-taking and info)
-*  [Collaborative Notes link](https://ucsdlib.github.io/2018-09-14-UCSDLC/)
+*  [Collaborative Notes link](https://hackmd.io/ytKtTa_bQ_mdgFFo_TCUug)
