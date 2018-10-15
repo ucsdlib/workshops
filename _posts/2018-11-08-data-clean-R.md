@@ -53,5 +53,5 @@ This workshop is geared to researchers wanting to use R for basic data manipulat
 
 Some familiarity with R is expected as a requirement to attend this course.  You can attend the [Intro to R](http://ucsd.libcal.com/event/2846343?hs=a) course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp. 
 
-<slabou@ucsd.edu>
-<rotsuji@ucsd.edu> 
+* <slabou@ucsd.edu>
+* <rotsuji@ucsd.edu> 
