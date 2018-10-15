@@ -51,6 +51,10 @@ Graduate students and researchers
 
 This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 11/8.
 
+* A laptop is required for the course.  
+
+<https://ucsd.libcal.com/event/4700956>
+
 Some familiarity with R is expected as a requirement to attend this course.  You can attend the [Intro to R](http://ucsd.libcal.com/event/2846343?hs=a) course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp. 
 
 * <slabou@ucsd.edu>
