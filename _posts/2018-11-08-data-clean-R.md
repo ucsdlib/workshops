@@ -14,7 +14,7 @@ category: posts r
 
 ## Time/Dates
 
-* 9:00am - 12:00pm, Thursday, November 8, 2018
+* 9:00am - 12:00pm, Thursday, November 8, 2018.
 
 ## Course materials
 
@@ -36,12 +36,12 @@ download.file('https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/
 
 Unzip those into your 'data' folder inside your workshop project folder.
 
-### HackMD: 
+### HackMD:
 
 ## Instructors
 
 * @u2ng - Reid Otsuji
-* @stephlabou - Stephanie Labou 
+* @stephlabou - Stephanie Labou
 
 ## Audience
 
@@ -55,7 +55,7 @@ This workshop is geared to researchers wanting to use R for basic data manipulat
 
 <https://ucsd.libcal.com/event/4700956>
 
-Some familiarity with R is expected as a requirement to attend this course.  You can attend the [Intro to R](http://ucsd.libcal.com/event/2846343?hs=a) course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp. 
+Some familiarity with R is expected as a requirement to attend this course.  You can attend the [Intro to R](http://ucsd.libcal.com/event/2846343?hs=a) course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp.
 
 * <slabou@ucsd.edu>
-* <rotsuji@ucsd.edu> 
+* <rotsuji@ucsd.edu>
