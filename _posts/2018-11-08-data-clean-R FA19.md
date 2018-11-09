@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Data Cleaning, Preparation and Analysis in R
+title: Data Cleaning, Preparation and Analysis in R FA19
 category: posts r
 ---
 
@@ -14,7 +14,7 @@ category: posts r
 
 ## Time/Dates
 
-* 9:00am - 12:00pm, Thursday, November 8, 2018.
+* 9:00am - 12:00pm, Thursday, November 8, 2018
 
 ## Course materials
 
