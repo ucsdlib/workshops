@@ -24,7 +24,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Instructors/Helpers
 
-* Bia Villas Boas (SFO) - Python
+* Bia Villas Boas (SIO) - Python
 * Rick Mc Cosh (OB/GYN+REPRO SCI) - BASH
 * Saranya Canchi (NEURO SCI) - BASH
 * @u2ng - Reid Otsuji (Library) - Git
