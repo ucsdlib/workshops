@@ -21,7 +21,7 @@ This two-day class has the following overall goals:
 ## Dates
 
 * December 11-12, 2018
-* 9-4:30pm
+* 9:00am - 4:30pm
 
 ## Websites
 

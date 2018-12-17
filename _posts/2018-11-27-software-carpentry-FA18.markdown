@@ -15,7 +15,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 ## Dates
 
 * Nov 27-28, 2018
-* 9:00a -4:30p
+* 9:00am - 4:30pm
 
 ## Location
 
@@ -38,7 +38,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Register
 
-* Available on Workshop site 
+* Available on Workshop site
 
 ## Websites
 
