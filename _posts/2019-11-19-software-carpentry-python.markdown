@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Software Carpentry Workshop - Scripps Institution of Oceanography
+title: Software Carpentry Workshop - Python
 category: [upcoming, swc]
 ---
 
@@ -9,37 +9,35 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 ## Topics:
 
 * Unix shell
-* Python
-* Data management (lecture)
+* Pytho
 * Git
-* Intro to R (half day)
 
 ## Dates
 
-* July 01-03, 2019
+* November 19-20, 2019
 * 8:30a -4:30p
 
 ## Location
 
-* Scripps Institution of Oceanography, Nierenberg Hall 101, La Jolla, CA 92037.
+* UC San Diego Library - Biomedical library Building, Classroom 4. 
 
 
 ## Instructors/Helpers
 
-* Bia Villas Boas (SIO)
-* Gui Castelao (SIO)
-* Stephanie Labou (Library)
+* Andre Paloczy (SIO)
+* Justin Shaffer (Pediatrics)
 * Reid Otsuji (Library)
 
-* Helpers:  Isa Rosso, Justin Shaffer
+* Helpers:  Stephanie Labou, Ryan Johnson, Tamara Bozih.
 
 
 
 ## Register
 
-* Invitation only - SURF Summer Internship Program
+* Open to Campus
 
 ## Websites
 
-* [Workshop website](https://ucsdlib.github.io/2019-07-01-UCSD/)
-* [Collaborative Notes](https://tinyurl.com/swc-note-taking)
+* [Workshop website](https://ucsdlib.github.io/2019-11-19-UCSD/)
+* [Collaborative Notes Day 1](https://hackmd.io/f2_NX9rJSxuk2XUsPhWxwA)
+* [Collaborative Notes Day 2](https://hackmd.io/poWbJl1PTRqY5MvqxaaltA)
