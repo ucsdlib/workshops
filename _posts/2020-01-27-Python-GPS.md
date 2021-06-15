@@ -1,5 +1,9 @@
 ---
 published: true
+layout: post
+category:
+  - posts
+  - python
 ---
 ---
 layout: post
