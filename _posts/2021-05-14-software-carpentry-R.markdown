@@ -20,6 +20,7 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 * Virtual
 
+
 ## Instructors/Helpers
 
 * Tim Dennis
@@ -33,5 +34,5 @@ Software Carpentry's mission is to help scientists and engineers get more resear
 
 ## Websites
 
-* [Workshop website](https://ucsdlib.github.io/2019-11-19-UCSD/)
+* [Workshop website](https://ucla-data-archive.github.io/2021-05-14-ucla/)
 * [Collaborative Notes](https://pad.carpentries.org/2021-r-librarians)
