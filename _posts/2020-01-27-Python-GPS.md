@@ -1,14 +1,9 @@
 ---
-published: true
+published: false
 layout: post
 category:
   - posts
   - python
----
----
-layout: post
-title: Intro to Python - School of Global Policy and Strategy
-category: [posts, python]
 ---
 
 ## Introduction:
