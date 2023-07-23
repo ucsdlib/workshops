@@ -1,6 +1,6 @@
 ---
 layout: post
-title: School of Global Policy and Strategy: Intro to Data Management (2021)
+title: School of Global Policy and Strategy - Intro to Data Management (2021)
 category:
   - posts
   - upcoming

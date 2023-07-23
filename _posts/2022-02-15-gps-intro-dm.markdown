@@ -1,6 +1,6 @@
 ---
 layout: post
-title: School of Global Policy and Strategy: Intro to Data Management (2022)
+title: School of Global Policy and Strategy - Intro to Data Management (2022)
 category:
   - posts
   - upcoming

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries Bootcamp: Intro to Python & Version Control w/ Git
+title: Carpentries Bootcamp - Intro to Python & Version Control w/ Git (2022)
 category:
   - posts
   - upcoming

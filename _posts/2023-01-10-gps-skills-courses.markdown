@@ -1,6 +1,6 @@
 ---
 layout: post
-title: School of Global Policy and Strategy: Skills Courses
+title: School of Global Policy and Strategy - Skills Courses
 category:
   - posts
   - upcoming

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: School of Global Policy and Strategy: Intro to Python (2021)
+title: School of Global Policy and Strategy - Intro to Python (2021)
 category:
   - posts
   - upcoming

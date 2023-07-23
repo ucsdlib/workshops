@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries Bootcamp:  R, Unix Shell, & Git
+title: Carpentries Bootcamp - R, Unix Shell, & Git (2022)
 category:
   - posts
   - upcoming

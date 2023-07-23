@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries Bootcamp:  Python, Unix Shell, & Git
+title: Carpentries Bootcamp - Python, Unix Shell, & Git (2022)
 category:
   - posts
   - upcoming
