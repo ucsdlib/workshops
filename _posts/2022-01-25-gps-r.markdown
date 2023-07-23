@@ -1,0 +1,49 @@
+---
+layout: post
+title: School of Global Policy and Strategy: Intro to R (2022)
+category:
+  - posts
+  - upcoming
+---
+
+## Introduction:
+
+This course will introduce you the R programming language and how to use R to work with data from GapMinder. In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short coding assignments, and pass the short, in-class quiz at the end of the course. See the workshop website for more details and schedule.
+
+
+## Topics:
+
+* R
+
+
+## Dates
+
+* January 25 - February 10, 2022
+* Tuesday & Thursday @ 2:00 PM - 3:20 PM
+
+## Location
+
+* RM 3203, School of Global Policy and Strategy, 9500 Gilman Drive, #0519, La Jolla, CA.
+
+
+## Staff
+
+### Instructors
+* TBD
+
+### Helpers
+* Reid Otsuji (UCSD/Library)
+* Kimberly Thomas (UCSD/RITS)
+* Stephanie Labou (UCSD/Library)
+* TA: Slade Mahoney (GPS)
+
+
+## Audience
+
+* GPS graduate students (do not need to have any previous knowledge of programming or the tools presented in the course to attend).
+
+
+## Resources
+
+* [Workshop Website](https://ucsdlib.github.io/win2022-gps-r/)
+* [Collaborative Notes](https://hackmd.io/@U2NG/S1g1fvCKt)
