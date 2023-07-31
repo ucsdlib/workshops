@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries Bootcamp - Python, Unix Shell, & Git (2023)
+title: Atmospheric Sciences Librarianship 101
 category:
   - posts
   - upcoming
@@ -8,20 +8,22 @@ category:
 
 ## Introduction:
 
-This hands-on workshop will cover basic concepts and tools used with the Python programming language and version control with Git. Participants will be encouraged to help one another and to apply what they have learned to their own research problems. See the workshop website for more details and schedule.
+This free two-day virtual workshop designed to introduce librarians and library staff to the basics of atmospheric science, including reference questions, collections and data management, and common resources used in the discipline.
 
 
 ## Topics:
 
-* Python
-* Git
-* Unix Shell
+* Collection Development
+* Remote Sensing
+* Scientific Data Management
+* Atmospheric and Oceanic Sciences Librarianship
+* Open Educational Resources (OER)
 
 
 ## Dates
 
-* June 26 - June 29, 2023
-* 1:00 PM - 4:00 PM (PST)
+* June 28 - June 29, 2022
+* 1:30 PM - 4:30 PM (ET)
 
 
 ## Location
@@ -31,24 +33,26 @@ This hands-on workshop will cover basic concepts and tools used with the Python 
 
 ## Staff
 
-### Instructors
-* Reid Otsuji (UCSD/Library)
-* Kimberly Thomas (UCSD/RITS)
-* Celeste Allaband (UCSD)
-* Rukmini Ravi (UCSD)
+### Speakers
+* Jamie Stanfield (The University of Southern Mississippi)
+* Dr. Greg Carter (The University of Southern Mississippi)
+* Matt Mayernik (National Center for Atmospheric Research)
+* Emily Wild (Princeton University)
+* Michele Frasier-Robinson (The University of Southern Mississippi)
+* Katie Rowley (National Oceanic and Atmospheric Administration)
 
-### Helpers
-* Reid Otsuji (UCSD/Library)
-* Kimberly Thomas (UCSD/RITS)
-* Rukmini Ravi (UCSD)
+### Organizing Team
+* Reid Otsuji (UCSD)
+* Elise Gowen (The Pennsylvania State University)
+* Justin Easterday (The University of Southern Mississippi)
+* Joyce Shaw (The University of Southern Mississippi)
 
 
 ## Audience
 
-* All UCSD students, staff, and faculty (do not need to have any previous knowledge of programming or the tools presented in the workshop to attend).
+* All librarians and library staff.
 
 
 ## Resources
 
-* [Workshop Website](https://ucsdlib.github.io/2023-06-26-UCSD/)
-* [Collaborative Notes](https://hackmd.io/4g9vUUBfTzacwN1jGgiKug)
+* [Website](https://libguides.lib.usm.edu/asl_101/team)
