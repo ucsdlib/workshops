@@ -1,6 +1,6 @@
 ---
 layout: post
-title: School of Global Policy and Strategy - Skills Courses
+title: School of Global Policy and Strategy - Skills Courses (2023)
 category:
   - posts
   - upcoming
