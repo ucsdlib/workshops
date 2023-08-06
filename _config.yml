@@ -15,4 +15,4 @@ datasvs: http://ucsd.libguides.com/data-services
 rdcp: http://libraries.ucsd.edu/services/data-curation
 
 # Enables/Disable future posts (posts with dates in the future) and drafts.  set using: True | False
-future: True
+future: false
