@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PREDATE TEST
-category: posts, upcoming
+category: [upcoming, swc]
 ---
 
 ## can you see this
