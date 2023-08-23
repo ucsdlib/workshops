@@ -3,6 +3,11 @@ layout: post
 title: UC Carpentries Fall Workshop (2023)
 category:
   - posts
+  - Carpentries
+  - Unix Shell
+  - Git
+  - R
+  - python
 ---
 
 ## Introduction:
@@ -13,7 +18,6 @@ Workshop topics taught as daily sessions Monday - Thursday over the course of tw
 
 
 ## Topics:
-
 * Unix Shell
 * Git Version Control
 * R
@@ -23,14 +27,11 @@ Workshop topics taught as daily sessions Monday - Thursday over the course of tw
 
 
 ## Dates
-
-* September 11 - September 21, 2023
-* 8:30 AM - 12:30 PM
+September 11 - September 21, 2023 (8:30 AM - 12:30 PM)
 
 
 ## Location
-
-* Zoom
+Zoom
 
 
 ## Staff
@@ -60,11 +61,9 @@ Workshop topics taught as daily sessions Monday - Thursday over the course of tw
 * Ellen Davenport
 
 ## Audience
-
-* All University of California students, staff, postdocs, and faculty (do not need to have any previous knowledge of programming or the tools presented in the workshop to attend).
+All University of California students, staff, postdocs, and faculty (do not need to have any previous knowledge of programming or the tools presented in the workshop to attend).
 
 
 ## Resources
-
 * [Workshop Website](https://ucsdlib.github.io/2023-09-11-uc-carpentries/)
 * [Collaborative Notes](https://hackmd.io/vfJr8dEaQn-bKG2XoWZexw?edit)

@@ -1,45 +1,45 @@
 ---
 layout: post
-title: Data Visualization in R for Genomics
-category: posts r
+title: Genomics: Data Visualization in R
+category:
+- posts
+- R
+- Genomics
 ---
 
-## Time/Date 
+## Introduction
 
-* March 9, 10am - noon 
+This workshop is geared to researchers wanting to use R for basic data visualization. It will cover ggplot2 and touch on ggvis for data visualization.  Some experience with R or attendance of the Intro to R course on 3/7 is required.
 
-## Location 
-
-Biomedical Library Building - Classroom 4 
-
-## Audience 
-
-Graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371652) 
-
-## Topics: 
+## Topics:
 
 * [Basic plots, Advanced plots & Writing images](http://www.datacarpentry.org/R-genomics/05-data-visualization.html) (from DataCarpentry)
 * [GGPLOT2](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480/8dot-a-rapid-introduction-to-the-r-language/ch08_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE0NDkzNjc0ODAlMkZpZHAxNTcxMjc4NF9odG1sJnF1ZXJ5PQ==) - from Bioinformatics Data Skills
-* [ggplot2 documentation](http://docs.ggplot2.org/current/)
 
-## Lecture Notes: 
- 
- * [ggplot2](http://ucsdlib.github.io/workshops/ggplot.html)
+## Date
+
+* March 9, 2016 (10:00 AM - 12:00 PM)
+
+## Location
+
+Biomedical Library Building - Classroom 4
+
+## Audience
+
+All graduate students or researchers.
 
 ## Resources
 
 * [Bioinformatics Data Skills](http://proquest.safaribooksonline.com/book/bioinformatics/9781449367480)
 * [R Graphics Cookbook](http://proquest.safaribooksonline.com/book/programming/r/9781449363086)
-* [Ggplot2: elegant grpahics for data analysis/Hadley Wickham](http://roger.ucsd.edu/record=b6914994~S9)
+* [Ggplot2: elegant graphics for data analysis/Hadley Wickham](http://roger.ucsd.edu/record=b6914994~S9)
+* [Registration Page](http://ucsd.libcal.com/event/2371652)
+* [Lecture Notes: ggplot2](http://ucsdlib.github.io/workshops/ggplot.html)
+* [ggplot2 documentation](http://docs.ggplot2.org/current/)
 
+## Setup
 
-## Description
-
-This workshop is geared to researchers wanting to use R for basic data visualization. It will cover ggplot2 and touch on ggvis for data visualization.  Some experience with R or attendance of the Intro to R course on 3/7 is required. 
-
-## Setup <a name="setup"></a>
-
-This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  This class is 
+This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  This class is
 
 ### R
 

@@ -1,38 +1,40 @@
 ---
 layout: post
-title: Software Carpentry Workshop - R
-category: [upcoming, swc]
+title: Carpentries Spring Workshop: R (2021)
+category:
+- posts
+- R
+- Carpentries
 ---
 
+## Introduction
 Software Carpentry's mission is to help scientists and engineers get more research done in less time and with less pain by teaching them basic lab skills for scientific computing. This hands-on workshop will cover basic concepts and tools, including program design, version control, data management, and task automation. Participants will be encouraged to help one another and to apply what they have learned to their own research problems.
 
-## Topics:
-
+## Topics
 * R
 
 ## Dates
-
-* May 14, 2021
-* May 21, 2021
-* 9:00a - 12:30p
+May 14, 2021 & May 21, 2021 (9:00 AM - 12:30 PM)
 
 ## Location
+Zoom
 
-* Virtual
+## Staff
 
-
-## Instructors/Helpers
-
+### Instructors
 * Tim Dennis
-* Reid Otsuji (Library)
+* Reid Otsuji (UCSD)
 
-* Helpers:  Jamie Jamison, Zhiyuan Yao, Leigh Phan, Geno Sanchez, Julia Wood, Dave George.
+### Helpers
+* Jamie Jamison
+* Zhiyuan Yao
+* Leigh Phan
+* Geno Sanchez
+* Julia Wood
+* Dave George
 
-## Register
-
-* Open to Campus
+## Audience
+This event is open to campus.
 
 ## Websites
-
-* [Workshop website](https://ucla-data-archive.github.io/2021-05-14-ucla/)
 * [Collaborative Notes](https://pad.carpentries.org/2021-r-librarians)

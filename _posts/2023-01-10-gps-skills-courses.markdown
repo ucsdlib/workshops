@@ -3,7 +3,11 @@ layout: post
 title: School of Global Policy and Strategy - Skills Courses (2023)
 category:
   - posts
-  - upcoming
+  - R
+  - python
+  - Git
+  - Unix Shell
+  - gps
 ---
 
 ## Topics:
@@ -17,15 +21,12 @@ category:
 * Data Management
 
 ## Dates
-
-* January 10 - March 9, 2023
-* 2:00 PM - 3:20 PM
+January 10 - March 9, 2023 (2:00 PM - 3:20 PM)
 * See the workshop website for more details and schedule.
 
 
 ## Location
-
-* Zoom
+Zoom
 
 
 ## Staff
@@ -45,12 +46,10 @@ category:
 
 
 ## Audience
-
-* GPS graduate students (do not need to have any previous knowledge of programming or the tools presented in the course to attend).
+All GPS graduate students (do not need to have any previous knowledge of programming or the tools presented in the course to attend).
 
 
 ## Resources
-
 * [Workshop Website](https://ucsdlib.github.io/WIN2023-GPS-Skills-Courses/)
 * [Collaborative Notes: Python](https://hackmd.io/@kkt008/gps-python-2023)
 * [Collaborative Notes: R](https://hackmd.io/@kkt008/gps-r-2023)

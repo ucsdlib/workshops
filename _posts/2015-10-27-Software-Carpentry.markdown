@@ -1,21 +1,43 @@
 ---
 layout: post
-title: Software Carpentry Workshop
-category: posts
+title: Software Carpentries Workshop (2015)
+category:
+- posts
+- Carpentries
+- Python
+- Unix Shell
 ---
 
-## Time/Date 
+## Introduction
 
-Oct. 27-28,  All Day 
+This hands-on workshop will cover basic concepts and tools, including program design, version control, data management, and task automation. Participants will be encouraged to help one another and to apply what they have learned to their own research problems. See website below for more information.
 
-## Audience 
+## Topics
+* Unix Shell
+* Git Version Control
+* Python
 
-Researchers who are new to coding. 
+## Dates
 
-## Website: 
+October 27 - 28, 2015 (9:00 AM - 5:00 PM)
 
-Set up and course topics can be found on the [website](http://scicomp.sdsc.edu/2015-10-27-ucsd/).  Any notebooks and links to the collaborative notetaking can be found there as well. 
+## Location
+Biomedical Library Building, UC San Diego 9500 Gilman Dr, La Jolla, CA 92093, BLB Events Room.
 
-## Description
+## Staff
 
-UC San Diego Library’s  Research & Reference Advisory Services (Data Services) and the Research Data Curation programs for a two-day, intensive Software Carpentry workshop. Software Carpentry’s mission is to give scientists and engineers the tools they need to be more productive and efficient by teaching them basic lab skills for scientific computing. This hands-on workshop will cover basic concepts and tools, including program design in python, version control, data management, and task automation. Participants will be encouraged to collaborate and to apply what they have learned to their own research problems.
+### Instructors
+* Andrea Zonca
+* Tessa Pierce
+
+### Helpers
+* Tim Dennis
+* Reid Otsuji
+
+## Audience
+
+All graduate students and other researchers (do not need to have any previous knowledge of programming or the tools presented in the workshop to attend).
+
+## Resources:
+
+* [Workshop Website](http://scicomp.sdsc.edu/2015-10-27-ucsd/)

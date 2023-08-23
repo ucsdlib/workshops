@@ -1,32 +1,28 @@
 ---
 layout: post
-title: Introduction to Data Management Best Practices for SIO
-category: [upcoming]
+title: Scripps Institution of Oceanography: Introduction to Data Management - Best Practices (2021)
+category:
+- posts
+- Data Management
+- SIO
 ---
 
-
+## Introduction
 This workshop will introduce you to best practices for data management, preparation and representation of your research data.
 
-
 ## Topics:
-
-* Data management
+* Data Management
 
 
 ## Dates
-
-* July 23, 2021
-* July 30, 2021
-* 10:00a - 12:00p
+July 23, 2021 & July 30, 2021 (10:00 AM - 12:00 PM)
 
 
 ## Location
-
-* Zoom meeting
+Zoom
 
 
 ## Instructors
-
 * Stephanie Labou (Library)
 * Reid Otsuji (Library)
 * Mary Linn Bergstrom (Library)
@@ -35,17 +31,10 @@ This workshop will introduce you to best practices for data management, preparat
 * David Minor (Library)
 
 
-## Registration
-
-* Open to SIO students
-
-
-## Contact
-
-* Please mail rotsuji@ucsd.edu, slabou@ucsd.edu for more information.
-
+## Audience
+These workshops are open to all Scripps Institute of Oceanography (SIO) students.
 
 ## Websites
-
-* [Workshop website](https://ucsdlib.github.io/sum2021-sio-dm/)
+* [Workshop Website](https://ucsdlib.github.io/sum2021-sio-dm/)
 * [Collaborative Notes](https://hackmd.io/@U2NG/Hk21ZWTnu)
+* Contact [Reid Otsuji](rotsuji@ucsd.edu) or [Stephanie Labou](slabou@ucsd.edu) for more information.

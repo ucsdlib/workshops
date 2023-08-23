@@ -3,16 +3,13 @@ layout: post
 title: Atmospheric Sciences Librarianship 101
 category:
   - posts
-  - upcoming
 ---
 
 ## Introduction:
-
 This free two-day virtual workshop designed to introduce librarians and library staff to the basics of atmospheric science, including reference questions, collections and data management, and common resources used in the discipline.
 
 
 ## Topics:
-
 * Collection Development
 * Remote Sensing
 * Scientific Data Management
@@ -21,14 +18,11 @@ This free two-day virtual workshop designed to introduce librarians and library 
 
 
 ## Dates
-
-* June 28 - June 29, 2022
-* 1:30 PM - 4:30 PM (ET)
+June 28 - June 29, 2022 (1:30 PM - 4:30 PM ET)
 
 
 ## Location
-
-* Zoom
+Zoom
 
 
 ## Staff
@@ -49,10 +43,8 @@ This free two-day virtual workshop designed to introduce librarians and library 
 
 
 ## Audience
-
-* All librarians and library staff.
+All librarians and library staff.
 
 
 ## Resources
-
 * [Website](https://libguides.lib.usm.edu/asl_101/team)

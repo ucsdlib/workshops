@@ -3,7 +3,11 @@ layout: post
 title: UCSD-UCLA-UC Berkeley Carpentries Workshop (2020)
 category:
   - posts
-  - upcoming
+  - R
+  - python
+  - Git
+  - Unix Shell
+  - Carpentries
 ---
 
 ## Introduction:
@@ -21,13 +25,11 @@ This hands-on workshop will cover basic concepts and tools, including program de
 
 ## Dates
 
-* September 29 - October 1; October 6 - October 9; October 13 - October 15
-* 9:00 AM - 12:00 PM
+* September 29 - October 1; October 6 - October 9; October 13 - October 15 (9:00 AM - 12:00 PM)
 
 
 ## Location
-
-* Zoom
+Zoom
 
 
 ## Staff
@@ -60,8 +62,7 @@ This hands-on workshop will cover basic concepts and tools, including program de
 
 
 ## Audience
-
-* Graduate students and other researchers (do not need to have any previous knowledge of the tools that will be presented at the workshop).
+All graduate students and other researchers (do not need to have any previous knowledge of the tools that will be presented at the workshop).
 
 
 ## Resources

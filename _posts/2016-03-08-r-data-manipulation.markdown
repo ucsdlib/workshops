@@ -1,44 +1,45 @@
 ---
 layout: post
-title: Data Manipulation in R for Genomics
-category: posts r
+title: Genomics: Data Manipulation in R
+category:
+- posts
+- R
+- Genomics
 ---
 
-## Time/Date 
+## Introduction
 
-* March 8, 10am - noon 
+This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 3/7.
 
-## Location 
+## Topics:
 
-Biomedical Library Building - Classroom 4 
+* Data Manipulation Using dplyr (subsetting, filtering, aggregating)
+* Dataframe Manipulation with tidyr (reshaping data)
 
-## Audience 
+## Date
+March 8, 2016 (10:00 AM - 12:00 PM)
 
-Graduate students or researchers: [please register](http://ucsd.libcal.com/event/2371651) 
+## Location
 
-## Topics: 
+Biomedical Library Building - Classroom 4
 
-* Data manipulation using Dplyr (subsetting, filtering, aggregating) 
-* Dataframe manipulation with tidyr (reshaping data)
+## Audience
 
-## Code Samples: 
- 
+All graduate students or researchers.
+
+## Code Samples:
+
  * [dplyr 1](http://ucsdlib.github.io/workshops/dplyr.html)
  * [dplyr 2](http://ucsdlib.github.io/workshops/dc_dplyr.html)
 
 ## Resources
 
-For this course we will be using Etherpad for collaborative note taking:
-[Etherpad](https://public.etherpad-mozilla.org/p/dmanip)
+[Collaborative Notes: Etherpad](https://public.etherpad-mozilla.org/p/dmanip)
+[Registration Page](http://ucsd.libcal.com/event/2371651)
 
+## Setup
 
-## Description
-
-This workshop is geared to researchers wanting to use R for basic data manipulation and analysis. It will introduce participants to the basics of data tidying and manipulation (notably using tidyr & dplyr), how to set up data processing pipelines, and briefly cover working with a database. We will be using a genomics dataset for this course.  This workshop is designed for novices, but we would like you to have some experience with R or have attended the Intro to R course on 3/7. 
-
-## Setup <a name="setup"></a>
-
-This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  This class is 
+This workshop is taught in a hands-on style, so participants are encouraged to use their own computers. To participate in this course, you will need access to the software described below. In addition, you will need an up-to-date web browser.  This class is
 
 ### R
 

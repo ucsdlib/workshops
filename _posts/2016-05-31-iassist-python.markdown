@@ -1,23 +1,29 @@
 ---
 layout: post
 title: Python for IASSIST
-category: [python, iassist]
+category:
+- posts
+- python
 ---
 
+## Introduction
+
+Data professionals supporting researchers provide valuable services throughout the data management life cycle. According to recent surveys, up to 80% of a data scientist's time can be spent cleaning, harmonizing and integrating data (a.k.a.: data wrangling). While there are many useful tools available to assist with these types of workflows, knowledge of basic programming can be extremely empowering.
+
+This full day workshop will provide an introduction to Python - one of the most popular and versatile languages in use today.
+
+No prior programming experience required! The workshop will be split into two parts: "Basic Python Programming" in the morning, and "Working with Data using Python" in the afternoon.
+
+## Date
+May 31, 2016 (9:00 AM - 3:30 PM ((w/ lunch)
+
+## Location
+Computer Lab 205 - Ulrike Pihl's House <https://goo.gl/rrtHq7>
+
 ## Instructor
+Tim Dennis, UCSD (@jt14den)
 
-* Tim Dennis, UCSD (@jt14den)
-
-## Location 
-
-* Computer Lab 205 - Ulrike Pihl's House <https://goo.gl/rrtHq7>
-
-## Time/Date 
-
-* May 31, 2016
-* 09:00-15:30 (lunch break 12:00-13:30)
-
-## Schedule 
+## Schedule
 
 1. 9am - noon - [Building programs with Python](http://swcarpentry.github.io/python-novice-inflammation/)
 2. noon-1:30p - Lunch
@@ -35,7 +41,7 @@ category: [python, iassist]
 
 ## Python Resources
 
-Your library might subscribe to numerous programming e-books. 
+Your library might subscribe to numerous programming e-books.
 
 * [Python for Data Analysis](http://shop.oreilly.com/product/0636920023784.do) - Excellent book written by the guy who created Pandas
 * [Web Scraping with Python](http://shop.oreilly.com/product/0636920034391.do) - If you need get data from websites or an API
@@ -44,15 +50,7 @@ Your library might subscribe to numerous programming e-books.
 * [A gallery of Jupyter (Ipython) Notebooks](https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks)
 * [Exercism.io](http://exercism.io/) - Download and solve practice problems in nearly 30 different languages including Python
 
-## Description 
-
-Data professionals supporting researchers provide valuable services throughout the data management life cycle. According to recent surveys, up to 80% of a data scientist's time can be spent cleaning, harmonizing and integrating data (a.k.a.: data wrangling). While there are many useful tools available to assist with these types of workflows, knowledge of basic programming can be extremely empowering.
-
-This full day workshop will provide an introduction to Python - one of the most popular and versatile languages in use today.
-
-No prior programming experience required! The workshop will be split into two parts: "Basic Python Programming" in the morning, and "Working with Data using Python" in the afternoon.
-
-## Set up 
+## Set up
 
 Sign-up for an account with SageMathCloud using the email you use to register for the workshop with <https://cloud.sagemath.com/>.
 
@@ -60,7 +58,7 @@ Sign-up for an account with SageMathCloud using the email you use to register fo
 
 Participants are required to abide by a [Code of Conduct](http://software-carpentry.org/conduct.html). We are using the Software Carpentry Code for this workshop.
 
-## Outcomes
+## Goals
 
 Users will be able to:
 
@@ -70,6 +68,6 @@ Users will be able to:
 * transform web-fetched json data into csv format
 * reference materials
 
-Thanks to SageMathCloud for providing the Jupyter infrastructure: 
+Thanks to SageMathCloud for providing the Jupyter infrastructure:
 
 [![SageMathCloud](https://cloud.sagemath.com/smc-logo.png)](https://cloud.sagemath.com/)

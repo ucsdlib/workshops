@@ -4,11 +4,14 @@ title: School of Global Policy and Strategy - Skills Courses (2020)
 category:
   - posts
   - python
-published: true
+  - R
+  - python
+  - Data Management
+  - Unix Shell
+  - gps
 ---
 
 ## Introduction:
-
 This course will introduce you the R programming language and how to use R to work with data from GapMinder, Python programming language and how to use Python and the Jupyter Notebook to work with data, and the best practices in data management, preparation and representation, including the basics of data in spreadsheets, SQL and using the Unix Shell. In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short coding assignments, and pass the short, in-class quiz at the end of the course. See the workshop website for more details and schedule.
 
 
@@ -29,7 +32,6 @@ This course will introduce you the R programming language and how to use R to wo
 
 
 ## Location
-
 * Python & R: Room 3201, 9500 Gilman Drive, #0519, La Jolla, CA.
 * Data Management: Classroom 4, Biomedical Library Building, 9500 Gilman Dr., La Jolla, California.
 
@@ -57,7 +59,7 @@ This course will introduce you the R programming language and how to use R to wo
 
 ## Audience
 
-* GPS graduate students (do not need to have any previous knowledge of programming or the tools presented in the course to attend).
+* All GPS graduate students (do not need to have any previous knowledge of programming or the tools presented in the course to attend).
 
 
 ## Resources

@@ -1,15 +1,14 @@
 ---
 layout: post
-title: Introduction to text mining in R
-category: posts r
+title: Introduction to Text Mining in R
+category:
+- posts
+- R
 ---
 
-## Materials & Resources
-* We followed the workshop materials created by Rochelle Terman (@rochelleterman): [Computational Text Analysis Workshop Materials
-](https://github.com/rochelleterman/text-analysis-dhbsi)
-* Text analysis with R for students of literature  <http://roger.ucsd.edu/record=b8216276~S9>
-* Guide to Text Corpora <http://ucsd.libguides.com/data-statistics/textmining>
-* We subscribe to [Crimson Hexagon](http://ucsd.libguides.com/data-statistics/crimsonhexagon)
+## Introduction
+
+This workshop will introduce you to text analysis techniques in R, an open source programming language. Some familiarity with R is expected as a requirement to attend this course.  You can attend the Intro to R course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp.
 
 ## Topics
 
@@ -21,24 +20,26 @@ category: posts r
 * Discriminating / Distinctive Words
 * Time permitting: Dictionary Methods (i.e. Sentiment Analysis)
 
+## Dates
+November 16, 2016 (9:00 AM - 12:00 PM)
+
+## Location
+[Biomedical Library Classroom 4](http://maps.google.com/maps?q=32.875270,%20-117.236917)
+
 **Things not covered**
 
 * Document Similarity
 * Topic modeling
 * Clustering
 
-## Time/Dates
-
-* 9:00am - 12:00pm, Wednesday, November 16, 2016
-
-## Location
-
-* [Biomedical Library Classroom 4](http://maps.google.com/maps?q=32.875270,%20-117.236917)
-
 ## Instructors
 
 * @u2ng - Reid Otsuji
-* @jt14den - Tim Dennis  
+* @jt14den - Tim Dennis
+
+## Audience
+
+All graduate students and researchers.
 
 ## Setup
 
@@ -75,16 +76,13 @@ RStudio is an environment for developing using R. It can be downloaded [here](ht
 
 <https://drive.google.com/open?id=0ByRar-ghNtRlNGpENWJmNGNlS2s>
 
-## Etherpad
-http://pad.software-carpentry.org/r-txt-analysis
-
-## Audience
-
-Graduate students and researchers
-
-## Description
-
-This workshop will introduce you to text analysis techniques in R, an open source programming language. Some familiarity with R is expected as a requirement to attend this course.  You can attend the Intro to R course we provide or take this online tutorial <https://www.datacamp.com/courses/free-introduction-to-r> from DataCamp.
+## Resources
+* [Collaborative Notes: Etherpad](http://pad.software-carpentry.org/r-txt-analysis)
+* [Computational Text Analysis Workshop Materials by Rochelle Terman (@rochelleterman)
+](https://github.com/rochelleterman/text-analysis-dhbsi)
+* [Text analysis with R for students of literature](http://roger.ucsd.edu/record=b8216276~S9)
+* [Guide to Text Corpora](http://ucsd.libguides.com/data-statistics/textmining)
+* [Crimson Hexagon](http://ucsd.libguides.com/data-statistics/crimsonhexagon)
 
 ## Credits
 

@@ -1,24 +1,30 @@
 ---
 layout: post
 title: School of Global Policy and Strategy - Skills Courses (2018)
-category: [past,r, python, Bash, SQL, opensci]
+category:
+- post
+- R
+- python
+- gps
 ---
 
-## Description
+## Introduction
 
-These skill courses will introduce the R & Python programming languages and basic concepts of working with and managing data. In order to earn a certificate of proficiency, a student must attend all of the class meetings for the individual course, complete short coding assignments, and pass the short, in-class quizzes. Courses begin on Monday, January 8th.
+These skill courses will introduce the R & Python programming languages and basic concepts of working with and managing data. In order to earn a certificate of proficiency, a student must attend all of the class meetings for the individual course, complete short coding assignments, and pass the short, in-class quizzes.
 
-## Time/Dates/Location
+## Dates
 
-* All courses are from 6:30 - 9:20 PM in the Robinson Auditorium.
+* All courses are from 6:30 - 9:20 PM.
+  * R: January 8, 17, & 22.
+  * Python: January 29, February 5 & 12.
+  * Data Management: February 21 & 26, March 5.
 
-* R: January 8, 17, & 22.
-* Python: January 29, February 5 & 12.
-* Data Management: February 21 & 26, March 5.
+## Location
+Robinson Auditorium.
 
 ## Audience
 
-Graduate students in the School of Global Policy and Strategy. Registration is closed to GPS students only. Contact rotsuji@ucsd.edu for more information.
+All graduate students in the School of Global Policy and Strategy.
 
 ## Course Syllabus & Website:
 
@@ -27,4 +33,5 @@ Graduate students in the School of Global Policy and Strategy. Registration is c
 * [Workshop Website: Data Management](https://ucsdlib.github.io/win2018-gps-intro-dm/)
 
 ## Resources:
-[Python Information](https://github.com/ucsdlib/win2018-gps-python/blob/master/pyinfo/python-Information-resources.ipynb)
+* [Python Information](https://github.com/ucsdlib/win2018-gps-python/blob/master/pyinfo/python-Information-resources.ipynb)
+* Contact rotsuji@ucsd.edu for more information.

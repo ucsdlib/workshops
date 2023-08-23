@@ -1,40 +1,43 @@
 ---
 layout: post
-title: Library Carpentry
-category: [library-carpentry, past]
+title: Library Carpentries Workshops (2016)
+category:
+- posts
+- Carpentries
+- Unix Shell
+- Git
 ---
 
-Library Carpentry is an exploratory program of four three-hour software skills sessions focused on the needs and requirements of the library professionals. 
+## Introduction
+Library Carpentry is an exploratory program of four three-hour software skills sessions focused on the needs and requirements of the library professionals.
 
-## Time/Dates
-
-* 7/18 - 7/22 (7/22 will be office hours, no instruction)
-* 9am - 12:30pm
-
-## Location
-
-Seuss Room
-
-## Instructors/Helpers:  
-
-* Juliane Schneider @pitviper6 (Worksohp Lead, Jargon Busing/RegEx & Open Refine)
-* Matt Crichlow @mcritchlow (Git) 
-* Reid Otsuji @U2NG (Bash)
-* Tim Dennis @jt14den (Bash)
-* Ryan Johnson @remerjohnson
-
-## Topics 
+## Topics
 
 1. Jargon Busting & Regular Expressions
 2. Unix shell, tabulated data, text data, named entity recognition
 3. Version control, github, gh-pages
 4. Open refine, cleaning data
 
-## Audience 
+## Date
+July 18 - July 22, 2016 (9:00 AM - 12:30 PM)
+* (7/22 will be office hours, no instruction)
 
-Library staff interested in learning software skills
+## Location
+Seuss Room
 
-## Register 
+## Staff (Instructors & Helpers)
+
+* Juliane Schneider @pitviper6 (Worksohp Lead, Jargon Busing/RegEx & Open Refine)
+* Matt Crichlow @mcritchlow (Git)
+* Reid Otsuji @U2NG (Bash)
+* Tim Dennis @jt14den (Bash)
+* Ryan Johnson @remerjohnson
+
+## Audience
+
+All Library staff interested in learning software skills.
+
+## Registration Pages
 <ul>
 <li>
 <style type="text/css">
@@ -56,8 +59,5 @@ Library staff interested in learning software skills
 
 ## Workshop Website
 
-* <https://ucsdlib.github.io/2016-07-18-UCSD/>
-
-## Etherpad (a collaborative space for note-taking and info)
-*  <https://public.etherpad-mozilla.org/p/library-carpentry-ucsd>
-
+* [Workshop Website](https://ucsdlib.github.io/2016-07-18-UCSD/)
+* [Collaborative Notes: Etherpad](https://public.etherpad-mozilla.org/p/library-carpentry-ucsd)
