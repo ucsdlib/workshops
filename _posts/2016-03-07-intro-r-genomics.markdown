@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Genomics: Intro to R (March 2016)
+title: Genomics - Intro to R (March 2016)
 category:
 - posts
 - R

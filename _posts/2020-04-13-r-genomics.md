@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Genomics: Intro to R (April  2020)
+title: Genomics - Intro to R (April  2020)
 category:
   - posts
   - R

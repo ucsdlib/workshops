@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scripps Institution of Oceanography: Introduction to Data Management - Best Practices (2021)
+title: Scripps Institution of Oceanography - Introduction to Data Management - Best Practices (2021)
 category:
 - posts
 - Data Management

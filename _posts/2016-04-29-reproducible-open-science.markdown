@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Workshop: Increasing Openness and Reproducibility in Quantitative Research
+title: Workshop - Increasing Openness and Reproducibility in Quantitative Research
 category:
 - posts
 ---

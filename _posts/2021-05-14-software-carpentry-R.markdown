@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries Spring Workshop: R (2021)
+title: Carpentries Spring Workshop - R (2021)
 category:
 - posts
 - R

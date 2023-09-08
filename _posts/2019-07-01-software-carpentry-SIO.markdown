@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scripps Institution of Oceanography: Software Carpentry Workshop (2019)
+title: Scripps Institution of Oceanography - Software Carpentry Workshop (2019)
 category:
 - posts
 - Carpentries

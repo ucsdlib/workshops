@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Genomics: Data Manipulation in R
+title: Genomics - Data Manipulation in R
 category:
 - posts
 - R

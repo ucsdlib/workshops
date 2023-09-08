@@ -1,6 +1,6 @@
 ---
 layout: post
-title: UCSD: Introduction to the Unix Shell and R (2021)
+title: UCSD - Introduction to the Unix Shell and R (2021)
 category:
   - posts
   - R
