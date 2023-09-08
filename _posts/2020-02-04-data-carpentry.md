@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Social Science: Data Carpentry R - Library
+title: Social Science - Data Carpentry R - Library
 category:
   - posts
   - R

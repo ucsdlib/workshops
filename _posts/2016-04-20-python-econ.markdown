@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Economics Department: Python
+title: Economics Department - Python
 category:
 - posts
 - python

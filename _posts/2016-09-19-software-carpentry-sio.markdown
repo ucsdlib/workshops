@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Scripps Institution of Oceanography: Software Carpentry Workshop (2016)
+title: Scripps Institution of Oceanography - Software Carpentry Workshop (2016)
 category:
 - post
 - python
