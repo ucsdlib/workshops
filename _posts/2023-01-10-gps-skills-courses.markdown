@@ -10,6 +10,9 @@ category:
   - gps
 ---
 
+## Introduction
+This course will introduce you the R programming language and how to use R to work with data from GapMinder, Python programming language and how to use Python and the Jupyter Notebook to work with data, and the best practices in data management, preparation and representation, including the basics of data in spreadsheets, SQL and using the Unix Shell. In order to earn a certificate of proficiency, you must attend all of the class meetings for the course, do the short  assignments, and pass the quizzes at the end of the course. See the workshop website for more details and schedule.
+
 ## Topics:
 
 * R
