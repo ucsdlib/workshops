@@ -3,7 +3,6 @@ layout: post
 title: School of Global Policy and Strategy - Skills Courses (2024)
 category:
   - posts
-  - R
   - python
   - Git
   - Unix Shell
