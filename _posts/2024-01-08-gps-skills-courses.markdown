@@ -16,13 +16,10 @@ This course will be referencing ["Plotting and Programming in Python](http://swc
 
 ## Topics:
 
-* R
 * Python
 * Git
 * Unix Shell
-* Tidy Data
 * SQL
-* Data Management
 
 ## Dates
 January 8 - March 15, 2024 (3:30 PM - 4:50 PM)
