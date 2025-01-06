@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Carpentries: Coding and Data Management Skills for Researchers
+title: Carpentries - Coding and Data Management Skills for Researchers
 category:
   - posts
   - Carpentries
