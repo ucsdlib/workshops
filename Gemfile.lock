@@ -15,7 +15,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rdiscount (2.1.8)
+    rdiscount (2.2.7.4)
     timers (4.0.4)
       hitimes
 
